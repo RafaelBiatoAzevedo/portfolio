@@ -28,9 +28,9 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: ${({ theme }) => theme.colors.textSoft};
-  margin-left: 1rem;
+  margin: 0px 2rem;
 `;
 
 export const StackContainer = styled.div`
@@ -96,16 +96,16 @@ export const Tooltip = styled.span`
 
 export const Stats = styled.div`
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
-  gap: 6rem;
-  margin-top: 5rem;
+  margin-top: 7rem;
 `;
 
 export const StatItem = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex: 1;
 `;
 
 export const StatNumber = styled.span`

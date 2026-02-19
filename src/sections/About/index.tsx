@@ -50,6 +50,9 @@ import {
 
 import { TbBrandCSharp } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
+import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
+import { KanbanIcon } from "../../assets/SVGs/kanbanIcon";
+import { TddIcon } from "../../assets/SVGs/tddIcon";
 
 export const About = () => {
   const mobile = [
@@ -73,7 +76,7 @@ export const About = () => {
   const backend = [
     { icon: FaNodeJs, name: "Node.js", scale: 1 },
     { icon: SiTypescript, name: "TypeScript", scale: 1 },
-    { icon: SiExpress, name: "Express", scale: 1 },
+    { icon: SiExpress, name: "Express.js", scale: 1 },
     { icon: SiNestjs, name: "NestJS", scale: 1 },
     { icon: TbBrandCSharp, name: "C#", scale: 1 },
     { icon: SiDotnet, name: ".NET", scale: 1.2 },
@@ -107,6 +110,13 @@ export const About = () => {
     { icon: VscVscode, name: "VS Code", scale: 1 },
     { icon: SiAndroidstudio, name: "Android Studio", scale: 1 },
   ];
+
+  const methodologies = [
+    { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    { icon: KanbanIcon, name: "Kanban", scale: 1 },
+    { icon: TddIcon, name: "TDD", scale: 1 },
+  ];
+
   return (
     <Section id="sobre">
       <Content>
@@ -225,6 +235,19 @@ export const About = () => {
 
             <IconsRow>
               {tools.map(({ icon: Icon, name, scale }) => (
+                <IconItem key={name}>
+                  <Icon style={{ transform: `scale(${scale})` }} />
+                  <Tooltip>{name}</Tooltip>
+                </IconItem>
+              ))}
+            </IconsRow>
+          </StackCategory>
+
+          <StackCategory>
+            <StackTitle>Metodologias</StackTitle>
+
+            <IconsRow>
+              {methodologies.map(({ icon: Icon, name, scale }) => (
                 <IconItem key={name}>
                   <Icon style={{ transform: `scale(${scale})` }} />
                   <Tooltip>{name}</Tooltip>
