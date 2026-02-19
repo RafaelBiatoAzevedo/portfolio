@@ -1,8 +1,19 @@
+import { ThemeProvider } from "styled-components";
+import { useState } from "react";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { lightTheme, darkTheme } from "./styles/themes";
+import { Hero } from "./sections/Hero";
+import { Navbar } from "./components/NavBar";
+
 function App() {
+  const [theme] = useState("dark");
+
   return (
-    <>
-      <h1>Seja Bem Vindo</h1>
-    </>
+    <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Navbar />
+      <Hero />
+    </ThemeProvider>
   );
 }
 
