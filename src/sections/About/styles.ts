@@ -79,10 +79,10 @@ export const IconItem = styled.div`
 
 export const Tooltip = styled.span`
   position: absolute;
-  bottom: -30px;
+  bottom: -35px;
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.text};
-  padding: 4px 8px;
+  padding: 3px 8px;
   font-size: 0.75rem;
   border-radius: 6px;
   white-space: nowrap;
