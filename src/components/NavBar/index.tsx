@@ -1,6 +1,6 @@
 import { Container, Logo, LogoWrapper, Menu, MenuItem } from "./styles";
 
-import profile from "../../assets/logoAnime.png";
+import profile from "../../assets/caricature.png";
 
 export const Navbar = () => {
   return (

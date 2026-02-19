@@ -37,7 +37,7 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.textSoft};
   transition: 0.3s;

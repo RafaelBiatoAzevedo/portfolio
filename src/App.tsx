@@ -4,6 +4,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { lightTheme, darkTheme } from "./styles/themes";
 import { Hero } from "./sections/Hero";
 import { Navbar } from "./components/NavBar";
+import { About } from "./sections/About";
 
 function App() {
   const [theme] = useState("dark");
@@ -13,6 +14,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <Hero />
+      <About />
     </ThemeProvider>
   );
 }
