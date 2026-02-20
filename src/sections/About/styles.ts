@@ -22,7 +22,7 @@ export const TextContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -31,6 +31,40 @@ export const Description = styled.p`
   line-height: 1.8;
   color: ${({ theme }) => theme.colors.textSoft};
   margin: 0px 2rem;
+`;
+
+export const SoftSkillsContainer = styled.div`
+  margin: 2.5rem 2rem;
+`;
+
+export const SoftSkillsTitle = styled.div`
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const SkillsList = styled.ul`
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+`;
+
+export const SkillItem = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  svg {
+    font-size: 1.4rem;
+    color: ${({ theme }) => theme.colors.primary};
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 1rem;
+    color: ${({ theme }) => theme.colors.textSoft};
+  }
 `;
 
 export const StackContainer = styled.div`
@@ -98,7 +132,7 @@ export const Stats = styled.div`
   align-items: center;
   justify-content: space-around;
   display: flex;
-  margin-top: 7rem;
+  margin-top: 4rem;
 `;
 
 export const StatItem = styled.div`

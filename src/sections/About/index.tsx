@@ -4,6 +4,10 @@ import {
   IconItem,
   IconsRow,
   Section,
+  SkillItem,
+  SkillsList,
+  SoftSkillsContainer,
+  SoftSkillsTitle,
   StackCategory,
   StackContainer,
   StackTitle,
@@ -46,6 +50,7 @@ import {
   SiInsomnia,
   SiVite,
   SiAndroidstudio,
+  SiLinux,
 } from "react-icons/si";
 
 import { TbBrandCSharp } from "react-icons/tb";
@@ -53,6 +58,8 @@ import { VscVscode } from "react-icons/vsc";
 import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
 import { KanbanIcon } from "../../assets/SVGs/kanbanIcon";
 import { TddIcon } from "../../assets/SVGs/tddIcon";
+import { FiMessageCircle, FiTarget } from "react-icons/fi";
+import { LuBrain, LuRefreshCw } from "react-icons/lu";
 
 export const About = () => {
   const mobile = [
@@ -102,6 +109,7 @@ export const About = () => {
   ];
 
   const tools = [
+    { icon: SiLinux, name: "Linux", scale: 0.9 },
     { icon: FaAws, name: "AWS", scale: 1 },
     { icon: SiDocker, name: "Docker", scale: 1 },
     { icon: SiPostman, name: "Postman", scale: 1 },
@@ -132,6 +140,32 @@ export const About = () => {
             tecnologia para simplificar problemas complexos e gerar impacto real
             através de software bem estruturado.
           </Description>
+
+          <SoftSkillsContainer>
+            <SoftSkillsTitle>Soft Skills</SoftSkillsTitle>
+
+            <SkillsList>
+              <SkillItem>
+                <FiMessageCircle />
+                <span>Comunicação clara e objetiva</span>
+              </SkillItem>
+
+              <SkillItem>
+                <LuBrain />
+                <span>Inteligência emocional em ambientes colaborativos</span>
+              </SkillItem>
+
+              <SkillItem>
+                <LuRefreshCw />
+                <span>Adaptabilidade a mudanças e contextos dinâmicos</span>
+              </SkillItem>
+
+              <SkillItem>
+                <FiTarget />
+                <span>Mentalidade orientada à solução</span>
+              </SkillItem>
+            </SkillsList>
+          </SoftSkillsContainer>
 
           <Stats>
             <StatItem>
