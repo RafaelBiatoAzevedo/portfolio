@@ -55,7 +55,6 @@ export const Greeting = styled.h1`
 
 export const Title = styled.h1`
   font-size: 5rem;
-  margin-bottom: 1rem;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -63,14 +62,14 @@ export const Subtitle = styled.h2`
   font-size: 2rem;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textSoft};
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 `;
 
 export const Description = styled.p`
   font-size: 1.2rem;
   line-height: 1.6;
   color: ${({ theme }) => theme.colors.textSoft};
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `;
 
 export const ButtonGroup = styled.div`

@@ -21,7 +21,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: ${({ theme }) => theme.colors.primary};
 `;
@@ -38,7 +38,7 @@ export const SoftSkillsContainer = styled.div`
 `;
 
 export const SoftSkillsTitle = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: ${({ theme }) => theme.colors.primary};
 `;

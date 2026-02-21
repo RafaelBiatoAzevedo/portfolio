@@ -5,6 +5,8 @@ import { lightTheme, darkTheme } from "./styles/themes";
 import { Hero } from "./sections/Hero";
 import { Navbar } from "./components/NavBar";
 import { About } from "./sections/About";
+import { Contact } from "./sections/Contact";
+import { Education } from "./sections/Education";
 
 function App() {
   const [theme] = useState("dark");
@@ -15,6 +17,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Education />
+      <Contact />
     </ThemeProvider>
   );
 }
