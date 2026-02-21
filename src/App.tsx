@@ -7,6 +7,7 @@ import { Navbar } from "./components/NavBar";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Education } from "./sections/Education";
+import { Experience } from "./sections/Experience";
 
 function App() {
   const [theme] = useState("dark");
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Education />
       <Contact />
     </ThemeProvider>

@@ -15,7 +15,7 @@ export const Content = styled.div`
   h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
@@ -24,8 +24,6 @@ export const EducationItem = styled.div`
   display: flex;
   gap: 2rem;
   align-items: center;
-
-  padding: 1.5rem;
 `;
 
 export const Logo = styled.img`
@@ -39,7 +37,7 @@ export const Info = styled.div`
   h3 {
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
-    color: ${({ theme }) => theme.colors.textSoft};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   span {

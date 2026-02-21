@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-import "@fontsource/space-grotesk/600.css";
-import "@fontsource/space-grotesk/700.css";
+import "@fontsource/inter-tight/400.css";
+import "@fontsource/inter-tight/500.css";
+import "@fontsource/inter-tight/600.css";
+import "@fontsource/inter-tight/700.css";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -18,19 +20,19 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
-    font-family: "Open Sans", sans-serif;
+    font-family: "Inter Tight", sans-serif;
     -webkit-font-smoothing: antialiased;
     transition: background 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Inter Tight", sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
   }
 
   button {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Inter Tight", sans-serif;
     cursor: pointer;
     border: none;
     background: none;

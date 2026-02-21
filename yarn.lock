@@ -380,6 +380,11 @@
     "@eslint/core" "^0.17.0"
     levn "^0.4.1"
 
+"@fontsource/inter-tight@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter-tight/-/inter-tight-5.2.7.tgz#7af65a24f6d24d9448bf6db610c75d084c887de3"
+  integrity sha512-44TmSfHdNQus/3MWOMIonUEnbxwQhiaFo2sfBJEGIE4c7TN+GO6kfLzsTH4Nu52BC9HDZFl9fPQ6Cwzp9vYTtQ==
+
 "@fontsource/space-grotesk@^5.2.10":
   version "5.2.10"
   resolved "https://registry.yarnpkg.com/@fontsource/space-grotesk/-/space-grotesk-5.2.10.tgz#36eef6a105be125d1025c206eb48f1a3d37ad512"

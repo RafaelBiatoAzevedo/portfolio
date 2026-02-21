@@ -6,13 +6,16 @@ export const Navbar = () => {
   return (
     <Container>
       <LogoWrapper>
-        <Logo src={profile} alt="Rafael anime" />
+        <Logo src={profile} alt="Rafael caricature" />
       </LogoWrapper>
 
       <Menu>
         <MenuItem>Início</MenuItem>
         <MenuItem>Sobre</MenuItem>
         <MenuItem>Projetos</MenuItem>
+        <MenuItem>Experiência</MenuItem>
+        <MenuItem>Formação</MenuItem>
+        <MenuItem>Certificados</MenuItem>
         <MenuItem>Contato</MenuItem>
       </Menu>
     </Container>
