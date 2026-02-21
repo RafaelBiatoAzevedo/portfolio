@@ -5,9 +5,13 @@ import {
   Section,
   CompanyInfo,
   BackTopButton,
+  AzevedoLogo,
+  InfoItem,
 } from "./styles";
 import { SocialLinks } from "../../components/SocialLinks";
 import { FiArrowUp } from "react-icons/fi";
+import azevedoLogo from "../../assets/azevedoLogo.png";
+import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 
 export const Contact = () => {
   const scrollToTop = () => {
@@ -32,15 +36,27 @@ export const Contact = () => {
         </Content>
 
         <CompanyInfo>
-          <strong>AZEVEDO DIGITAL</strong>
+          <AzevedoLogo src={azevedoLogo} />
           <p>CNPJ: 39.324.590/0001-43</p>
-          <p>
-            Rua Cleonice Ap. Cruz Thielle, 350 - Jd Alvorada - Mogi Guaçu - SP
-          </p>
-          <p>
-            E-mail: rafaelazevedo321@gmail.com | azevedodigital321@gmail.com
-          </p>
-          <p>Cel: ( 19 ) 990197883</p>
+
+          <InfoItem>
+            <FaMapMarkerAlt />
+            <span>
+              Rua Cleonice Ap. Cruz Thielle, 350 - Jd Alvorada - Mogi Guaçu - SP
+            </span>
+          </InfoItem>
+
+          <InfoItem>
+            <FaEnvelope />
+            <span>
+              rafaelazevedo321@gmail.com | azevedodigital321@gmail.com
+            </span>
+          </InfoItem>
+
+          <InfoItem>
+            <FaWhatsapp />
+            <span>(19) 99019-7883</span>
+          </InfoItem>
         </CompanyInfo>
 
         <Copy>© {new Date().getFullYear()} Rafael Azevedo</Copy>

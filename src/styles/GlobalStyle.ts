@@ -28,8 +28,12 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: "Inter Tight", sans-serif;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
+
+  /* span, p {
+    letter-spacing: 1px;
+  } */
 
   button {
     font-family: "Inter Tight", sans-serif;

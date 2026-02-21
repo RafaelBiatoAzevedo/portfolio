@@ -60,18 +60,32 @@ export const Content = styled.div`
   }
 `;
 
+export const AzevedoLogo = styled.img`
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+`;
+
 export const CompanyInfo = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 4rem;
   font-size: 0.8rem;
   line-height: 1.6;
   text-align: center;
   color: ${({ theme }) => theme.colors.textSoft};
+`;
 
-  strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: ${({ theme }) => theme.colors.primary};
+export const InfoItem = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+
+  svg {
+    font-size: 1rem;
+    min-width: 16px;
   }
 `;
 

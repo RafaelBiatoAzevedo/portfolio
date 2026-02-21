@@ -19,7 +19,7 @@ export const darkTheme = {
   colors: {
     background: "#0B0F19",
     surface: "#111827",
-    primary: "#5925b2",
+    primary: "#0485C9",
     secondary: "#8B5CF6",
     text: "#F9FAFB",
     textSoft: "#9CA3AF",
