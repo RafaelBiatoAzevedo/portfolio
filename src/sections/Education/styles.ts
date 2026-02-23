@@ -27,15 +27,15 @@ export const EducationItem = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 8px;
   object-fit: contain;
 `;
 
 export const Info = styled.div`
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.4rem;
     color: ${({ theme }) => theme.colors.text};
   }

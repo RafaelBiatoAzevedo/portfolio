@@ -7,7 +7,9 @@ import { Navbar } from "./components/NavBar";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Education } from "./sections/Education";
-import { Experience } from "./sections/Experience";
+import { Experiences } from "./sections/Experiences";
+import { Certificates } from "./sections/Certificates";
+import { Courses } from "./sections/Courses";
 
 function App() {
   const [theme] = useState("dark");
@@ -18,8 +20,10 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Experience />
+      <Experiences />
       <Education />
+      {/* <Courses /> */}
+      <Certificates />
       <Contact />
     </ThemeProvider>
   );

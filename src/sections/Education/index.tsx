@@ -19,8 +19,8 @@ export const Education = () => {
             <Logo src={pucLogo} alt="PUC Campinas" />
 
             <Info>
-              <h3>Análise e Desenvolvimento de Sistemas</h3>
-              <span>PUC Campinas</span>
+              <h3>Análise de Sistemas</h3>
+              <span>PUC - Campinas</span>
               <p>2005 – 2009 • 8° semestre</p>
             </Info>
           </EducationItem>

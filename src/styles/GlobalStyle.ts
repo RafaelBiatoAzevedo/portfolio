@@ -31,9 +31,9 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 1.5px;
   }
 
-  /* span, p {
-    letter-spacing: 1px;
-  } */
+  span, p, li {
+    letter-spacing: 0.4px;
+  }
 
   button {
     font-family: "Inter Tight", sans-serif;

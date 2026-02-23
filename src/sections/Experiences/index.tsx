@@ -15,7 +15,7 @@ import vahlisLogo from "../../assets/vahlisLogo.png";
 import rsLogo from "../../assets/rsLogo.jpeg";
 import restauranteLogo from "../../assets/restauranteBandeirantesLogo.jpeg";
 
-export const Experience = () => {
+export const Experiences = () => {
   const experiences = [
     {
       companyLogo: zokiLogo,
@@ -56,7 +56,7 @@ export const Experience = () => {
     {
       companyLogo: restauranteLogo,
       company: "Restaurante Bandeirantes",
-      responsibility: "Gerente geral",
+      responsibility: "Gerente",
       duration: "jan de 2003 - jan de 2018 • 15 anos 1 meses",
       bullets: [
         "Liderança e desenvolvimento de equipe operacional, promovendo alinhamento e eficiência nos processos internos",
@@ -68,7 +68,7 @@ export const Experience = () => {
   ];
 
   return (
-    <Section id="experience">
+    <Section id="experiences">
       <Container>
         <Content>
           <h2>Experiências</h2>
