@@ -8,7 +8,6 @@ import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Education } from "./sections/Education";
 import { Experiences } from "./sections/Experiences";
-import { Certificates } from "./sections/Certificates";
 import { Courses } from "./sections/Courses";
 
 function App() {
@@ -22,8 +21,7 @@ function App() {
       <About />
       <Experiences />
       <Education />
-      {/* <Courses /> */}
-      <Certificates />
+      <Courses />
       <Contact />
     </ThemeProvider>
   );
