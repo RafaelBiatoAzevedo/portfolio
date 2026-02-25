@@ -4,6 +4,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       background: string;
+      backgroundCard: string;
       surface: string;
       primary: string;
       secondary: string;

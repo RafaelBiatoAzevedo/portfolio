@@ -7,6 +7,26 @@ export const Container = styled.section`
   align-items: center;
   padding: 0 8%;
   padding-top: 70px;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+      to left,
+      ${({ theme }) => theme.colors.primary}20,
+      transparent
+    );
+
+    pointer-events: none;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -38,12 +58,12 @@ export const ProfileImage = styled.img`
   max-width: 100%;
   border-radius: 20px;
   object-fit: cover;
-  box-shadow:
+  /* box-shadow:
     0 0 80px ${({ theme }) => theme.colors.primary}46,
     0 0 180px ${({ theme }) => theme.colors.primary}83;
   transition: 0.4s;
 
-  /* &:hover {
+  &:hover {
     transform: translateY(-8px);
   } */
 `;

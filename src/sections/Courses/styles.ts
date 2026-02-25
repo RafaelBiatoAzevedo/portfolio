@@ -23,7 +23,7 @@ export const CourseCard = styled.div`
 
   padding: 2.5rem;
   border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  //border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const CourseTitle = styled.h2`
@@ -155,13 +155,14 @@ export const Grid = styled.div`
 `;
 
 export const FeaturedCard = styled.div`
+  background: ${({ theme }) => theme.colors.backgroundCard};
   display: flex;
   flex-direction: row;
 
   padding: 1.5rem;
   gap: 1.5rem;
   border-radius: 8px;
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  //border: 1px solid ${({ theme }) => theme.colors.border};
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

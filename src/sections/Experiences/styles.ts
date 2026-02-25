@@ -55,15 +55,9 @@ export const CompanyLogo = styled.img`
 `;
 
 export const ExperienceItem = styled.div`
-  padding: 1.8rem;
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  background: ${({ theme }) => theme.colors.backgroundCard};
+  padding: 2.2rem 3rem;
   border-radius: 12px;
-
-  transition: 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
 
   h3 {
     font-size: 1.2rem;
