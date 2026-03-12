@@ -14,6 +14,7 @@ export const Container = styled.nav`
   padding: 0 8%;
   background: ${({ theme }) => theme.colors.surface};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  transition: all 0.3s ease;
 
   z-index: 1000;
 `;
@@ -45,4 +46,44 @@ export const MenuItem = styled.li`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+export const ThemeSwitch = styled.button`
+  width: 52px;
+  height: 26px;
+
+  background: ${({ theme }) => theme.colors.border};
+
+  border-radius: 20px;
+  border: none;
+
+  position: relative;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.3s;
+`;
+
+export const SwitchCircle = styled.span<{ themeMode: string }>`
+  width: 22px;
+  height: 22px;
+
+  background: ${({ theme }) => theme.colors.primary};
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+
+  left: ${({ themeMode }) => (themeMode === "dark" ? "2px" : "28px")};
+
+  transition: all 0.3s ease;
 `;

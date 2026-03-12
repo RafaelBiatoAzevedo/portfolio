@@ -1,8 +1,21 @@
-import { Container, Logo, LogoWrapper, Menu, MenuItem } from "./styles";
+import {
+  Container,
+  Logo,
+  LogoWrapper,
+  Menu,
+  MenuItem,
+  SwitchCircle,
+  ThemeSwitch,
+} from "./styles";
 
 import profile from "../../assets/caricature.png";
 
-export const Navbar = () => {
+interface NavbarProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
   return (
     <Container>
       <LogoWrapper>
@@ -18,6 +31,12 @@ export const Navbar = () => {
         <MenuItem>Certificados</MenuItem>
         <MenuItem>Contato</MenuItem>
       </Menu>
+
+      <ThemeSwitch onClick={toggleTheme}>
+        <SwitchCircle themeMode={theme}>
+          {theme === "dark" ? "🌙" : "☀️"}
+        </SwitchCircle>
+      </ThemeSwitch>
     </Container>
   );
 };

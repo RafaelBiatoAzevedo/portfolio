@@ -11,12 +11,29 @@ import { Experiences } from "./sections/Experiences";
 import { Courses } from "./sections/Courses";
 
 function App() {
-  const [theme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) return savedTheme;
+
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    return prefersDark ? "dark" : "light";
+  });
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+
+    setTheme(newTheme);
+
+    localStorage.setItem("portfolio-theme", newTheme);
+  };
 
   return (
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Navbar />
+      <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Hero />
       <About />
       <Experiences />
