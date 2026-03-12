@@ -48,6 +48,12 @@ export const MenuItem = styled.li`
   }
 `;
 
+export const ActionsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+`;
+
 export const ThemeSwitch = styled.button`
   width: 52px;
   height: 26px;
@@ -86,4 +92,21 @@ export const SwitchCircle = styled.span<{ themeMode: string }>`
   left: ${({ themeMode }) => (themeMode === "dark" ? "2px" : "28px")};
 
   transition: all 0.3s ease;
+`;
+
+export const LanguageButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: ${({ theme }) => theme.colors.textSoft};
+
+  transition: 0.3s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;

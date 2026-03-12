@@ -1,5 +1,7 @@
 import {
+  ActionsWrapper,
   Container,
+  LanguageButton,
   Logo,
   LogoWrapper,
   Menu,
@@ -7,6 +9,7 @@ import {
   SwitchCircle,
   ThemeSwitch,
 } from "./styles";
+import { useTranslation } from "react-i18next";
 
 import profile from "../../assets/caricature.png";
 
@@ -16,6 +19,16 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    console.log("oioi", i18n);
+    const newLang = i18n.language === "pt" ? "en" : "pt";
+
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("portfolio-language", newLang);
+  };
+
   return (
     <Container>
       <LogoWrapper>
@@ -32,11 +45,17 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
         <MenuItem>Contato</MenuItem>
       </Menu>
 
-      <ThemeSwitch onClick={toggleTheme}>
-        <SwitchCircle themeMode={theme}>
-          {theme === "dark" ? "🌙" : "☀️"}
-        </SwitchCircle>
-      </ThemeSwitch>
+      <ActionsWrapper>
+        <ThemeSwitch onClick={toggleTheme}>
+          <SwitchCircle themeMode={theme}>
+            {theme === "dark" ? "🌙" : "☀️"}
+          </SwitchCircle>
+        </ThemeSwitch>
+
+        <LanguageButton onClick={toggleLanguage}>
+          {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
+        </LanguageButton>
+      </ActionsWrapper>
     </Container>
   );
 };
