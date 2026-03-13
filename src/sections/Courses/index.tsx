@@ -217,8 +217,8 @@ export const Courses = () => {
               <ExpandableContainer $isOpen={isOpen}>
                 <Grid>
                   {certificatesAdditionals.map(
-                    ({ image, name, link, pdf, contents }) => (
-                      <FeaturedCard>
+                    ({ image, name, link, pdf, contents }, index) => (
+                      <FeaturedCard key={index}>
                         <FeaturedLeft>
                           <CertificateImage src={image} />
 
@@ -237,8 +237,8 @@ export const Courses = () => {
                           <h4>{name}</h4>
 
                           <CertificateList>
-                            {contents.map((content) => (
-                              <li>{content}</li>
+                            {contents.map((content, index) => (
+                              <li key={index}>{content}</li>
                             ))}
                           </CertificateList>
                         </FeaturedRight>

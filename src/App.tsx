@@ -9,6 +9,7 @@ import { Contact } from "./sections/Contact";
 import { Education } from "./sections/Education";
 import { Experiences } from "./sections/Experiences";
 import { Courses } from "./sections/Courses";
+import { Projects } from "./sections/Projects";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -36,6 +37,7 @@ function App() {
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Hero />
       <About />
+      <Projects />
       <Experiences />
       <Education />
       <Courses />

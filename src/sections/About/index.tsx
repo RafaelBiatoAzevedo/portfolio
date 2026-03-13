@@ -1,7 +1,6 @@
 import {
   Content,
   Description,
-  IconItem,
   IconsRow,
   Section,
   SkillItem,
@@ -17,7 +16,6 @@ import {
   Stats,
   TextContainer,
   Title,
-  Tooltip,
 } from "./styles";
 
 import { FaReact, FaNodeJs, FaJava, FaAws } from "react-icons/fa";
@@ -51,6 +49,7 @@ import {
   SiVite,
   SiAndroidstudio,
   SiLinux,
+  SiMongoose,
 } from "react-icons/si";
 
 import { TbBrandCSharp } from "react-icons/tb";
@@ -60,6 +59,7 @@ import { KanbanIcon } from "../../assets/SVGs/kanbanIcon";
 import { TddIcon } from "../../assets/SVGs/tddIcon";
 import { FiMessageCircle, FiTarget } from "react-icons/fi";
 import { LuBrain, LuRefreshCw } from "react-icons/lu";
+import { TechIcon } from "../../components/TechIcon";
 
 export const About = () => {
   const mobile = [
@@ -85,6 +85,7 @@ export const About = () => {
     { icon: SiTypescript, name: "TypeScript", scale: 1 },
     { icon: SiExpress, name: "Express.js", scale: 1 },
     { icon: SiNestjs, name: "NestJS", scale: 1 },
+    { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
     { icon: TbBrandCSharp, name: "C#", scale: 1 },
     { icon: SiDotnet, name: ".NET", scale: 1.2 },
   ];
@@ -190,11 +191,8 @@ export const About = () => {
             <StackTitle>Mobile</StackTitle>
 
             <IconsRow>
-              {mobile.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {mobile.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -203,11 +201,8 @@ export const About = () => {
             <StackTitle>Front-end</StackTitle>
 
             <IconsRow>
-              {frontend.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {frontend.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -216,11 +211,8 @@ export const About = () => {
             <StackTitle>Back-end</StackTitle>
 
             <IconsRow>
-              {backend.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {backend.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -229,11 +221,8 @@ export const About = () => {
             <StackTitle>Banco de dados</StackTitle>
 
             <IconsRow>
-              {database.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {database.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -242,11 +231,8 @@ export const About = () => {
             <StackTitle>Versionamento</StackTitle>
 
             <IconsRow>
-              {versioning.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {versioning.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -255,11 +241,8 @@ export const About = () => {
             <StackTitle>Testes</StackTitle>
 
             <IconsRow>
-              {testing.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {testing.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -268,11 +251,8 @@ export const About = () => {
             <StackTitle>Ferramentas</StackTitle>
 
             <IconsRow>
-              {tools.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {tools.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
@@ -281,11 +261,8 @@ export const About = () => {
             <StackTitle>Metodologias</StackTitle>
 
             <IconsRow>
-              {methodologies.map(({ icon: Icon, name, scale }) => (
-                <IconItem key={name}>
-                  <Icon style={{ transform: `scale(${scale})` }} />
-                  <Tooltip>{name}</Tooltip>
-                </IconItem>
+              {methodologies.map(({ icon, name, scale }) => (
+                <TechIcon key={name} name={name} scale={scale} icon={icon} />
               ))}
             </IconsRow>
           </StackCategory>
