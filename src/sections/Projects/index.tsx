@@ -144,7 +144,7 @@ export function Projects() {
                 </IconsRow>
 
                 <ActionButton href={project.link} target="_blank">
-                  <FaExternalLinkAlt /> Visitar
+                  <FaExternalLinkAlt /> Saiba mais
                 </ActionButton>
               </ProjectContent>
             </ProjectRow>

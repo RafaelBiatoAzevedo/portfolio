@@ -12,17 +12,50 @@ import {
 import { useTranslation } from "react-i18next";
 
 import profile from "../../assets/caricature.png";
+import { useEffect, useState } from "react";
 
 interface NavbarProps {
   toggleTheme: () => void;
   theme: string;
 }
 
+const sections = [
+  "hero",
+  "about",
+  "projects",
+  "experiences",
+  "education",
+  "courses",
+  "contact",
+];
+
 export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
-  const { i18n } = useTranslation();
+  const [active, setActive] = useState("hero");
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+      },
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const toggleLanguage = () => {
-    console.log("oioi", i18n);
     const newLang = i18n.language === "pt" ? "en" : "pt";
 
     i18n.changeLanguage(newLang);
@@ -36,13 +69,11 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
       </LogoWrapper>
 
       <Menu>
-        <MenuItem>Início</MenuItem>
-        <MenuItem>Sobre</MenuItem>
-        <MenuItem>Projetos</MenuItem>
-        <MenuItem>Experiência</MenuItem>
-        <MenuItem>Formação</MenuItem>
-        <MenuItem>Certificados</MenuItem>
-        <MenuItem>Contato</MenuItem>
+        {sections.map((id) => (
+          <MenuItem key={id} as="a" href={`#${id}`} $active={active === id}>
+            {t(`nav.${id}`)}
+          </MenuItem>
+        ))}
       </Menu>
 
       <ActionsWrapper>

@@ -1,5 +1,4 @@
 import {
-  Container,
   Content,
   Title,
   Subtitle,
@@ -11,6 +10,7 @@ import {
   Wrapper,
   ImageWrapper,
   ProfileImage,
+  Section,
 } from "./styles";
 
 import profile from "../../assets/RafaelAzevedoHitech.png";
@@ -18,7 +18,7 @@ import { SocialLinks } from "../../components/SocialLinks";
 
 export const Hero = () => {
   return (
-    <Container>
+    <Section id="hero">
       <Wrapper>
         <Content>
           <Greeting>Olá, eu sou</Greeting>
@@ -47,6 +47,6 @@ export const Hero = () => {
           <ProfileImage src={profile} alt="Rafael Azevedo" />
         </ImageWrapper>
       </Wrapper>
-    </Container>
+    </Section>
   );
 };

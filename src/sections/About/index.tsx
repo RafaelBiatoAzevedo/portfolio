@@ -127,7 +127,7 @@ export const About = () => {
   ];
 
   return (
-    <Section id="sobre">
+    <Section id="about">
       <Content>
         <TextContainer>
           <Title>Sobre mim</Title>

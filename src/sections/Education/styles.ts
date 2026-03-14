@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 4rem 8%;
+  padding: 8rem 8%;
 `;
 
 export const Container = styled.div`

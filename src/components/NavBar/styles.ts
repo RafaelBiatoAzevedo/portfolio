@@ -37,10 +37,14 @@ export const Menu = styled.ul`
   list-style: none;
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled.a<{ $active?: boolean }>`
   font-size: 1rem;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.textSoft};
+  text-decoration: none;
+
+  color: ${({ theme, $active }) =>
+    $active ? theme.colors.primary : theme.colors.textSoft};
+
   transition: 0.3s;
 
   &:hover {

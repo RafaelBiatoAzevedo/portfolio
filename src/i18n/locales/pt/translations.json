@@ -1,1 +1,11 @@
-{}
+{
+  "nav": {
+    "hero": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experiences": "Experiências",
+    "education": "Formação",
+    "courses": "Cursos",
+    "contact": "Contato"
+  }
+}
