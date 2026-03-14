@@ -19,12 +19,26 @@ import {
 import pdv1 from "../../assets/projects/PDVFacil/pdvs.webp";
 import pdv2 from "../../assets/projects/PDVFacil/pdvAndroid.png";
 import pdv3 from "../../assets/projects/PDVFacil/pdvMachines.png";
-import pdv4 from "../../assets/projects/PDVFacil/usingPdv.webp";
+import pdv4 from "../../assets/projects/PDVFacil/usingPdv.png";
 
 import totem1 from "../../assets/projects/VitrineTotem/totensSunmi.webp";
 import totem2 from "../../assets/projects/VitrineTotem/totens.png";
 import totem3 from "../../assets/projects/VitrineTotem/tabletsTotem.png";
 import totem4 from "../../assets/projects/VitrineTotem/usingTotem.webp";
+
+import tablet1 from "../../assets/projects/TabletFacil/TabletFacil1.webp";
+import tablet2 from "../../assets/projects/TabletFacil/TabletFacil2.webp";
+import tablet3 from "../../assets/projects/TabletFacil/usingTablet.webp";
+
+import menu1 from "../../assets/projects/MenuFacil/menu1.png";
+import menu2 from "../../assets/projects/MenuFacil/menu2.png";
+import menu3 from "../../assets/projects/MenuFacil/menuIntegration.png";
+import menu4 from "../../assets/projects/MenuFacil/usingMenu.webp";
+
+import portalPos1 from "../../assets/projects/PortalPOS/portalPOS1.webp";
+import portalPos2 from "../../assets/projects/PortalPOS/portalPOS2.png";
+import portalPos3 from "../../assets/projects/PortalPOS/kds.webp";
+import portalPos4 from "../../assets/projects/PortalPOS/painelSenha.webp";
 
 import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
 
@@ -34,6 +48,7 @@ import {
   SiMongodb,
   SiMongoose,
   SiNestjs,
+  SiNextdotjs,
   SiReact,
   SiStyledcomponents,
   SiTypescript,
@@ -41,62 +56,139 @@ import {
 import { FaAws, FaExternalLinkAlt, FaJava } from "react-icons/fa";
 import { TechIcon } from "../../components/TechIcon";
 
-export function Projects() {
-  const projects = [
-    {
-      title: "PDV Fácil",
-      descriptionMain:
-        "Ponto de Venda baseado em Android, focado em agilidade e baixo custo para estabelecimentos comerciais.",
-      descriptionList: [
-        "Versatilidade de Hardware: Por ser Android, ele funciona tanto em equipamentos robustos de balcão quanto em maquininhas smart, permitindo mobilidade total no atendimento.",
-        "Gestão Completa: Centraliza o controle de vendas, estoque, comandas, garçons e operações de delivery em uma única interface.",
-        "Foco em Eficiência: Combina um sistema intuitivo e rápido com segurança de dados, sendo ideal para quem busca performance sem precisar de um alto investimento inicial.",
-        'Praticidade: Transforma o dispositivo no "cérebro" do negócio, facilitando desde o fechamento do caixa até a organização das mesas.',
-      ],
-      tech: [
-        { icon: SiReact, name: "React Native", scale: 1 },
-        { icon: FaJava, name: "Java", scale: 1 },
-        { icon: SiTypescript, name: "TypeScript", scale: 1 },
-        { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
-        { icon: SiNestjs, name: "NestJS", scale: 1 },
-        { icon: SiMongodb, name: "MongoDB", scale: 1 },
-        { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
-        { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
-        { icon: FaAws, name: "AWS", scale: 1 },
-        { icon: SiDocker, name: "Docker", scale: 1 },
-        { icon: ScrumIcon, name: "Scrum", scale: 1 },
-      ],
-      images: [pdv1, pdv2, pdv3, pdv4],
-      link: "https://pdvfacil.app.br/",
-    },
-    {
-      title: "Vitrine Totem",
-      descriptionMain:
-        "Autoatendimento focado em autonomia e produtividade, eliminando intermediários no processo de compra para acelerar o giro do estabelecimento.",
-      descriptionList: [
-        "Autonomia do Cliente: O próprio consumidor realiza o pedido e o pagamento de forma digital, eliminando o uso de papel e reduzindo erros humanos ou dependência de garçons.",
-        "Fluxo Automatizado: Assim que o pagamento é confirmado, o pedido é enviado instantaneamente para a produção na cozinha, otimizando o tempo de entrega.",
-        "Experiência Visual: O totem funciona como uma vitrine interativa, permitindo a exibição de vídeos, promoções e conteúdos personalizados que atraem o público.",
-        "Gestão Centralizada: Todo o processo — do pedido à impressão e desempenho de vendas — fica conectado ao sistema principal, garantindo controle total da operação em um só lugar.",
-      ],
-      tech: [
-        { icon: SiReact, name: "React Native", scale: 1 },
-        { icon: FaJava, name: "Java", scale: 1 },
-        { icon: SiTypescript, name: "TypeScript", scale: 1 },
-        { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
-        { icon: SiNestjs, name: "NestJS", scale: 1 },
-        { icon: SiMongodb, name: "MongoDB", scale: 1 },
-        { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
-        { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
-        { icon: FaAws, name: "AWS", scale: 1 },
-        { icon: SiDocker, name: "Docker", scale: 1 },
-        { icon: ScrumIcon, name: "Scrum", scale: 1 },
-      ],
-      images: [totem1, totem2, totem3, totem4],
-      link: "https://vitrinetotem.com.br/",
-    },
-  ];
+const projects = [
+  {
+    title: "PDV Fácil",
+    descriptionMain:
+      "Ponto de Venda baseado em Android, focado em agilidade e baixo custo para estabelecimentos comerciais.",
+    descriptionList: [
+      "Versatilidade de Hardware: Por ser Android, ele funciona tanto em equipamentos robustos de balcão quanto em maquininhas smart, permitindo mobilidade total no atendimento.",
+      "Gestão Completa: Centraliza o controle de vendas, estoque, comandas, garçons e operações de delivery em uma única interface.",
+      "Foco em Eficiência: Combina um sistema intuitivo e rápido com segurança de dados, sendo ideal para quem busca performance sem precisar de um alto investimento inicial.",
+      'Praticidade: Transforma o dispositivo no "cérebro" do negócio, facilitando desde o fechamento do caixa até a organização das mesas.',
+    ],
+    tech: [
+      { icon: SiReact, name: "React Native", scale: 1 },
+      { icon: FaJava, name: "Java", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiMongodb, name: "MongoDB", scale: 1 },
+      { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
+      { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    ],
+    images: [pdv1, pdv2, pdv3, pdv4],
+    link: "https://pdvfacil.app.br/",
+  },
+  {
+    title: "Vitrine Totem",
+    descriptionMain:
+      "Autoatendimento focado em autonomia e produtividade, eliminando intermediários no processo de compra para acelerar o giro do estabelecimento.",
+    descriptionList: [
+      "Autonomia do Cliente: O próprio consumidor realiza o pedido e o pagamento de forma digital, eliminando o uso de papel e reduzindo erros humanos ou dependência de garçons.",
+      "Fluxo Automatizado: Assim que o pagamento é confirmado, o pedido é enviado instantaneamente para a produção na cozinha, otimizando o tempo de entrega.",
+      "Experiência Visual: O totem funciona como uma vitrine interativa, permitindo a exibição de vídeos, promoções e conteúdos personalizados que atraem o público.",
+      "Gestão Centralizada: Todo o processo — do pedido à impressão e desempenho de vendas — fica conectado ao sistema principal, garantindo controle total da operação em um só lugar.",
+    ],
+    tech: [
+      { icon: SiReact, name: "React Native", scale: 1 },
+      { icon: FaJava, name: "Java", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiMongodb, name: "MongoDB", scale: 1 },
+      { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
+      { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    ],
+    images: [totem1, totem2, totem3, totem4],
+    link: "https://vitrinetotem.com.br/",
+  },
+  {
+    title: "Tablet Fácil",
+    descriptionMain:
+      "Solução de autoatendimento na mesa, focada em dar autonomia ao cliente e reduzir a carga de trabalho da equipe de salão.",
+    descriptionList: [
+      "Autonomia Total na Mesa: O cliente visualiza o cardápio digital, escolhe os itens e faz o pedido sozinho, eliminando a dependência de garçons e o uso de papel.",
+      "Pagamento Integrado (Tap to Pay): Permite finalizar a conta diretamente no tablet por aproximação, dispensando o uso de maquininhas externas e agilizando o fechamento.",
+      "Fluxo em Tempo Real: Os pedidos feitos no tablet são enviados automaticamente para a cozinha e integrados ao painel de gestão, garantindo precisão e acompanhamento de desempenho.",
+      "Experiência Moderna e Fluida: O equipamento é compacto e personalizável com a marca do negócio, ajudando a evitar filas no balcão e tornando a jornada do cliente mais prática e tecnológica.",
+    ],
+    tech: [
+      { icon: SiReact, name: "React Native", scale: 1 },
+      { icon: FaJava, name: "Java", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiMongodb, name: "MongoDB", scale: 1 },
+      { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
+      { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    ],
+    images: [tablet1, tablet2, tablet3],
+    link: "https://tabletfacil.com.br/",
+  },
+  {
+    title: "Menu Digital",
+    descriptionMain:
+      "Solução de cardápio digital via QR Code e Delivery Próprio, focada em maximizar o lucro eliminando intermediários e taxas de comissão.",
+    descriptionList: [
+      "Aumento de Faturamento: Potencializa as vendas em até 200% através de um cardápio visual com fotos e descrições atraentes, que estimulam o consumo de acompanhamentos.",
+      "Redução de Custos Operacionais: O cliente faz o pedido pelo próprio celular na mesa, diminuindo em até 50% os gastos com equipe e eliminando erros humanos no lançamento.",
+      "Lucro Total (Zero Comissões): Diferente de apps de terceiros, o valor das vendas fica 100% com o estabelecimento, sem taxas ocultas ou mensalidades variáveis sobre o faturamento.",
+      "Autonomia e Fidelização: Proporciona uma jornada de compra rápida e sem filas, aumentando a satisfação do cliente, o que gera mais indicações e retorno ao local.",
+    ],
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiMongodb, name: "MongoDB", scale: 1 },
+      { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
+      { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    ],
+    images: [menu1, menu2, menu3, menu4],
+    link: "https://www.menufacil.app/",
+  },
+  {
+    title: "Portal POS",
+    descriptionMain:
+      "Central de inteligência e integração, que unifica a gestão de todos os canais de venda e automatiza a comunicação entre o salão, cozinha e delivery.",
+    descriptionList: [
+      "Gestão Centralizada: Funciona como um painel único onde você atualiza cardápios, preços e configurações para todos os aplicativos e PDVs simultaneamente, eliminando o trabalho manual repetitivo.",
+      "Automação do Fluxo de Pedidos: Integra os pedidos do delivery e do balcão diretamente ao sistema, enviando-os em tempo real para a cozinha (KDS) sem necessidade de redigitação ou uso de papel.",
+      "Painel de Senhas Inteligente: Gerencia automaticamente o status do pedido (em preparo → pronto), chamando o cliente para a retirada assim que a cozinha finaliza a produção, o que organiza o fluxo do estabelecimento.",
+      "Visão Gerencial Completa: Oferece relatórios unificados de vendas por canal, permitindo identificar quais plataformas trazem mais lucro e evitando perdas com pedidos esquecidos ou duplicados.",
+      "Eficiência Operacional: Reduz drasticamente erros de comunicação e aumenta o foco da equipe no atendimento, já que a tecnologia cuida da transmissão de dados entre os setores.",
+    ],
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiStyledcomponents, name: "Styled Components", scale: 1.6 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiMongodb, name: "MongoDB", scale: 1 },
+      { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
+      { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: ScrumIcon, name: "Scrum", scale: 1 },
+    ],
+    images: [portalPos1, portalPos2, portalPos3, portalPos4],
+    link: "https://portal.colibri.com.br/",
+  },
+];
 
+export function Projects() {
   return (
     <Section id="projects">
       <Container>

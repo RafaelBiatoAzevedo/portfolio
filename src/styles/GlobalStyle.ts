@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 1.5px;
   }
 
-  span, p, li {
+  span, p, li, a {
     letter-spacing: 0.4px;
   }
 

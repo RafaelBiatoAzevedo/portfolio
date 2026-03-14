@@ -17,6 +17,14 @@ import profile from "../../assets/RafaelAzevedoHitech.png";
 import { SocialLinks } from "../../components/SocialLinks";
 
 export const Hero = () => {
+  const onClickPrimary = (): void => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const onClickSecondary = (): void => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Section id="hero">
       <Wrapper>
@@ -36,8 +44,10 @@ export const Hero = () => {
           </Description>
 
           <ButtonGroup>
-            <ButtonPrimary>Ver Projetos</ButtonPrimary>
-            <ButtonSecondary>Contato</ButtonSecondary>
+            <ButtonPrimary onClick={onClickPrimary}>Projetos</ButtonPrimary>
+            <ButtonSecondary onClick={onClickSecondary}>
+              Contato
+            </ButtonSecondary>
           </ButtonGroup>
 
           <SocialLinks />
