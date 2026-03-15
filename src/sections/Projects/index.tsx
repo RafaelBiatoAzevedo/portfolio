@@ -219,9 +219,15 @@ export function Projects() {
                 <p>{project.descriptionMain}</p>
 
                 <DescriptionListWrapper>
-                  {project.descriptionList.map((description, index) => (
-                    <li key={index}>{description}</li>
-                  ))}
+                  {project.descriptionList.map((description, index) => {
+                    const [title, text] = description.split(":");
+
+                    return (
+                      <li key={index}>
+                        <strong>{title}:</strong> {text}
+                      </li>
+                    );
+                  })}
                 </DescriptionListWrapper>
 
                 <IconsRow>

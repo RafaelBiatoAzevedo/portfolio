@@ -28,7 +28,9 @@ import {
 
 import { FaDownload, FaExternalLinkAlt } from "react-icons/fa";
 
+//logos
 import trybeLogo from "../../assets/courses/trybeIcon.png";
+import aiFullcycleLogo from "../../assets/courses/fullcycleLogo.png";
 
 //Certificates
 import mainCertificateImage from "../../assets/certificates/MainCertificate.png";
@@ -36,6 +38,7 @@ import computerScienceCertificateImage from "../../assets/certificates/ComputerS
 import backEndCertificateImage from "../../assets/certificates/BackEnd.png";
 import frontEndCertificateImage from "../../assets/certificates/FrontEnd.png";
 import fundamentalsCertificateImage from "../../assets/certificates/Fundamentals.png";
+import mainAiFullcycleCertificateImage from "../../assets/certificates/AiFullCycle.png";
 
 //PDFs
 import mainCertificatePdf from "../../assets/certificates/pdf/MainCertificate.pdf";
@@ -43,11 +46,40 @@ import computerScienceCertificatePdf from "../../assets/certificates/pdf/Compute
 import backEndCertificatePdf from "../../assets/certificates/pdf/BackEnd.pdf";
 import frontEndCertificatePdf from "../../assets/certificates/pdf/FrontEnd.pdf";
 import fundamentalsCertificatePdf from "../../assets/certificates/pdf/Fundamentals.pdf";
+import mainAiFullcycleCertificatePdf from "../../assets/certificates/pdf/AiFullCycle.pdf";
 
 export const Courses = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const courses = [
+    {
+      school: "FullCycle",
+      logo: aiFullcycleLogo,
+      name: "Desenvolvimento com IA",
+      startDate: "Mar 2026",
+      endDate: "Mar 2026",
+      qtdHours: 8,
+      status: "Concluído",
+      contents: [
+        "Prompt e Context Engineering",
+        "Integrar aplicações usando IA (vai muinto além de usar SDK da OpenAI)",
+        "Criar Agentes de IA",
+        "Criar skills para agentes IA",
+        "Problemas que não existiam e que a IA nos trouxe",
+        "Entendimento aprofundado sobre o que são agentes de IA",
+        "Gerenciamento de prompts e o impacto nos agentes",
+        "Retrieval Augmented Generation (RAG)",
+        "Frameworks para desenvolvimento de agentes",
+      ],
+      mainCertificate: {
+        image: mainAiFullcycleCertificateImage,
+        name: "Desenvolvimento Web",
+        link: "",
+        pdf: mainAiFullcycleCertificatePdf,
+        contents: [],
+      },
+      certificatesAdditionals: [],
+    },
     {
       school: "Trybe",
       logo: trybeLogo,
@@ -200,53 +232,64 @@ export const Courses = () => {
                         <FaDownload /> Download
                       </ActionButton>
 
-                      <ActionButton href={mainCertificate.link} target="_blank">
-                        <FaExternalLinkAlt /> Credencial
-                      </ActionButton>
+                      {!!mainCertificate.link && (
+                        <ActionButton
+                          href={mainCertificate.link}
+                          target="_blank"
+                        >
+                          <FaExternalLinkAlt /> Credencial
+                        </ActionButton>
+                      )}
                     </ActionButtons>
                   </MainCertificate>
                 )}
               </CourseContent>
-              <ToggleWrapper>
-                <ToggleButton onClick={() => setIsOpen(!isOpen)}>
-                  {isOpen
-                    ? "Ocultar certificados dos módulos"
-                    : "Ver certificados dos módulos"}
-                </ToggleButton>
-              </ToggleWrapper>
-              <ExpandableContainer $isOpen={isOpen}>
-                <Grid>
-                  {certificatesAdditionals.map(
-                    ({ image, name, link, pdf, contents }, index) => (
-                      <FeaturedCard key={index}>
-                        <FeaturedLeft>
-                          <CertificateImage src={image} />
+              {certificatesAdditionals.length && (
+                <>
+                  <ToggleWrapper>
+                    <ToggleButton onClick={() => setIsOpen(!isOpen)}>
+                      {isOpen
+                        ? "Ocultar certificados dos módulos"
+                        : "Ver certificados dos módulos"}
+                    </ToggleButton>
+                  </ToggleWrapper>
+                  <ExpandableContainer $isOpen={isOpen}>
+                    <Grid>
+                      {certificatesAdditionals.map(
+                        ({ image, name, link, pdf, contents }, index) => (
+                          <FeaturedCard key={index}>
+                            <FeaturedLeft>
+                              <CertificateImage src={image} />
 
-                          <ActionButtons>
-                            <ActionButton href={pdf} download>
-                              <FaDownload /> Download
-                            </ActionButton>
+                              <ActionButtons>
+                                <ActionButton href={pdf} download>
+                                  <FaDownload /> Download
+                                </ActionButton>
 
-                            <ActionButton href={link} target="_blank">
-                              <FaExternalLinkAlt /> Credencial
-                            </ActionButton>
-                          </ActionButtons>
-                        </FeaturedLeft>
+                                {!!link && (
+                                  <ActionButton href={link} target="_blank">
+                                    <FaExternalLinkAlt /> Credencial
+                                  </ActionButton>
+                                )}
+                              </ActionButtons>
+                            </FeaturedLeft>
 
-                        <FeaturedRight>
-                          <h4>{name}</h4>
+                            <FeaturedRight>
+                              <h4>{name}</h4>
 
-                          <CertificateList>
-                            {contents.map((content, index) => (
-                              <li key={index}>{content}</li>
-                            ))}
-                          </CertificateList>
-                        </FeaturedRight>
-                      </FeaturedCard>
-                    ),
-                  )}
-                </Grid>
-              </ExpandableContainer>
+                              <CertificateList>
+                                {contents.map((content, index) => (
+                                  <li key={index}>{content}</li>
+                                ))}
+                              </CertificateList>
+                            </FeaturedRight>
+                          </FeaturedCard>
+                        ),
+                      )}
+                    </Grid>
+                  </ExpandableContainer>
+                </>
+              )}
             </CourseCard>
           ),
         )}
