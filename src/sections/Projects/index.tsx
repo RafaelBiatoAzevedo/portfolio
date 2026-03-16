@@ -16,6 +16,8 @@ import {
   ActionButton,
 } from "./styles";
 
+import smartInvoiceExtrator from "../../assets/projects/SmartInvoiceExtrator/ExtartorLLMInvoices.png";
+
 import pdv1 from "../../assets/projects/PDVFacil/pdvs.webp";
 import pdv2 from "../../assets/projects/PDVFacil/pdvAndroid.png";
 import pdv3 from "../../assets/projects/PDVFacil/pdvMachines.png";
@@ -45,18 +47,41 @@ import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
 import {
   SiBitbucket,
   SiDocker,
+  SiGithub,
   SiMongodb,
   SiMongoose,
   SiNestjs,
   SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiStyledcomponents,
   SiTypescript,
 } from "react-icons/si";
-import { FaAws, FaExternalLinkAlt, FaJava } from "react-icons/fa";
+import { FaAws, FaExternalLinkAlt, FaJava, FaNodeJs } from "react-icons/fa";
 import { TechIcon } from "../../components/TechIcon";
 
 const projects = [
+  {
+    title: "Extrator de Faturas Inteligente (API)",
+    descriptionMain:
+      "Sistema inteligente para processamento, extração e gestão de faturas de energia elétrica, utilizando Inteligência Artificial para transformar documentos não estruturados (PDF) em dados acionáveis.",
+    descriptionList: [
+      'Validação de Resposta da IA: LLMs podem sofrer "alucinações". Implementamos uma camada de validação com Zod imediatamente após a resposta do LLM. Se a IA omitir um campo ou mudar um tipo de dado, o sistema rejeita a entrada antes que ela chegue ao banco.',
+      "Transações Atômicas: No InvoiceRepository, o registro da empresa, do cliente e da fatura ocorre dentro de uma $transaction do Prisma. Isso evita a criação de dados órfãos caso ocorra uma falha no meio do processo de salvamento.",
+      "Prompt Engineering: O prompt enviado ao LLM está configurado para retornar estritamente JSON puro, facilitando o parse e reduzindo drasticamente o consumo de tokens e latência.",
+    ],
+    tech: [
+      { icon: FaNodeJs, name: "Node.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
+      { icon: SiPrisma, name: "Prisma", scale: 1.2 },
+      { icon: SiGithub, name: "GitHub", scale: 1 },
+    ],
+    images: [smartInvoiceExtrator],
+    link: "https://energy-api-six.vercel.app/docs",
+  },
   {
     title: "PDV Fácil",
     descriptionMain:
