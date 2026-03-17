@@ -12,7 +12,7 @@ export const IconItem = styled.div`
   }
 
   &:hover svg {
-    transform: translateY(-5px);
+    //transform: translateY(-5px);
     color: ${({ theme }) => theme.colors.primary};
   }
 

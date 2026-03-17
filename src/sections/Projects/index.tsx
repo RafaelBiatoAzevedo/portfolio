@@ -16,6 +16,10 @@ import {
   ActionButton,
 } from "./styles";
 
+import zoki1 from "../../assets/projects/GestorLoteamento/zokiCRM.png";
+import zoki2 from "../../assets/projects/GestorLoteamento/ZokiHome.png";
+import zoki3 from "../../assets/projects/GestorLoteamento/usingZoki.png";
+
 import smartInvoiceExtrator from "../../assets/projects/SmartInvoiceExtrator/ExtartorLLMInvoices.png";
 
 import pdv1 from "../../assets/projects/PDVFacil/pdvs.webp";
@@ -47,6 +51,7 @@ import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
 import {
   SiBitbucket,
   SiDocker,
+  SiDotnet,
   SiGithub,
   SiMongodb,
   SiMongoose,
@@ -57,9 +62,14 @@ import {
   SiReact,
   SiStyledcomponents,
   SiTypescript,
+  SiVuedotjs,
+  SiVuetify,
 } from "react-icons/si";
 import { FaAws, FaExternalLinkAlt, FaJava, FaNodeJs } from "react-icons/fa";
 import { TechIcon } from "../../components/TechIcon";
+import { TbBrandCSharp } from "react-icons/tb";
+import { KanbanIcon } from "../../assets/SVGs/kanbanIcon";
+import { SwaggerIcon } from "../../assets/SVGs/swaggerIcon";
 
 const projects = [
   {
@@ -83,6 +93,36 @@ const projects = [
     link: "https://energy-api-six.vercel.app/docs",
   },
   {
+    title: "Gestor de loteamentos",
+    descriptionMain:
+      "Plataforma de inteligência imobiliária e financeira, projetada para centralizar o ciclo de vida completo de empreendimentos, do lead à liquidação das parcelas.",
+    descriptionList: [
+      "Controle de Empreendimentos: Centraliza a organização de quadras e lotes, integrando disponibilidade de vendas, contratos e fluxos financeiros em uma interface única.",
+      "Modelagem de Amortização: Gestão profissional de contratos de longo prazo utilizando tabelas Price ou SAC, com suporte nativo para distratos, aditivos e histórico auditável por cliente.",
+      "Reajustes Automáticos: Aplicação precisa de índices (INPC, IPCA, IGP-M) com rastreabilidade total e atualização imediata do fluxo de caixa projetado.",
+      "Régua de Relacionamento: Sistema de cobrança automatizado via WhatsApp, E-mail e SMS, reduzindo a inadimplência através de notificações inteligentes e facilitação de renegociações.",
+      "Visibilidade de Caixa: Projeção clara de receitas baseada em contratos reais, permitindo distinguir com precisão parcelas a vencer, liquidadas e em atraso.",
+      "Funil de Vendas Imobiliário: Conecta a captação de leads diretamente à geração de propostas e contratos, eliminando o retrabalho entre as áreas comercial e administrativa.",
+      "Portal de Autoatendimento: Área exclusiva para o comprador acessar boletos, consultar o extrato de parcelas e baixar documentos, diminuindo a carga de suporte operacional.",
+      "Relatórios Estratégicos: Painéis financeiros e gerenciais focados em tomada de decisão, análise de crédito e prestação de contas para investidores.",
+    ],
+    tech: [
+      { icon: SiVuedotjs, name: "Vue.js", scale: 1 },
+      { icon: SiVuetify, name: "Vuetify", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: TbBrandCSharp, name: "C#", scale: 1 },
+      { icon: SiDotnet, name: ".NET", scale: 1.2 },
+      { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
+      { icon: SiGithub, name: "GitHub", scale: 1 },
+      { icon: FaAws, name: "AWS", scale: 1 },
+      { icon: SiDocker, name: "Docker", scale: 1 },
+      { icon: KanbanIcon, name: "Kanban", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
+    ],
+    images: [zoki1, zoki2, zoki3],
+    link: "https://zoki.com.br/",
+  },
+  {
     title: "PDV Fácil",
     descriptionMain:
       "Ponto de Venda baseado em Android, focado em agilidade e baixo custo para estabelecimentos comerciais.",
@@ -101,6 +141,7 @@ const projects = [
       { icon: SiMongodb, name: "MongoDB", scale: 1 },
       { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
       { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: ScrumIcon, name: "Scrum", scale: 1 },
@@ -127,6 +168,7 @@ const projects = [
       { icon: SiMongodb, name: "MongoDB", scale: 1 },
       { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
       { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: ScrumIcon, name: "Scrum", scale: 1 },
@@ -153,6 +195,7 @@ const projects = [
       { icon: SiMongodb, name: "MongoDB", scale: 1 },
       { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
       { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: ScrumIcon, name: "Scrum", scale: 1 },
@@ -178,6 +221,7 @@ const projects = [
       { icon: SiMongodb, name: "MongoDB", scale: 1 },
       { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
       { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: ScrumIcon, name: "Scrum", scale: 1 },
@@ -204,6 +248,7 @@ const projects = [
       { icon: SiMongodb, name: "MongoDB", scale: 1 },
       { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
       { icon: SiBitbucket, name: "Bitbucket", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: ScrumIcon, name: "Scrum", scale: 1 },

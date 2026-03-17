@@ -61,6 +61,7 @@ import { TddIcon } from "../../assets/SVGs/tddIcon";
 import { FiMessageCircle, FiTarget } from "react-icons/fi";
 import { LuBrain, LuRefreshCw } from "react-icons/lu";
 import { TechIcon } from "../../components/TechIcon";
+import { SwaggerIcon } from "../../assets/SVGs/swaggerIcon";
 
 export const About = () => {
   const mobile = [
@@ -115,6 +116,7 @@ export const About = () => {
     { icon: SiLinux, name: "Linux", scale: 0.9 },
     { icon: FaAws, name: "AWS", scale: 1 },
     { icon: SiDocker, name: "Docker", scale: 1 },
+    { icon: SwaggerIcon, name: "Swagger", scale: 1 },
     { icon: SiPostman, name: "Postman", scale: 1 },
     { icon: SiInsomnia, name: "Insomnia", scale: 1 },
     { icon: SiVite, name: "Vite", scale: 1 },
