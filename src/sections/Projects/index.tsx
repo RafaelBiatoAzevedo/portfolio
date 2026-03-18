@@ -13,7 +13,9 @@ import {
   ProjectContent,
   DescriptionListWrapper,
   IconsRow,
-  ActionButton,
+  ButtonGroup,
+  ActionButtonPrimary,
+  ActionButtonSecondary,
 } from "./styles";
 
 import zoki1 from "../../assets/projects/GestorLoteamento/zokiCRM.png";
@@ -45,6 +47,10 @@ import portalPos1 from "../../assets/projects/PortalPOS/portalPOS1.webp";
 import portalPos2 from "../../assets/projects/PortalPOS/portalPOS2.png";
 import portalPos3 from "../../assets/projects/PortalPOS/kds.webp";
 import portalPos4 from "../../assets/projects/PortalPOS/painelSenha.webp";
+
+import aleTech from "../../assets/projects/AleTechnology/aleTech.png";
+
+import vahlis from "../../assets/projects/Vahlis/vahlis.png";
 
 import { ScrumIcon } from "../../assets/SVGs/scrumIcon";
 
@@ -86,11 +92,13 @@ const projects = [
       { icon: SiTypescript, name: "TypeScript", scale: 1 },
       { icon: SiNestjs, name: "NestJS", scale: 1 },
       { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
-      { icon: SiPrisma, name: "Prisma", scale: 1.2 },
+      { icon: SiPrisma, name: "Prisma", scale: 1 },
       { icon: SiGithub, name: "GitHub", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
     ],
     images: [smartInvoiceExtrator],
     link: "https://energy-api-six.vercel.app/docs",
+    github: "https://github.com/RafaelBiatoAzevedo/energy-api",
   },
   {
     title: "Gestor de loteamentos",
@@ -114,13 +122,14 @@ const projects = [
       { icon: SiDotnet, name: ".NET", scale: 1.2 },
       { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
       { icon: SiGithub, name: "GitHub", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
       { icon: FaAws, name: "AWS", scale: 1 },
       { icon: SiDocker, name: "Docker", scale: 1 },
       { icon: KanbanIcon, name: "Kanban", scale: 1 },
-      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
     ],
     images: [zoki1, zoki2, zoki3],
     link: "https://zoki.com.br/",
+    github: "",
   },
   {
     title: "PDV Fácil",
@@ -148,6 +157,7 @@ const projects = [
     ],
     images: [pdv1, pdv2, pdv3, pdv4],
     link: "https://pdvfacil.app.br/",
+    github: "",
   },
   {
     title: "Vitrine Totem",
@@ -175,6 +185,7 @@ const projects = [
     ],
     images: [totem1, totem2, totem3, totem4],
     link: "https://vitrinetotem.com.br/",
+    github: "",
   },
   {
     title: "Tablet Fácil",
@@ -202,6 +213,7 @@ const projects = [
     ],
     images: [tablet1, tablet2, tablet3],
     link: "https://tabletfacil.com.br/",
+    github: "",
   },
   {
     title: "Menu Digital",
@@ -228,6 +240,7 @@ const projects = [
     ],
     images: [menu1, menu2, menu3, menu4],
     link: "https://www.menufacil.app/",
+    github: "",
   },
   {
     title: "Portal POS",
@@ -255,6 +268,49 @@ const projects = [
     ],
     images: [portalPos1, portalPos2, portalPos3, portalPos4],
     link: "https://portal.colibri.com.br/",
+    github: "",
+  },
+  {
+    title: "Ale Technology",
+    descriptionMain:
+      "Landing page de venda e manutenção de dispositivos premium, unindo precisão técnica a peças de alta qualidade para Apple e Xiaomi.",
+    descriptionList: [
+      "IPhones e MacBooks: Comercialização de aparelhos novos e seminovos com garantia, procedência verificada e foco no ecossistema Apple.",
+      "Linha Xiaomi: Smartphones e acessórios globais com o melhor custo-benefício do mercado, prontos para uso.",
+      "Manutenção de iPhones: Troca de telas, baterias, conectores e reparos em placa com ferramentas de precisão e vedação original.",
+      "Reparo de MacBooks: Limpeza interna, upgrade de SSD/Memória, reparo de carcaça e solução de problemas de software/MacOS.",
+      "Suporte Xiaomi: Troca de componentes, recuperação de sistema (MIUI) e reparos físicos especializados na linha Android.",
+      "Orçamento Rápido: Diagnóstico preciso e transparente, explicando cada etapa do reparo para que você saiba exatamente o que está sendo feito.",
+      "Peças de Primeira Linha: Utilização de componentes homologados que preservam a vida útil e a performance original do seu equipamento.",
+    ],
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiGithub, name: "GitHub", scale: 1 },
+    ],
+    images: [aleTech],
+    link: "https://aletecsite.netlify.app/",
+    github: "https://github.com/RafaelBiatoAzevedo/aleTec",
+  },
+  {
+    title: "Vahlis Incorporadora",
+    descriptionMain:
+      "Landing page de uma incorporadora que é uma referência em inteligência imobiliária e urbanismo de alto padrão, unindo uma tradição de quase um século à visão estratégica de mercado para criar ativos de valor geracional.",
+    descriptionList: [
+      "Tradição desde 1933: Fundada por Santos Vahlis, a incorporadora acumula uma trajetória de excelência com mais de 200 empreendimentos que moldaram o cenário urbano nacional.",
+      "Identificação Estratégica: Mapeamento rigoroso de áreas com alto potencial de valorização, analisando métricas de preço por metro quadrado, infraestrutura e demanda reprimida.",
+      "Concepção de Projetos: Criação de plantas arquitetônicas alinhadas ao perfil da região, unindo elegância, rigor técnico e as mais altas exigências do mercado imobiliário.",
+      "Foco no Investidor: Desenvolvimento de espaços que transcendem a construção civil, focados na valorização do capital para investidores e na experiência de vida para os moradores.",
+      "Construção de Narrativas: Entrega de empreendimentos que funcionam como legados duradouros, integrando-se de forma inteligente e estética à evolução das cidades.",
+    ],
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiGithub, name: "GitHub", scale: 1 },
+    ],
+    images: [vahlis],
+    link: "https://vahlis.netlify.app/",
+    github: "https://github.com/RafaelBiatoAzevedo/site-vahlis",
   },
 ];
 
@@ -311,9 +367,19 @@ export function Projects() {
                   ))}
                 </IconsRow>
 
-                <ActionButton href={project.link} target="_blank">
-                  <FaExternalLinkAlt /> Saiba mais
-                </ActionButton>
+                <ButtonGroup>
+                  <ActionButtonPrimary href={project.link} target="_blank">
+                    <FaExternalLinkAlt /> Saiba mais
+                  </ActionButtonPrimary>
+                  {!!project.github && (
+                    <ActionButtonSecondary
+                      href={project.github}
+                      target="_blank"
+                    >
+                      <SiGithub /> GitHub
+                    </ActionButtonSecondary>
+                  )}
+                </ButtonGroup>
               </ProjectContent>
             </ProjectRow>
           ))}

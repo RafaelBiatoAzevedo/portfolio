@@ -88,7 +88,7 @@ export const About = () => {
     { icon: SiExpress, name: "Express.js", scale: 1 },
     { icon: SiNestjs, name: "NestJS", scale: 1 },
     { icon: SiMongoose, name: "Mongoose", scale: 1.2 },
-    { icon: SiPrisma, name: "Prisma", scale: 1.2 },
+    { icon: SiPrisma, name: "Prisma", scale: 1 },
     { icon: TbBrandCSharp, name: "C#", scale: 1 },
     { icon: SiDotnet, name: ".NET", scale: 1.2 },
   ];

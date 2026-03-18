@@ -46,7 +46,12 @@ export const ProjectContent = styled.div`
   }
 `;
 
-export const ActionButton = styled.a`
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+export const ActionButtonPrimary = styled.a`
   width: fit-content;
   display: inline-flex;
   align-items: center;
@@ -64,6 +69,28 @@ export const ActionButton = styled.a`
 
   &:hover {
     opacity: 0.85;
+  }
+`;
+
+export const ActionButtonSecondary = styled.a`
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary};
+    color: #fff;
   }
 `;
 
