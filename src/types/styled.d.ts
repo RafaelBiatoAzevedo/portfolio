@@ -12,10 +12,14 @@ declare module "styled-components" {
       textSoft: string;
       border: string;
     };
-    resolutions: {
-      small: string;
-      medium: string;
+
+    breakpoints: {
+      smallMobile: string;
+      mobile: string;
       tablet: string;
+      laptop: string;
+      desktop: string;
+      fullhd: string;
     };
   }
 }

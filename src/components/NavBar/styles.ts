@@ -17,6 +17,18 @@ export const Container = styled.nav`
   transition: all 0.3s ease;
 
   z-index: 1000;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 0 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0 3%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 50px;
+  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -29,6 +41,11 @@ export const Logo = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 36px;
+    height: 36px;
+  }
 `;
 
 export const Menu = styled.ul`
@@ -112,5 +129,85 @@ export const LanguageButton = styled.button`
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+export const DesktopOnly = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+export const MobileOnly = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: block;
+  }
+`;
+
+export const Hamburger = styled.button`
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  span {
+    height: 3px;
+    width: 100%;
+    background: ${({ theme }) => theme.colors.textSoft};
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 26px;
+    height: 18px;
+
+    span {
+      height: 2px;
+    }
+  }
+`;
+
+export const MobileMenu = styled.div<{ $open: boolean }>`
+  position: fixed;
+  top: 70px;
+  right: 0;
+
+  width: 50%;
+  height: 100vh;
+
+  background: ${({ theme }) => theme.colors.surface};
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem;
+
+  transform: ${({ $open }) => ($open ? "translateX(0)" : "translateX(100%)")};
+
+  transition: 0.3s;
+
+  z-index: 999;
+
+  ${MenuItem} {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    top: 50px;
+    width: 60%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    width: 100%;
   }
 `;

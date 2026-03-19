@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   span, p, li, a {
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
   }
 
   button {
@@ -41,23 +41,24 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     background: none;
     color: ${({ theme }) => theme.colors.text};
+    letter-spacing: 0.5px;
   }
 
-  @media (max-width: ${({ theme }) => theme.resolutions.medium}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     html {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.resolutions.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
     html {
       font-size: 10px;
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     html {
-      font-size: 9px;
+      font-size: 8px;
     }
   }
 `;

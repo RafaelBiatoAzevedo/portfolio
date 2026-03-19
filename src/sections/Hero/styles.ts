@@ -27,6 +27,19 @@ export const Section = styled.section`
 
     pointer-events: none;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 0 4%;
+    padding-top: 70px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0 3%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-top: 50px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -36,7 +49,11 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   gap: 4rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    gap: 2rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -47,10 +64,14 @@ export const Content = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  flex: 1;
+  flex: 0.8;
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    flex: 0.6;
+  }
 `;
 
 export const ProfileImage = styled.img`
@@ -58,14 +79,18 @@ export const ProfileImage = styled.img`
   max-width: 100%;
   border-radius: 20px;
   object-fit: cover;
-  /* box-shadow:
-    0 0 80px ${({ theme }) => theme.colors.primary}46,
-    0 0 180px ${({ theme }) => theme.colors.primary}83;
-  transition: 0.4s;
 
-  &:hover {
-    transform: translateY(-8px);
-  } */
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 350px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    width: 300px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 250px;
+  }
 `;
 
 export const Greeting = styled.h1`
@@ -89,19 +114,27 @@ export const Description = styled.p`
   font-size: 1.2rem;
   line-height: 1.6;
   color: ${({ theme }) => theme.colors.textSoft};
-  margin-bottom: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0px 4rem;
+  }
 `;
 
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
+  margin: 4rem 0px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    justify-content: center;
+  }
 `;
 
 export const ButtonPrimary = styled.button`
   padding: 0.8rem 1.8rem;
   background: ${({ theme }) => theme.colors.primary};
   color: #fff;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 600;
   transition: 0.3s;
 
@@ -114,7 +147,7 @@ export const ButtonSecondary = styled.button`
   padding: 0.8rem 1.8rem;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.primary};
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 600;
   transition: 0.3s;
 

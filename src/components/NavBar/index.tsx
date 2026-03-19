@@ -1,11 +1,15 @@
 import {
   ActionsWrapper,
   Container,
+  DesktopOnly,
+  Hamburger,
   LanguageButton,
   Logo,
   LogoWrapper,
   Menu,
   MenuItem,
+  MobileMenu,
+  MobileOnly,
   SwitchCircle,
   ThemeSwitch,
 } from "./styles";
@@ -13,6 +17,7 @@ import { useTranslation } from "react-i18next";
 
 import profile from "../../assets/caricature.png";
 import { useEffect, useState } from "react";
+import { SocialLinks } from "../SocialLinks";
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -31,6 +36,7 @@ const sections = [
 
 export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
   const [active, setActive] = useState("hero");
+  const [isOpen, setIsOpen] = useState(false);
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
@@ -62,31 +68,73 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
     localStorage.setItem("portfolio-language", newLang);
   };
 
+  const handleClick = () => setIsOpen(false);
+
   return (
     <Container>
       <LogoWrapper>
         <Logo src={profile} alt="Rafael caricature" />
       </LogoWrapper>
 
-      <Menu>
+      <DesktopOnly>
+        <Menu>
+          {sections.map((id) => (
+            <MenuItem key={id} as="a" href={`#${id}`} $active={active === id}>
+              {t(`nav.${id}`)}
+            </MenuItem>
+          ))}
+        </Menu>
+      </DesktopOnly>
+
+      <DesktopOnly>
+        <ActionsWrapper>
+          <ThemeSwitch onClick={toggleTheme}>
+            <SwitchCircle themeMode={theme}>
+              {theme === "dark" ? "🌙" : "☀️"}
+            </SwitchCircle>
+          </ThemeSwitch>
+
+          <LanguageButton onClick={toggleLanguage}>
+            {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
+          </LanguageButton>
+        </ActionsWrapper>
+      </DesktopOnly>
+
+      <MobileOnly>
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+      </MobileOnly>
+
+      <MobileMenu $open={isOpen}>
         {sections.map((id) => (
-          <MenuItem key={id} as="a" href={`#${id}`} $active={active === id}>
+          <MenuItem
+            key={id}
+            as="a"
+            href={`#${id}`}
+            $active={active === id}
+            onClick={handleClick}
+          >
             {t(`nav.${id}`)}
           </MenuItem>
         ))}
-      </Menu>
 
-      <ActionsWrapper>
-        <ThemeSwitch onClick={toggleTheme}>
-          <SwitchCircle themeMode={theme}>
-            {theme === "dark" ? "🌙" : "☀️"}
-          </SwitchCircle>
-        </ThemeSwitch>
+        <ActionsWrapper>
+          <ThemeSwitch onClick={toggleTheme}>
+            <SwitchCircle themeMode={theme}>
+              {theme === "dark" ? "🌙" : "☀️"}
+            </SwitchCircle>
+          </ThemeSwitch>
 
-        <LanguageButton onClick={toggleLanguage}>
-          {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
-        </LanguageButton>
-      </ActionsWrapper>
+          <LanguageButton onClick={toggleLanguage}>
+            {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
+          </LanguageButton>
+        </ActionsWrapper>
+
+        <SocialLinks />
+      </MobileMenu>
     </Container>
   );
 };

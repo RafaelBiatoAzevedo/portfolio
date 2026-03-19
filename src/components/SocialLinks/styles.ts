@@ -35,4 +35,16 @@ export const SocialButton = styled.a`
       0 0 15px ${({ theme }) => theme.colors.primary}66,
       0 0 30px ${({ theme }) => theme.colors.primary}33;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 1.6rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
 `;

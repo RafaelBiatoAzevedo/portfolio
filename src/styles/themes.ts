@@ -9,10 +9,14 @@ export const lightTheme = {
     textSoft: "#4B5563",
     border: "#E5E7EB",
   },
-  resolutions: {
-    small: "480px",
-    medium: "768px",
-    tablet: "1024px",
+
+  breakpoints: {
+    smallMobile: "340px",
+    mobile: "480px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1280px",
+    fullhd: "1920px",
   },
 };
 
@@ -20,7 +24,6 @@ export const darkTheme = {
   colors: {
     background: "#0A0A0A",
     backgroundCard: " #0485C910",
-    //backgroundCard: "#161616",
     surface: "#111827",
     primary: "#0485C9",
     secondary: "#8B5CF6",
@@ -28,9 +31,13 @@ export const darkTheme = {
     textSoft: "#9CA3AF",
     border: "#1F2937",
   },
-  resolutions: {
-    small: "480px",
-    medium: "768px",
-    tablet: "1024px",
+
+  breakpoints: {
+    smallMobile: "340px",
+    mobile: "480px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1280px",
+    fullhd: "1920px",
   },
 };
