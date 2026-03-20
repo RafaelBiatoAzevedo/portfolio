@@ -7,13 +7,13 @@ interface SwaggerIconProps {
 }
 
 export const SwaggerIcon: React.FC<SwaggerIconProps> = ({
-  size = 42,
+  size,
   color = "currentColor",
 }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={size || "1.3em"}
+      height={size || "1.3em"}
       viewBox="0 0 256 256"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

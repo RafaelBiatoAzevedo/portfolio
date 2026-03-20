@@ -7,18 +7,17 @@ interface TddIconProps {
 }
 
 export const TddIcon: React.FC<TddIconProps> = ({
-  size = 32,
+  size,
   color = "currentColor",
 }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={size || "1.2em"}
+      height={size || "1.2em"}
       viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Círculo principal (ciclo) */}
       <circle
         cx="32"
         cy="32"
@@ -28,12 +27,10 @@ export const TddIcon: React.FC<TddIconProps> = ({
         strokeDasharray="6 6"
       />
 
-      {/* 3 pontos do ciclo */}
       <circle cx="32" cy="10" r="4" fill={color} />
       <circle cx="52" cy="42" r="4" fill={color} />
       <circle cx="12" cy="42" r="4" fill={color} />
 
-      {/* Check central */}
       <path
         d="M26 32l4 4 8-10"
         stroke={color}

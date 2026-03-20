@@ -1,13 +1,16 @@
 import {
   ActionsWrapper,
   Container,
+  Copy,
   DesktopOnly,
+  FooterMenuMobile,
   Hamburger,
   LanguageButton,
   Logo,
   LogoWrapper,
   Menu,
   MenuItem,
+  MenuWrapper,
   MobileMenu,
   MobileOnly,
   SwitchCircle,
@@ -109,31 +112,36 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
       </MobileOnly>
 
       <MobileMenu $open={isOpen}>
-        {sections.map((id) => (
-          <MenuItem
-            key={id}
-            as="a"
-            href={`#${id}`}
-            $active={active === id}
-            onClick={handleClick}
-          >
-            {t(`nav.${id}`)}
-          </MenuItem>
-        ))}
+        <MenuWrapper>
+          {sections.map((id) => (
+            <MenuItem
+              key={id}
+              as="a"
+              href={`#${id}`}
+              $active={active === id}
+              onClick={handleClick}
+            >
+              {t(`nav.${id}`)}
+            </MenuItem>
+          ))}
 
-        <ActionsWrapper>
-          <ThemeSwitch onClick={toggleTheme}>
-            <SwitchCircle themeMode={theme}>
-              {theme === "dark" ? "🌙" : "☀️"}
-            </SwitchCircle>
-          </ThemeSwitch>
+          <ActionsWrapper>
+            <ThemeSwitch onClick={toggleTheme}>
+              <SwitchCircle themeMode={theme}>
+                {theme === "dark" ? "🌙" : "☀️"}
+              </SwitchCircle>
+            </ThemeSwitch>
 
-          <LanguageButton onClick={toggleLanguage}>
-            {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
-          </LanguageButton>
-        </ActionsWrapper>
+            <LanguageButton onClick={toggleLanguage}>
+              {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
+            </LanguageButton>
+          </ActionsWrapper>
+        </MenuWrapper>
 
-        <SocialLinks />
+        <FooterMenuMobile>
+          <SocialLinks />
+          <Copy>© {new Date().getFullYear()} Rafael Azevedo</Copy>
+        </FooterMenuMobile>
       </MobileMenu>
     </Container>
   );

@@ -37,11 +37,11 @@ function App() {
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Hero />
       <About />
-      <Projects />
+      {/* <Projects />
       <Experiences />
       <Education />
       <Courses />
-      <Contact />
+      <Contact /> */}
     </ThemeProvider>
   );
 }

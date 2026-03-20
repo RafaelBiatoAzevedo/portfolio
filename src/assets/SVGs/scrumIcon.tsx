@@ -7,13 +7,13 @@ interface ScrumIconProps {
 }
 
 export const ScrumIcon: React.FC<ScrumIconProps> = ({
-  size = 42,
+  size,
   color = "currentColor",
 }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={size || "1.2em"}
+      height={size || "1.2em"}
       viewBox="0 0 14 14"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"

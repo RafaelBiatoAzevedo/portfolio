@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  min-height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   padding: 0 8%;
@@ -38,7 +38,7 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding-top: 50px;
+    margin-top: 25px;
   }
 `;
 
@@ -47,6 +47,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 4rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -89,7 +90,7 @@ export const ProfileImage = styled.img`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: 250px;
+    width: 200px;
   }
 `;
 
@@ -111,8 +112,8 @@ export const Subtitle = styled.h2`
 `;
 
 export const Description = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  line-height: 1.5;
   color: ${({ theme }) => theme.colors.textSoft};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -127,6 +128,10 @@ export const ButtonGroup = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     justify-content: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin: 2rem 0px;
   }
 `;
 

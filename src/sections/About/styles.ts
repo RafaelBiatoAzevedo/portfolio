@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   padding: 8rem 8%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 4rem 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 4rem 3%;
+  }
 `;
 
 export const Content = styled.div`
@@ -10,7 +18,11 @@ export const Content = styled.div`
   gap: 8rem;
   justify-content: space-between;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    gap: 4rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
   }
 `;
@@ -31,6 +43,11 @@ export const Description = styled.p`
   line-height: 1.8;
   color: ${({ theme }) => theme.colors.textSoft};
   margin: 0px 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    margin: 0px 1rem;
+    line-height: 1.6;
+  }
 `;
 
 export const SoftSkillsContainer = styled.div`
@@ -72,6 +89,14 @@ export const StackContainer = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding-left: 2rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-left: 0rem;
+  }
 `;
 
 export const StackCategory = styled.div``;
@@ -106,6 +131,10 @@ export const StatNumber = styled.span`
   font-size: 5rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 4rem;
+  }
 `;
 
 export const StatLabel = styled.span`

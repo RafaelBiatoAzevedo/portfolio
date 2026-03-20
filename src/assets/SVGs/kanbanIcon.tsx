@@ -7,13 +7,13 @@ interface KanbanIconProps {
 }
 
 export const KanbanIcon: React.FC<KanbanIconProps> = ({
-  size = 32,
+  size,
   color = "currentColor",
 }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={size || "1.2em"}
+      height={size || "1.2em"}
       viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

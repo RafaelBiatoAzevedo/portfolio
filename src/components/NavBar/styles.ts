@@ -177,18 +177,20 @@ export const Hamburger = styled.button`
 `;
 
 export const MobileMenu = styled.div<{ $open: boolean }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 70px;
   right: 0;
 
   width: 50%;
-  height: 100vh;
+  height: 100dvh;
 
   background: ${({ theme }) => theme.colors.surface};
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 
   padding: 2rem;
 
@@ -210,4 +212,28 @@ export const MobileMenu = styled.div<{ $open: boolean }>`
   @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     width: 100%;
   }
+`;
+
+export const MenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const FooterMenuMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6.5rem 0px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 5.5rem 0px;
+  }
+`;
+
+export const Copy = styled.p`
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors.textSoft};
 `;
