@@ -2,6 +2,14 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   padding: 8rem 8%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 8rem 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 4rem 3%;
+  }
 `;
 
 export const Container = styled.div`

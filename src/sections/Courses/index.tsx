@@ -48,6 +48,9 @@ import frontEndCertificatePdf from "../../assets/certificates/pdf/FrontEnd.pdf";
 import fundamentalsCertificatePdf from "../../assets/certificates/pdf/Fundamentals.pdf";
 import mainAiFullcycleCertificatePdf from "../../assets/certificates/pdf/AiFullCycle.pdf";
 
+import { FiEye, FiEyeOff } from "react-icons/fi";
+import { FiPlus, FiMinus } from "react-icons/fi";
+
 const courses = [
   {
     school: "FullCycle",
@@ -248,9 +251,15 @@ export const Courses = () => {
                 <>
                   <ToggleWrapper>
                     <ToggleButton onClick={() => setIsOpen(!isOpen)}>
-                      {isOpen
-                        ? "Ocultar certificados dos módulos"
-                        : "Ver certificados dos módulos"}
+                      {isOpen ? (
+                        <>
+                          <FiEyeOff size={"1.7rem"} /> -
+                        </>
+                      ) : (
+                        <>
+                          <FiEye size={"1.7rem"} /> +
+                        </>
+                      )}
                     </ToggleButton>
                   </ToggleWrapper>
                   <ExpandableContainer $isOpen={isOpen}>

@@ -5,11 +5,11 @@ export const Section = styled.section`
   padding: 8rem 8%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    padding: 4rem 4%;
+    padding: 8rem 4%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 4rem 3%;
+    padding: 8rem 3%;
   }
 `;
 
@@ -89,14 +89,6 @@ export const StackContainer = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 1.5rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding-left: 2rem;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding-left: 0rem;
-  }
 `;
 
 export const StackCategory = styled.div``;

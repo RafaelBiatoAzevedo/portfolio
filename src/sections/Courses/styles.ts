@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   padding: 8rem 8%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 8rem 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 8rem 3%;
+  }
 `;
 
 export const Container = styled.div`
@@ -36,6 +44,11 @@ export const CourseContent = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -43,11 +56,23 @@ export const LogoWrapper = styled.div`
   justify-content: center;
   display: flex;
   flex: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex: 0.9;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    flex: 0.8;
+  }
 `;
 
 export const CourseLogo = styled.img`
   width: 50%;
   object-fit: contain;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 20%;
+  }
 `;
 
 export const CourseInfo = styled.div`
@@ -91,11 +116,24 @@ export const MainCertificate = styled.div`
   justify-content: center;
   gap: 1.5rem;
   flex: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex: 0.9;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    flex: 0.8;
+  }
 `;
 
 export const MainCertificateImage = styled.img`
   width: 60%;
   border-radius: 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 80%;
+    border-radius: 4px;
+  }
 `;
 
 export const ActionButtons = styled.div`
@@ -130,17 +168,22 @@ export const ToggleWrapper = styled.div`
 `;
 
 export const ToggleButton = styled.button`
+  display: flex;
+  justify-content: flex-start;
+  gap: 2px;
   background: none;
   border: none;
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 600;
   cursor: pointer;
+
+  font-size: 1.2rem;
 `;
 
 export const ExpandableContainer = styled.div<{ $isOpen: boolean }>`
   overflow: hidden;
   transition: all 0.4s ease;
-  max-height: ${({ $isOpen }) => ($isOpen ? "1000px" : "0")};
+  max-height: ${({ $isOpen }) => ($isOpen ? "2000px" : "0")};
   opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
 `;
 
@@ -148,9 +191,10 @@ export const Grid = styled.div`
   display: grid;
   gap: 2rem;
   margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -162,16 +206,19 @@ export const FeaturedCard = styled.div`
   padding: 1.5rem;
   gap: 1.5rem;
   border-radius: 8px;
-  //border: 1px solid ${({ theme }) => theme.colors.border};
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    flex-direction: column-reverse;
   }
 `;
 
 export const CertificateImage = styled.img`
   width: 100%;
   border-radius: 6px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    width: 80%;
+  }
 `;
 
 export const FeaturedLeft = styled.div`
@@ -180,6 +227,10 @@ export const FeaturedLeft = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex: 0.7;
+  }
 `;
 
 export const FeaturedRight = styled.div`

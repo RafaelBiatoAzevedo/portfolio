@@ -35,6 +35,10 @@ export const BackTopButton = styled.button`
   svg {
     font-size: 1.1rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 export const Container = styled.footer`

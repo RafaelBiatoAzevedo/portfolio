@@ -35,6 +35,23 @@ export const Section = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 3%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 60%;
+
+      background: linear-gradient(
+        to bottom,
+        ${({ theme }) => theme.colors.primary}20,
+        transparent
+      );
+
+      pointer-events: none;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

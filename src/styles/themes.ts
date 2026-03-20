@@ -33,7 +33,7 @@ export const darkTheme = {
   },
 
   breakpoints: {
-    smallMobile: "340px",
+    smallMobile: "360px",
     mobile: "480px",
     tablet: "768px",
     laptop: "1024px",
