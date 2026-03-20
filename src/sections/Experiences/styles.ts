@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   padding: 8rem 8%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 8rem 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 8rem 3%;
+  }
 `;
 
 export const Container = styled.div`
@@ -35,9 +43,10 @@ export const ContentTitle = styled.div`
 export const Grid = styled.div`
   display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -46,6 +55,11 @@ export const LogoWrapper = styled.div`
   height: 80px;
   border-radius: 4px;
   overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const CompanyLogo = styled.img`

@@ -38,7 +38,7 @@ function App() {
       <Hero />
       <About />
       {/* <Projects /> */}
-      {/* <Experiences /> */}
+      <Experiences />
       <Education />
       <Courses />
       <Contact />
