@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const Section = styled.section`
   width: 100%;
   padding: 8rem 8%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: 8rem 4%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 8rem 3%;
+  }
 `;
 
 export const Container = styled.div`
@@ -26,6 +34,16 @@ export const ProjectRow = styled.div<{ reverse?: boolean }>`
 
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   padding: 3rem 0px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: column;
+    margin-bottom: 0rem;
+  }
 `;
 
 export const ProjectContent = styled.div`
@@ -95,11 +113,17 @@ export const ActionButtonSecondary = styled.a`
 `;
 
 export const IconsRow = styled.div`
+  justify-content: center;
   display: flex;
   gap: 2.4rem;
   font-size: 2rem;
   color: ${({ theme }) => theme.colors.textSoft};
   margin-bottom: 1rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 `;
 
 export const DescriptionListWrapper = styled.div`
@@ -113,6 +137,8 @@ export const DescriptionListWrapper = styled.div`
 `;
 
 export const Carousel = styled.div`
+  display: flex;
+  align-items: center;
   flex: 1;
   min-width: 0;
 
@@ -125,5 +151,26 @@ export const Carousel = styled.div`
     width: 700px;
     height: 400px;
     object-fit: contain;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    img {
+      width: 100%;
+      height: 250px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    img {
+      width: 100%;
+      height: 200px;
+    }
   }
 `;

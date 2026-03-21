@@ -41,6 +41,8 @@ export const Logo = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 100%;
+  padding: 1px;
+  border: solid ${({ theme }) => theme.colors.primary} 1px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 36px;
@@ -61,6 +63,7 @@ export const MenuItem = styled.a<{ $active?: boolean }>`
 
   color: ${({ theme, $active }) =>
     $active ? theme.colors.primary : theme.colors.textSoft};
+  font-weight: ${({ $active }) => ($active ? 600 : 400)};
 
   transition: 0.3s;
 

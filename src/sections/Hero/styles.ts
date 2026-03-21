@@ -16,12 +16,12 @@ export const Section = styled.section`
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 70%;
     height: 100%;
 
     background: linear-gradient(
       to left,
-      ${({ theme }) => theme.colors.primary}20,
+      ${({ theme }) => theme.colors.primary}30,
       transparent
     );
 
@@ -42,11 +42,11 @@ export const Section = styled.section`
       top: 0;
       right: 0;
       width: 100%;
-      height: 60%;
+      height: 70%;
 
       background: linear-gradient(
         to bottom,
-        ${({ theme }) => theme.colors.primary}20,
+        ${({ theme }) => theme.colors.primary}30,
         transparent
       );
 
@@ -107,7 +107,7 @@ export const ProfileImage = styled.img`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: 200px;
+    width: 180px;
   }
 `;
 
@@ -119,6 +119,10 @@ export const Greeting = styled.h1`
 export const Title = styled.h1`
   font-size: 5rem;
   color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 3.8rem;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -126,6 +130,10 @@ export const Subtitle = styled.h2`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textSoft};
   margin-bottom: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -135,6 +143,10 @@ export const Description = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0px 4rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 0px 2rem;
   }
 `;
 

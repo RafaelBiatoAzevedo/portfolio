@@ -103,6 +103,10 @@ export const IconsRow = styled.div`
   gap: 2.4rem;
   font-size: 2rem;
   color: ${({ theme }) => theme.colors.textSoft};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 1.9rem;
+  }
 `;
 
 export const Stats = styled.div`
@@ -127,9 +131,17 @@ export const StatNumber = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 4rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 3rem;
+  }
 `;
 
 export const StatLabel = styled.span`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.textSoft};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+  }
 `;

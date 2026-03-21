@@ -58,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     html {
-      font-size: 8px;
+      font-size: 9px;
     }
   }
 `;

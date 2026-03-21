@@ -60,7 +60,7 @@ export const Content = styled.div`
   p {
     opacity: 0.8;
     margin-bottom: 2rem;
-    color: ${({ theme }) => theme.colors.textSoft};
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 

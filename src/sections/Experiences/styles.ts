@@ -91,7 +91,7 @@ export const ExperienceItem = styled.div`
   }
 
   li {
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
     color: ${({ theme }) => theme.colors.textSoft};
   }
 `;
