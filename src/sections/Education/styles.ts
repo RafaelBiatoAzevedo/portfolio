@@ -32,12 +32,10 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 8rem 3%;
     min-height: 40vh;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
-    padding: 8rem 3%;
     min-height: 100px;
   }
 `;
