@@ -237,6 +237,8 @@ export const FeaturedCard = styled.div`
 
     opacity: 0;
     transition: 0.3s;
+
+    pointer-events: none;
   }
 
   &:hover {
