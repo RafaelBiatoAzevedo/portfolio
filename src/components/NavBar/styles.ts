@@ -52,7 +52,7 @@ export const Logo = styled.img`
 
 export const Menu = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 2.4rem;
   list-style: none;
 `;
 
@@ -60,18 +60,18 @@ export const MenuItem = styled.a<{ $active?: boolean }>`
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   text-decoration: none;
 
   color: ${({ theme, $active }) =>
     $active ? theme.colors.primary : theme.colors.textSoft};
-  font-weight: ${({ $active }) => ($active ? 600 : 400)};
+  font-weight: ${({ $active }) => ($active ? 600 : 300)};
 
   transition: 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary}3;
   }
 `;
 

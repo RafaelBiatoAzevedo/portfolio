@@ -17,10 +17,12 @@ function App() {
 
     if (savedTheme) return savedTheme;
 
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    return prefersDark ? "dark" : "light";
+    // const prefersDark = window.matchMedia(
+    //   "(prefers-color-scheme: dark)",
+    // ).matches;
+    //return prefersDark ? "dark" : "light";
+
+    return "dark";
   });
 
   const toggleTheme = () => {

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import "@fontsource/inter-tight/200.css";
+import "@fontsource/inter-tight/300.css";
 import "@fontsource/inter-tight/400.css";
 import "@fontsource/inter-tight/500.css";
 import "@fontsource/inter-tight/600.css";
