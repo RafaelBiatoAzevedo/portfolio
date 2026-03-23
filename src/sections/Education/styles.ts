@@ -39,6 +39,12 @@ export const Section = styled.section`
   @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     min-height: 100px;
   }
+
+  &#education {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      scroll-margin-top: 50px;
+    }
+  }
 `;
 
 export const Container = styled.div`
