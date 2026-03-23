@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 
 import {
   ActionButton,
@@ -49,7 +49,6 @@ import fundamentalsCertificatePdf from "../../assets/certificates/pdf/Fundamenta
 import mainAiFullcycleCertificatePdf from "../../assets/certificates/pdf/AiFullCycle.pdf";
 
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { FiPlus, FiMinus } from "react-icons/fi";
 
 const courses = [
   {
@@ -179,7 +178,11 @@ const courses = [
   },
 ];
 
-export const Courses = () => {
+interface ICoursesProps {
+  themeSelected: string;
+}
+
+export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -205,7 +208,7 @@ export const Courses = () => {
               <CourseTitle>{name}</CourseTitle>
 
               <CourseContent>
-                <LogoWrapper>
+                <LogoWrapper $themeSelected={themeSelected}>
                   <CourseLogo src={logo} />
                 </LogoWrapper>
 

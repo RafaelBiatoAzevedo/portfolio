@@ -45,6 +45,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    position: relative;
+    height: 100px;
+  }
 `;
 
 export const Content = styled.div`
@@ -54,12 +59,39 @@ export const Content = styled.div`
     margin-bottom: 3rem;
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    position: absolute;
+    top: -60px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  }
 `;
 
 export const EducationItem = styled.div`
   display: flex;
   gap: 2rem;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 1rem;
+  }
 `;
 
 export const Logo = styled.img`
@@ -67,6 +99,26 @@ export const Logo = styled.img`
   height: 120px;
   border-radius: 8px;
   object-fit: contain;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Info = styled.div`

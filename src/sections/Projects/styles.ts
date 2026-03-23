@@ -20,7 +20,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     margin-bottom: 3rem;
     color: ${({ theme }) => theme.colors.primary};
@@ -133,6 +133,10 @@ export const DescriptionListWrapper = styled.div`
     font-size: 0.9rem;
     margin-bottom: 0.7rem;
     color: ${({ theme }) => theme.colors.textSoft};
+
+    &::marker {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
 

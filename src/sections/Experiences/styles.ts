@@ -20,7 +20,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     margin-bottom: 3rem;
     color: ${({ theme }) => theme.colors.primary};
@@ -43,6 +43,7 @@ export const ContentTitle = styled.div`
 export const Grid = styled.div`
   display: grid;
   gap: 2rem;
+
   grid-template-columns: repeat(2, 1fr);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -53,8 +54,16 @@ export const Grid = styled.div`
 export const LogoWrapper = styled.div`
   width: 80px;
   height: 80px;
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 12px;
+
+  background: ${({ theme }) => theme.colors.surface};
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 50px;
@@ -69,12 +78,49 @@ export const CompanyLogo = styled.img`
 `;
 
 export const ExperienceItem = styled.div`
+  position: relative;
+
   background: ${({ theme }) => theme.colors.backgroundCard};
   padding: 2.2rem 3rem;
-  border-radius: 12px;
+  border-radius: 16px;
+
+  border: 1px solid ${({ theme }) => theme.colors.border};
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+
+    border-color: ${({ theme }) => theme.colors.primary};
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    &::before {
+      opacity: 1;
+    }
+  }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.4rem;
     color: ${({ theme }) => theme.colors.text};
   }
@@ -87,11 +133,17 @@ export const ExperienceItem = styled.div`
 
   ul {
     padding-left: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: ${({ theme }) => theme.colors.textSoft};
+
+    position: relative;
+
+    &::marker {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;

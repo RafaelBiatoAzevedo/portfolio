@@ -40,7 +40,7 @@ function App() {
       <Projects />
       <Experiences />
       <Education />
-      <Courses />
+      <Courses themeSelected={theme} />
       <Contact />
     </ThemeProvider>
   );

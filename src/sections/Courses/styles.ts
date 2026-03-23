@@ -19,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   margin-bottom: 3rem;
   color: ${({ theme }) => theme.colors.primary};
@@ -29,7 +29,6 @@ export const CourseCard = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 2.5rem;
   border-radius: 16px;
   //border: 1px solid ${({ theme }) => theme.colors.border};
 `;
@@ -51,11 +50,15 @@ export const CourseContent = styled.div`
   }
 `;
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled.div<{ $themeSelected: string }>`
   align-items: center;
   justify-content: center;
   display: flex;
   flex: 1;
+  border-radius: 1rem;
+
+  background: ${({ $themeSelected }) =>
+    $themeSelected === "dark" ? "transparent" : "black"};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     flex: 0.9;
@@ -100,12 +103,16 @@ export const CourseInfo = styled.div`
 `;
 
 export const ContentsList = styled.ul`
-  padding-left: 1.2rem;
+  padding-left: 3rem;
 
   li {
     margin-bottom: 1rem;
     color: ${({ theme }) => theme.colors.textSoft};
     font-size: 1.2rem;
+
+    &::marker {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
 
@@ -192,6 +199,7 @@ export const Grid = styled.div`
   gap: 2rem;
   margin-top: 2rem;
   grid-template-columns: repeat(2, 1fr);
+  padding: 0.5rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     grid-template-columns: repeat(1, 1fr);
@@ -199,13 +207,49 @@ export const Grid = styled.div`
 `;
 
 export const FeaturedCard = styled.div`
-  background: ${({ theme }) => theme.colors.backgroundCard};
+  position: relative;
   display: flex;
   flex-direction: row;
-
-  padding: 1.5rem;
   gap: 1.5rem;
-  border-radius: 8px;
+
+  background: ${({ theme }) => theme.colors.backgroundCard};
+  padding: 1.5rem;
+  border-radius: 12px;
+
+  border: 1px solid ${({ theme }) => theme.colors.border};
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+
+    border-color: ${({ theme }) => theme.colors.primary};
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    &::before {
+      opacity: 1;
+    }
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     flex-direction: column-reverse;
@@ -247,5 +291,9 @@ export const CertificateList = styled.ul`
   li {
     margin-bottom: 0.5rem;
     color: ${({ theme }) => theme.colors.textSoft};
+
+    &::marker {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
