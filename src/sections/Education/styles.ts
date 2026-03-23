@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import campusBg from "../../assets/Campus-I.jpg";
 
 export const Section = styled.section`
   padding: 8rem 8%;
   min-height: 100vh;
   position: relative;
 
-  background: url("/src/assets/Campus-I.jpg") center/cover no-repeat;
+  background: url(${campusBg}) center/cover no-repeat;
 
   &::before {
     content: "";
