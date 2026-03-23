@@ -21,21 +21,30 @@ import { useTranslation } from "react-i18next";
 import profile from "../../assets/caricature.png";
 import { useEffect, useState } from "react";
 import { SocialLinks } from "../SocialLinks";
+import {
+  FiAward,
+  FiBookOpen,
+  FiBriefcase,
+  FiGrid,
+  FiHome,
+  FiMail,
+  FiUser,
+} from "react-icons/fi";
 
 interface NavbarProps {
   toggleTheme: () => void;
   theme: string;
 }
 
-const sections = [
-  "hero",
-  "about",
-  "projects",
-  "experiences",
-  "education",
-  "courses",
-  "contact",
-];
+const sectionAndIcons = {
+  hero: FiHome,
+  about: FiUser,
+  projects: FiGrid,
+  experiences: FiBriefcase,
+  education: FiBookOpen,
+  courses: FiAward,
+  contact: FiMail,
+};
 
 export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
   const [active, setActive] = useState("hero");
@@ -56,7 +65,7 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
       },
     );
 
-    sections.forEach((id) => {
+    Object.keys(sectionAndIcons).forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -81,9 +90,14 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
 
       <DesktopOnly>
         <Menu>
-          {sections.map((id) => (
-            <MenuItem key={id} as="a" href={`#${id}`} $active={active === id}>
-              {t(`nav.${id}`)}
+          {Object.keys(sectionAndIcons).map((name) => (
+            <MenuItem
+              key={name}
+              as="a"
+              href={`#${name}`}
+              $active={active === name}
+            >
+              {t(`nav.${name}`)}
             </MenuItem>
           ))}
         </Menu>
@@ -113,17 +127,20 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
 
       <MobileMenu $open={isOpen}>
         <MenuWrapper>
-          {sections.map((id) => (
-            <MenuItem
-              key={id}
-              as="a"
-              href={`#${id}`}
-              $active={active === id}
-              onClick={handleClick}
-            >
-              {t(`nav.${id}`)}
-            </MenuItem>
-          ))}
+          {Object.entries(sectionAndIcons).map(([name, Icon]) => {
+            return (
+              <MenuItem
+                key={name}
+                as="a"
+                href={`#${name}`}
+                $active={active === name}
+                onClick={handleClick}
+              >
+                <Icon />
+                {t(`nav.${name}`)}
+              </MenuItem>
+            );
+          })}
 
           <ActionsWrapper>
             <ThemeSwitch onClick={toggleTheme}>

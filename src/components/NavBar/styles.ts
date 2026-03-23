@@ -57,7 +57,10 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.a<{ $active?: boolean }>`
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   text-decoration: none;
 
@@ -119,11 +122,13 @@ export const SwitchCircle = styled.span<{ themeMode: string }>`
 `;
 
 export const LanguageButton = styled.button`
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
 
   color: ${({ theme }) => theme.colors.textSoft};
