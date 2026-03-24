@@ -12,8 +12,11 @@ import { SocialLinks } from "../../components/SocialLinks";
 import { FiArrowUp } from "react-icons/fi";
 import azevedoLogo from "../../assets/azevedoLogo.png";
 import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+  const { t } = useTranslation();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,8 +32,8 @@ export const Contact = () => {
 
       <Container>
         <Content>
-          <h2>Pronto para transformar sua ideia em solução?</h2>
-          <p>Estou disponível para novos projetos e oportunidades.</p>
+          <h2>{t("contact.title")}</h2>
+          <p>{t("contact.subtitle")}</p>
 
           <SocialLinks />
         </Content>

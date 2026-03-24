@@ -7,5 +7,129 @@
     "education": "Education",
     "courses": "Courses",
     "contact": "Contact"
+  },
+
+  "hero": {
+    "greeting": "Hello, I am",
+    "subtitle": "Full Stack Engineer focused on scalable applications",
+    "description": "5+ years developing web and mobile applications for retail and commercial automation, integrating APIs, SDKs, and AWS environments with a focus on performance, scalability, and user experience.",
+    "buttonPrimary": "Projects",
+    "buttonSecondary": "Contact"
+  },
+
+  "about": {
+    "title": "About me",
+    "description": "I am a Full Stack Developer focused on building modern, high-performance, and scalable applications, always prioritizing clean architecture, best practices, and user experience. In addition to my technical work, I am the founder of Azevedo Digital, where I develop tailored solutions for companies and professionals looking to transform processes into efficient digital products. My motivation is to use technology to simplify complex problems and create real impact through well-structured software.",
+    "softSkillOne": "Clear and objective communication",
+    "softSkillTwo": "Emotional intelligence in collaborative environments",
+    "softSkillThree": "Adaptability to change and dynamic contexts",
+    "softSkillFour": "Solution-oriented mindset",
+    "statsExperience": "Years of experience",
+    "statsProjects": "Projects delivered",
+    "statsClients": "Clients served",
+    "stackTitleOne": "Mobile",
+    "stackTitleTwo": "Front-end",
+    "stackTitleThree": "Back-end",
+    "stackTitleFour": "Database",
+    "stackTitleFive": "Version Control",
+    "stackTitleSix": "Testing",
+    "stackTitleSeven": "Tools",
+    "stackTitleEight": "Methodologies"
+  },
+
+  "projects": {
+    "title": "Projects",
+    "genericButtonPlus": "Learn more",
+    "projectSmartExtrator": {
+      "title": "Smart Invoice Extractor (API)",
+      "description": "Intelligent system for processing, extracting, and managing electricity invoices, using Artificial Intelligence to transform unstructured documents (PDF) into actionable data.",
+      "featureOne": "AI Response Validation: LLMs can suffer from \"hallucinations\". We implemented a validation layer with Zod immediately after the LLM response. If the AI omits a field or changes a data type, the system rejects the input before it reaches the database.",
+      "featureTwo": "Atomic Transactions: In the InvoiceRepository, the company, customer, and invoice records are created within a Prisma $transaction. This prevents orphan data in case a failure occurs during the saving process.",
+      "featureThree": "Prompt Engineering: The prompt sent to the LLM is configured to return strictly pure JSON, simplifying parsing and drastically reducing token usage and latency."
+    },
+    "projectZoki": {
+      "title": "Land Development Management System",
+      "description": "A real estate and financial intelligence platform designed to centralize the entire lifecycle of developments, from lead generation to installment settlement.",
+      "featureOne": "Development Management: Centralizes the organization of blocks and lots, integrating sales availability, contracts, and financial flows into a single interface.",
+      "featureTwo": "Amortization Modeling: Professional management of long-term contracts using Price or SAC tables, with native support for cancellations, amendments, and auditable client history.",
+      "featureThree": "Automatic Adjustments: Accurate application of indexes (INPC, IPCA, IGP-M) with full traceability and immediate updates to projected cash flow.",
+      "featureFour": "Relationship Management: Automated billing system via WhatsApp, Email, and SMS, reducing delinquency through intelligent notifications and easier renegotiation.",
+      "featureFive": "Cash Flow Visibility: Clear revenue projection based on real contracts, allowing precise tracking of upcoming, settled, and overdue installments.",
+      "featureSix": "Real Estate Sales Funnel: Connects lead acquisition directly to proposal and contract generation, eliminating rework between sales and administrative teams.",
+      "featureSeven": "Self-Service Portal: Exclusive area for buyers to access invoices, check installment statements, and download documents, reducing operational support workload.",
+      "featureEight": "Strategic Reports: Financial and management dashboards focused on decision-making, credit analysis, and investor reporting."
+    },
+    "projectPdv": {
+      "title": "Easy POS",
+      "description": "Android-based Point of Sale system focused on agility and low cost for commercial establishments.",
+      "featureOne": "Hardware Versatility: Being Android-based, it runs on both robust countertop equipment and smart POS devices, enabling full mobility in service.",
+      "featureTwo": "Complete Management: Centralizes control of sales, inventory, orders, waitstaff, and delivery operations in a single interface.",
+      "featureThree": "Efficiency Focus: Combines an intuitive and fast system with data security, making it ideal for those seeking performance without a high initial investment.",
+      "featureFour": "Practicality: Transforms the device into the \"brain\" of the business, simplifying everything from cash closing to table organization."
+    },
+    "projectTotem": {
+      "title": "Self-Service Kiosk",
+      "description": "Self-service solution focused on autonomy and productivity, eliminating intermediaries in the purchasing process to accelerate business turnover.",
+      "featureOne": "Customer Autonomy: Customers place and pay for their orders digitally, eliminating paper usage and reducing human errors or dependency on waitstaff.",
+      "featureTwo": "Automated Flow: Once payment is confirmed, the order is instantly sent to the kitchen, optimizing delivery time.",
+      "featureThree": "Visual Experience: The kiosk works as an interactive showcase, displaying videos, promotions, and personalized content to attract customers.",
+      "featureFour": "Centralized Management: The entire process — from order to printing and sales performance — is connected to the main system, ensuring full operational control in one place."
+    },
+    "projectTablet": {
+      "title": "Easy Tablet",
+      "description": "Table-side self-service solution focused on giving customers autonomy and reducing the workload of the floor staff.",
+      "featureOne": "Full Table Autonomy: Customers browse the digital menu, select items, and place orders independently, eliminating reliance on waitstaff and paper.",
+      "featureTwo": "Integrated Payment (Tap to Pay): Allows customers to complete payment directly on the tablet via contactless, eliminating the need for external POS devices and speeding up checkout.",
+      "featureThree": "Real-Time Flow: Orders placed on the tablet are automatically sent to the kitchen and integrated into the management system, ensuring accuracy and performance tracking.",
+      "featureFour": "Modern and Seamless Experience: The device is compact and customizable with the business branding, helping avoid queues and making the customer journey more practical and technological."
+    },
+    "projectMenu": {
+      "title": "Digital Menu",
+      "description": "QR Code-based digital menu and proprietary delivery solution focused on maximizing profit by eliminating intermediaries and commission fees.",
+      "featureOne": "Revenue Growth: Increases sales by up to 200% through a visual menu with appealing photos and descriptions that encourage upselling.",
+      "featureTwo": "Operational Cost Reduction: Customers place orders using their own phones at the table, reducing staff costs by up to 50% and eliminating human errors in order entry.",
+      "featureThree": "Full Profit (Zero Commission): Unlike third-party apps, 100% of the revenue stays with the business, with no hidden fees or variable monthly commissions.",
+      "featureFour": "Autonomy and Loyalty: Provides a fast, queue-free purchasing experience, increasing customer satisfaction and encouraging repeat visits and referrals."
+    },
+    "projectPortal": {
+      "title": "POS Portal",
+      "description": "Central intelligence and integration hub that unifies the management of all sales channels and automates communication between floor, kitchen, and delivery.",
+      "featureOne": "Centralized Management: Acts as a single dashboard to update menus, prices, and settings across all apps and POS systems simultaneously, eliminating repetitive manual work.",
+      "featureTwo": "Order Flow Automation: Integrates delivery and counter orders directly into the system, sending them in real time to the kitchen (KDS) without retyping or paper usage.",
+      "featureThree": "Smart Queue Display: Automatically manages order status (in preparation → ready), notifying customers for pickup once the kitchen finishes, organizing workflow efficiently.",
+      "featureFour": "Complete Management View: Provides unified sales reports by channel, helping identify the most profitable platforms and preventing losses from missed or duplicate orders.",
+      "featureFive": "Operational Efficiency: Drastically reduces communication errors and allows the team to focus on customer service while the system handles data flow between departments."
+    },
+    "projectAleTec": {
+      "title": "Ale Technology",
+      "description": "Landing page for selling and servicing premium devices, combining technical precision with high-quality components for Apple and Xiaomi products.",
+      "featureOne": "iPhones and MacBooks: Sale of new and pre-owned devices with warranty, verified origin, and focus on the Apple ecosystem.",
+      "featureTwo": "Xiaomi Line: Smartphones and global accessories with the best cost-benefit, ready to use.",
+      "featureThree": "iPhone Repair: Screen, battery, connector replacements, and board-level repairs using precision tools and original sealing.",
+      "featureFour": "MacBook Repair: Internal cleaning, SSD/Memory upgrades, chassis repair, and software/macOS troubleshooting.",
+      "featureFive": "Xiaomi Support: Component replacement, system recovery (MIUI), and specialized physical repairs for Android devices.",
+      "featureSix": "Fast Quotation: Accurate and transparent diagnostics, explaining each repair step so you know exactly what is being done.",
+      "featureSeven": "High-Quality Parts: Use of certified components that preserve the lifespan and original performance of your device."
+    },
+    "projectVahlis": {
+      "title": "Vahlis Development",
+      "description": "Landing page of a real estate developer recognized for high-end urban planning and market intelligence, combining nearly a century of tradition with strategic vision to create generational value assets.",
+      "featureOne": "Tradition since 1933: Founded by Santos Vahlis, the company has built a legacy of excellence with over 200 developments shaping the national urban landscape.",
+      "featureTwo": "Strategic Site Selection: Rigorous mapping of high-appreciation areas, analyzing price per square meter, infrastructure, and demand.",
+      "featureThree": "Project Design: Development of architectural plans aligned with regional profiles, combining elegance, technical rigor, and top market standards.",
+      "featureFour": "Investor Focus: Creation of spaces that go beyond construction, focusing on capital appreciation for investors and quality of life for residents.",
+      "featureFive": "Legacy Building: Delivery of developments that act as long-lasting assets, intelligently and aesthetically integrated into the evolution of cities."
+    }
+  },
+
+  "education": {
+    "title": "Academic Training",
+    "educationName": "Systems Analysis",
+    "period": "semester"
+  },
+
+  "contact": {
+    "title": "Ready to turn your idea into a solution?",
+    "subtitle": "I am available for new projects and opportunities."
   }
 }

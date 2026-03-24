@@ -15,8 +15,11 @@ import {
 
 import profile from "../../assets/RafaelAzevedoHitech.png";
 import { SocialLinks } from "../../components/SocialLinks";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   const onClickPrimary = (): void => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -29,24 +32,20 @@ export const Hero = () => {
     <Section id="hero">
       <Wrapper>
         <Content>
-          <Greeting>Olá, eu sou</Greeting>
+          <Greeting>{t("hero.greeting")}</Greeting>
 
           <Title>Rafael Azevedo</Title>
 
-          <Subtitle>
-            Full Stack Engineer focado em aplicações escaláveis
-          </Subtitle>
+          <Subtitle>{t("hero.subtitle")}</Subtitle>
 
-          <Description>
-            5+ anos desenvolvendo aplicações web e mobile para varejo e
-            automação comercial, integrando APIs, SDKs e ambientes AWS com foco
-            em performance, escalabilidade e experiência do usuário.
-          </Description>
+          <Description>{t("hero.description")}</Description>
 
           <ButtonGroup>
-            <ButtonPrimary onClick={onClickPrimary}>Projetos</ButtonPrimary>
+            <ButtonPrimary onClick={onClickPrimary}>
+              {t("hero.buttonPrimary")}
+            </ButtonPrimary>
             <ButtonSecondary onClick={onClickSecondary}>
-              Contato
+              {t("hero.buttonSecondary")}
             </ButtonSecondary>
           </ButtonGroup>
 

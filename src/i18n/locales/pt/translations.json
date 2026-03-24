@@ -7,5 +7,129 @@
     "education": "Formação",
     "courses": "Cursos",
     "contact": "Contato"
+  },
+
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "subtitle": "Full Stack Engineer focado em aplicações escaláveis",
+    "description": "5+ anos desenvolvendo aplicações web e mobile para varejo e automação comercial, integrando APIs, SDKs e ambientes AWS com foco em performance, escalabilidade e experiência do usuário.",
+    "buttonPrimary": "Projetos",
+    "buttonSecondary": "Contatos"
+  },
+
+  "about": {
+    "title": "Sobre mim",
+    "description": "Sou Desenvolvedor Full Stack com foco na criação de aplicações modernas, performáticas e escaláveis, sempre priorizando arquitetura limpa, boas práticas e experiência do usuário. Além da atuação técnica, sou fundador da Azevedo Digital, onde desenvolvo soluções sob medida para empresas e profissionais que desejam transformar processos em produtos digitais eficientes. Minha motivação é usar tecnologia para simplificar problemas complexos e gerar impacto real através de software bem estruturado.",
+    "softSkillOne": "Comunicação clara e objetiva",
+    "softSkillTwo": "Inteligência emocional em ambientes colaborativos",
+    "softSkillThree": "Adaptabilidade a mudanças e contextos dinâmicos",
+    "softSkillFour": "Mentalidade orientada à solução",
+    "statsExperience": "Anos de experiência",
+    "statsProjects": "Projetos desenvolvidos",
+    "statsClients": "Clientes atendidos",
+    "stackTitleOne": "Mobile",
+    "stackTitleTwo": "Front-end",
+    "stackTitleThree": "Back-end",
+    "stackTitleFour": "Banco de dados",
+    "stackTitleFive": "Versionamento",
+    "stackTitleSix": "Testes",
+    "stackTitleSeven": "Ferramentas",
+    "stackTitleEight": "Metodologias"
+  },
+
+  "projects": {
+    "title": "Projetos",
+    "genericButtonPlus": "Saiba mais",
+    "projectSmartExtrator": {
+      "title": "Extrator de Faturas Inteligente (API)",
+      "description": "Sistema inteligente para processamento, extração e gestão de faturas de energia elétrica, utilizando Inteligência Artificial para transformar documentos não estruturados (PDF) em dados acionáveis.",
+      "featureOne": "Validação de Resposta da IA: LLMs podem sofrer \"alucinações\". Implementamos uma camada de validação com Zod imediatamente após a resposta do LLM. Se a IA omitir um campo ou mudar um tipo de dado, o sistema rejeita a entrada antes que ela chegue ao banco.",
+      "featureTwo": "Transações Atômicas: No InvoiceRepository, o registro da empresa, do cliente e da fatura ocorre dentro de uma $transaction do Prisma. Isso evita a criação de dados órfãos caso ocorra uma falha no meio do processo de salvamento.",
+      "featureThree": "Prompt Engineering: O prompt enviado ao LLM está configurado para retornar estritamente JSON puro, facilitando o parse e reduzindo drasticamente o consumo de tokens e latência."
+    },
+    "projectZoki": {
+      "title": "Gestor de loteamentos",
+      "description": "Plataforma de inteligência imobiliária e financeira, projetada para centralizar o ciclo de vida completo de empreendimentos, do lead à liquidação das parcelas.",
+      "featureOne": "Controle de Empreendimentos: Centraliza a organização de quadras e lotes, integrando disponibilidade de vendas, contratos e fluxos financeiros em uma interface única.",
+      "featureTwo": "Modelagem de Amortização: Gestão profissional de contratos de longo prazo utilizando tabelas Price ou SAC, com suporte nativo para distratos, aditivos e histórico auditável por cliente.",
+      "featureThree": "Reajustes Automáticos: Aplicação precisa de índices (INPC, IPCA, IGP-M) com rastreabilidade total e atualização imediata do fluxo de caixa projetado.",
+      "featureFour": "Régua de Relacionamento: Sistema de cobrança automatizado via WhatsApp, E-mail e SMS, reduzindo a inadimplência através de notificações inteligentes e facilitação de renegociações.",
+      "featureFive": "Visibilidade de Caixa: Projeção clara de receitas baseada em contratos reais, permitindo distinguir com precisão parcelas a vencer, liquidadas e em atraso.",
+      "featureSix": "Funil de Vendas Imobiliário: Conecta a captação de leads diretamente à geração de propostas e contratos, eliminando o retrabalho entre as áreas comercial e administrativa.",
+      "featureSeven": "Portal de Autoatendimento: Área exclusiva para o comprador acessar boletos, consultar o extrato de parcelas e baixar documentos, diminuindo a carga de suporte operacional.",
+      "featureEight": "Relatórios Estratégicos: Painéis financeiros e gerenciais focados em tomada de decisão, análise de crédito e prestação de contas para investidores."
+    },
+    "projectPdv": {
+      "title": "PDV Fácil",
+      "description": "Ponto de Venda baseado em Android, focado em agilidade e baixo custo para estabelecimentos comerciais.",
+      "featureOne": "Versatilidade de Hardware: Por ser Android, ele funciona tanto em equipamentos robustos de balcão quanto em maquininhas smart, permitindo mobilidade total no atendimento.",
+      "featureTwo": "Gestão Completa: Centraliza o controle de vendas, estoque, comandas, garçons e operações de delivery em uma única interface.",
+      "featureThree": "Foco em Eficiência: Combina um sistema intuitivo e rápido com segurança de dados, sendo ideal para quem busca performance sem precisar de um alto investimento inicial.",
+      "featureFour": "Praticidade: Transforma o dispositivo no \"cérebro\" do negócio, facilitando desde o fechamento do caixa até a organização das mesas."
+    },
+    "projectTotem": {
+      "title": "Vitrine Totem",
+      "description": "Autoatendimento focado em autonomia e produtividade, eliminando intermediários no processo de compra para acelerar o giro do estabelecimento.",
+      "featureOne": "Autonomia do Cliente: O próprio consumidor realiza o pedido e o pagamento de forma digital, eliminando o uso de papel e reduzindo erros humanos ou dependência de garçons.",
+      "featureTwo": "Fluxo Automatizado: Assim que o pagamento é confirmado, o pedido é enviado instantaneamente para a produção na cozinha, otimizando o tempo de entrega.",
+      "featureThree": "Experiência Visual: O totem funciona como uma vitrine interativa, permitindo a exibição de vídeos, promoções e conteúdos personalizados que atraem o público.",
+      "featureFour": "Gestão Centralizada: Todo o processo — do pedido à impressão e desempenho de vendas — fica conectado ao sistema principal, garantindo controle total da operação em um só lugar."
+    },
+    "projectTablet": {
+      "title": "Tablet Fácil",
+      "description": "Solução de autoatendimento na mesa, focada em dar autonomia ao cliente e reduzir a carga de trabalho da equipe de salão.",
+      "featureOne": "Autonomia Total na Mesa: O cliente visualiza o cardápio digital, escolhe os itens e faz o pedido sozinho, eliminando a dependência de garçons e o uso de papel.",
+      "featureTwo": "Pagamento Integrado (Tap to Pay): Permite finalizar a conta diretamente no tablet por aproximação, dispensando o uso de maquininhas externas e agilizando o fechamento.",
+      "featureThree": "Fluxo em Tempo Real: Os pedidos feitos no tablet são enviados automaticamente para a cozinha e integrados ao painel de gestão, garantindo precisão e acompanhamento de desempenho.",
+      "featureFour": "Experiência Moderna e Fluida: O equipamento é compacto e personalizável com a marca do negócio, ajudando a evitar filas no balcão e tornando a jornada do cliente mais prática e tecnológica."
+    },
+    "projectMenu": {
+      "title": "Menu Digital",
+      "description": "Solução de cardápio digital via QR Code e Delivery Próprio, focada em maximizar o lucro eliminando intermediários e taxas de comissão.",
+      "featureOne": "Aumento de Faturamento: Potencializa as vendas em até 200% através de um cardápio visual com fotos e descrições atraentes, que estimulam o consumo de acompanhamentos.",
+      "featureTwo": "Redução de Custos Operacionais: O cliente faz o pedido pelo próprio celular na mesa, diminuindo em até 50% os gastos com equipe e eliminando erros humanos no lançamento.",
+      "featureThree": "Lucro Total (Zero Comissões): Diferente de apps de terceiros, o valor das vendas fica 100% com o estabelecimento, sem taxas ocultas ou mensalidades variáveis sobre o faturamento.",
+      "featureFour": "Autonomia e Fidelização: Proporciona uma jornada de compra rápida e sem filas, aumentando a satisfação do cliente, o que gera mais indicações e retorno ao local."
+    },
+    "projectPortal": {
+      "title": "Portal POS",
+      "description": "Central de inteligência e integração, que unifica a gestão de todos os canais de venda e automatiza a comunicação entre o salão, cozinha e delivery.",
+      "featureOne": "Gestão Centralizada: Funciona como um painel único onde você atualiza cardápios, preços e configurações para todos os aplicativos e PDVs simultaneamente, eliminando o trabalho manual repetitivo.",
+      "featureTwo": "Automação do Fluxo de Pedidos: Integra os pedidos do delivery e do balcão diretamente ao sistema, enviando-os em tempo real para a cozinha (KDS) sem necessidade de redigitação ou uso de papel.",
+      "featureThree": "Painel de Senhas Inteligente: Gerencia automaticamente o status do pedido (em preparo → pronto), chamando o cliente para a retirada assim que a cozinha finaliza a produção, o que organiza o fluxo do estabelecimento.",
+      "featureFour": "Visão Gerencial Completa: Oferece relatórios unificados de vendas por canal, permitindo identificar quais plataformas trazem mais lucro e evitando perdas com pedidos esquecidos ou duplicados.",
+      "featureFive": "Eficiência Operacional: Reduz drasticamente erros de comunicação e aumenta o foco da equipe no atendimento, já que a tecnologia cuida da transmissão de dados entre os setores."
+    },
+    "projectAleTec": {
+      "title": "Ale Technology",
+      "description": "Landing page de venda e manutenção de dispositivos premium, unindo precisão técnica a peças de alta qualidade para Apple e Xiaomi.",
+      "featureOne": "IPhones e MacBooks: Comercialização de aparelhos novos e seminovos com garantia, procedência verificada e foco no ecossistema Apple.",
+      "featureTwo": "Linha Xiaomi: Smartphones e acessórios globais com o melhor custo-benefício do mercado, prontos para uso.",
+      "featureThree": "Manutenção de iPhones: Troca de telas, baterias, conectores e reparos em placa com ferramentas de precisão e vedação original.",
+      "featureFour": "Reparo de MacBooks: Limpeza interna, upgrade de SSD/Memória, reparo de carcaça e solução de problemas de software/MacOS.",
+      "featureFive": "Suporte Xiaomi: Troca de componentes, recuperação de sistema (MIUI) e reparos físicos especializados na linha Android.",
+      "featureSix": "Orçamento Rápido: Diagnóstico preciso e transparente, explicando cada etapa do reparo para que você saiba exatamente o que está sendo feito.",
+      "featureSeven": "Peças de Primeira Linha: Utilização de componentes homologados que preservam a vida útil e a performance original do seu equipamento."
+    },
+    "projectVahlis": {
+      "title": "Vahlis Incorporadora",
+      "description": "Landing page de uma incorporadora que é uma referência em inteligência imobiliária e urbanismo de alto padrão, unindo uma tradição de quase um século à visão estratégica de mercado para criar ativos de valor geracional.",
+      "featureOne": "Tradição desde 1933: Fundada por Santos Vahlis, a incorporadora acumula uma trajetória de excelência com mais de 200 empreendimentos que moldaram o cenário urbano nacional.",
+      "featureTwo": "Identificação Estratégica: Mapeamento rigoroso de áreas com alto potencial de valorização, analisando métricas de preço por metro quadrado, infraestrutura e demanda reprimida.",
+      "featureThree": "Concepção de Projetos: Criação de plantas arquitetônicas alinhadas ao perfil da região, unindo elegância, rigor técnico e as mais altas exigências do mercado imobiliário.",
+      "featureFour": "Foco no Investidor: Desenvolvimento de espaços que transcendem a construção civil, focados na valorização do capital para investidores e na experiência de vida para os moradores.",
+      "featureFive": "Construção de Narrativas: Entrega de empreendimentos que funcionam como legados duradouros, integrando-se de forma inteligente e estética à evolução das cidades."
+    }
+  },
+
+  "education": {
+    "title": "Formação Acadêmica",
+    "educationName": "Análise de Sistemas",
+    "period": "semestre"
+  },
+
+  "contact": {
+    "title": "Pronto para transformar sua ideia em solução?",
+    "subtitle": "Estou disponível para novos projetos e oportunidades."
   }
 }

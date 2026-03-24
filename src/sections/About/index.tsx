@@ -62,8 +62,10 @@ import { FiMessageCircle, FiTarget } from "react-icons/fi";
 import { LuBrain, LuRefreshCw } from "react-icons/lu";
 import { TechIcon } from "../../components/TechIcon";
 import { SwaggerIcon } from "../../assets/SVGs/swaggerIcon";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
   const mobile = [
     { icon: SiReact, name: "React Native", scale: 1 },
     { icon: FaJava, name: "Java", scale: 1 },
@@ -134,17 +136,8 @@ export const About = () => {
     <Section id="about">
       <Content>
         <TextContainer>
-          <Title>Sobre mim</Title>
-          <Description>
-            Sou Desenvolvedor Full Stack com foco na criação de aplicações
-            modernas, performáticas e escaláveis, sempre priorizando arquitetura
-            limpa, boas práticas e experiência do usuário. Além da atuação
-            técnica, sou fundador da Azevedo Digital, onde desenvolvo soluções
-            sob medida para empresas e profissionais que desejam transformar
-            processos em produtos digitais eficientes. Minha motivação é usar
-            tecnologia para simplificar problemas complexos e gerar impacto real
-            através de software bem estruturado.
-          </Description>
+          <Title>{t("about.title")}</Title>
+          <Description>{t("about.description")}</Description>
 
           <SoftSkillsContainer>
             <SoftSkillsTitle>Soft Skills</SoftSkillsTitle>
@@ -152,22 +145,22 @@ export const About = () => {
             <SkillsList>
               <SkillItem>
                 <FiMessageCircle />
-                <span>Comunicação clara e objetiva</span>
+                <span>{t("about.softSkillOne")}</span>
               </SkillItem>
 
               <SkillItem>
                 <LuBrain />
-                <span>Inteligência emocional em ambientes colaborativos</span>
+                <span>{t("about.softSkillTwo")}</span>
               </SkillItem>
 
               <SkillItem>
                 <LuRefreshCw />
-                <span>Adaptabilidade a mudanças e contextos dinâmicos</span>
+                <span>{t("about.softSkillThree")}</span>
               </SkillItem>
 
               <SkillItem>
                 <FiTarget />
-                <span>Mentalidade orientada à solução</span>
+                <span>{t("about.softSkillFour")}</span>
               </SkillItem>
             </SkillsList>
           </SoftSkillsContainer>
@@ -175,24 +168,24 @@ export const About = () => {
           <Stats>
             <StatItem>
               <StatNumber>+5</StatNumber>
-              <StatLabel>Anos de experiência</StatLabel>
+              <StatLabel>{t("about.statsExperience")}</StatLabel>
             </StatItem>
 
             <StatItem>
               <StatNumber>+15</StatNumber>
-              <StatLabel>Projetos desenvolvidos</StatLabel>
+              <StatLabel>{t("about.statsProjects")}</StatLabel>
             </StatItem>
 
             <StatItem>
               <StatNumber>+10</StatNumber>
-              <StatLabel>Clientes atendidos</StatLabel>
+              <StatLabel>{t("about.statsClients")}</StatLabel>
             </StatItem>
           </Stats>
         </TextContainer>
 
         <StackContainer>
           <StackCategory>
-            <StackTitle>Mobile</StackTitle>
+            <StackTitle>{t("about.stackTitleOne")}</StackTitle>
 
             <IconsRow>
               {mobile.map(({ icon, name, scale }) => (
@@ -202,7 +195,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Front-end</StackTitle>
+            <StackTitle>{t("about.stackTitleTwo")}</StackTitle>
 
             <IconsRow>
               {frontend.map(({ icon, name, scale }) => (
@@ -212,7 +205,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Back-end</StackTitle>
+            <StackTitle>{t("about.stackTitleThree")}</StackTitle>
 
             <IconsRow>
               {backend.map(({ icon, name, scale }) => (
@@ -222,7 +215,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Banco de dados</StackTitle>
+            <StackTitle>{t("about.stackTitleFour")}</StackTitle>
 
             <IconsRow>
               {database.map(({ icon, name, scale }) => (
@@ -232,7 +225,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Versionamento</StackTitle>
+            <StackTitle>{t("about.stackTitleFive")}</StackTitle>
 
             <IconsRow>
               {versioning.map(({ icon, name, scale }) => (
@@ -242,7 +235,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Testes</StackTitle>
+            <StackTitle>{t("about.stackTitleSix")}</StackTitle>
 
             <IconsRow>
               {testing.map(({ icon, name, scale }) => (
@@ -252,7 +245,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Ferramentas</StackTitle>
+            <StackTitle>{t("about.stackTitleSeven")}</StackTitle>
 
             <IconsRow>
               {tools.map(({ icon, name, scale }) => (
@@ -262,7 +255,7 @@ export const About = () => {
           </StackCategory>
 
           <StackCategory>
-            <StackTitle>Metodologias</StackTitle>
+            <StackTitle>{t("about.stackTitleEight")}</StackTitle>
 
             <IconsRow>
               {methodologies.map(({ icon, name, scale }) => (

@@ -76,19 +76,19 @@ import { TechIcon } from "../../components/TechIcon";
 import { TbBrandCSharp } from "react-icons/tb";
 import { KanbanIcon } from "../../assets/SVGs/kanbanIcon";
 import { SwaggerIcon } from "../../assets/SVGs/swaggerIcon";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
-    title: "Extrator de Faturas Inteligente (API)",
-    descriptionMain:
-      "Sistema inteligente para processamento, extração e gestão de faturas de energia elétrica, utilizando Inteligência Artificial para transformar documentos não estruturados (PDF) em dados acionáveis.",
+    title: "projects.projectSmartExtrator.title",
+    descriptionMain: "projects.projectSmartExtrator.description",
     descriptionList: [
-      'Validação de Resposta da IA: LLMs podem sofrer "alucinações". Implementamos uma camada de validação com Zod imediatamente após a resposta do LLM. Se a IA omitir um campo ou mudar um tipo de dado, o sistema rejeita a entrada antes que ela chegue ao banco.',
-      "Transações Atômicas: No InvoiceRepository, o registro da empresa, do cliente e da fatura ocorre dentro de uma $transaction do Prisma. Isso evita a criação de dados órfãos caso ocorra uma falha no meio do processo de salvamento.",
-      "Prompt Engineering: O prompt enviado ao LLM está configurado para retornar estritamente JSON puro, facilitando o parse e reduzindo drasticamente o consumo de tokens e latência.",
+      "projects.projectSmartExtrator.featureOne",
+      "projects.projectSmartExtrator.featureTwo",
+      "projects.projectSmartExtrator.featureThree",
     ],
     tech: [
-      { icon: FaNodeJs, name: "Node.js", scale: 1 },
+      { icon: FaNodeJs, nmae: "Node.js", scale: 1 },
       { icon: SiTypescript, name: "TypeScript", scale: 1 },
       { icon: SiNestjs, name: "NestJS", scale: 1 },
       { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
@@ -101,18 +101,17 @@ const projects = [
     github: "https://github.com/RafaelBiatoAzevedo/energy-api",
   },
   {
-    title: "Gestor de loteamentos",
-    descriptionMain:
-      "Plataforma de inteligência imobiliária e financeira, projetada para centralizar o ciclo de vida completo de empreendimentos, do lead à liquidação das parcelas.",
+    title: "projects.projectZoki.title",
+    descriptionMain: "projects.projectZoki.description",
     descriptionList: [
-      "Controle de Empreendimentos: Centraliza a organização de quadras e lotes, integrando disponibilidade de vendas, contratos e fluxos financeiros em uma interface única.",
-      "Modelagem de Amortização: Gestão profissional de contratos de longo prazo utilizando tabelas Price ou SAC, com suporte nativo para distratos, aditivos e histórico auditável por cliente.",
-      "Reajustes Automáticos: Aplicação precisa de índices (INPC, IPCA, IGP-M) com rastreabilidade total e atualização imediata do fluxo de caixa projetado.",
-      "Régua de Relacionamento: Sistema de cobrança automatizado via WhatsApp, E-mail e SMS, reduzindo a inadimplência através de notificações inteligentes e facilitação de renegociações.",
-      "Visibilidade de Caixa: Projeção clara de receitas baseada em contratos reais, permitindo distinguir com precisão parcelas a vencer, liquidadas e em atraso.",
-      "Funil de Vendas Imobiliário: Conecta a captação de leads diretamente à geração de propostas e contratos, eliminando o retrabalho entre as áreas comercial e administrativa.",
-      "Portal de Autoatendimento: Área exclusiva para o comprador acessar boletos, consultar o extrato de parcelas e baixar documentos, diminuindo a carga de suporte operacional.",
-      "Relatórios Estratégicos: Painéis financeiros e gerenciais focados em tomada de decisão, análise de crédito e prestação de contas para investidores.",
+      "projects.projectZoki.featureOne",
+      "projects.projectZoki.featureTwo",
+      "projects.projectZoki.featureThree",
+      "projects.projectZoki.featureFour",
+      "projects.projectZoki.featureFive",
+      "projects.projectZoki.featureSix",
+      "projects.projectZoki.featureSeven",
+      "projects.projectZoki.featureEight",
     ],
     tech: [
       { icon: SiVuedotjs, name: "Vue.js", scale: 1 },
@@ -132,14 +131,13 @@ const projects = [
     github: "",
   },
   {
-    title: "PDV Fácil",
-    descriptionMain:
-      "Ponto de Venda baseado em Android, focado em agilidade e baixo custo para estabelecimentos comerciais.",
+    title: "projects.projectPdv.title",
+    descriptionMain: "projects.projectPdv.description",
     descriptionList: [
-      "Versatilidade de Hardware: Por ser Android, ele funciona tanto em equipamentos robustos de balcão quanto em maquininhas smart, permitindo mobilidade total no atendimento.",
-      "Gestão Completa: Centraliza o controle de vendas, estoque, comandas, garçons e operações de delivery em uma única interface.",
-      "Foco em Eficiência: Combina um sistema intuitivo e rápido com segurança de dados, sendo ideal para quem busca performance sem precisar de um alto investimento inicial.",
-      'Praticidade: Transforma o dispositivo no "cérebro" do negócio, facilitando desde o fechamento do caixa até a organização das mesas.',
+      "projects.projectPdv.featureOne",
+      "projects.projectPdv.featureTwo",
+      "projects.projectPdv.featureThree",
+      "projects.projectPdv.featureFour",
     ],
     tech: [
       { icon: SiReact, name: "React Native", scale: 1 },
@@ -160,14 +158,13 @@ const projects = [
     github: "",
   },
   {
-    title: "Vitrine Totem",
-    descriptionMain:
-      "Autoatendimento focado em autonomia e produtividade, eliminando intermediários no processo de compra para acelerar o giro do estabelecimento.",
+    title: "projects.projectTotem.title",
+    descriptionMain: "projects.projectTotem.description",
     descriptionList: [
-      "Autonomia do Cliente: O próprio consumidor realiza o pedido e o pagamento de forma digital, eliminando o uso de papel e reduzindo erros humanos ou dependência de garçons.",
-      "Fluxo Automatizado: Assim que o pagamento é confirmado, o pedido é enviado instantaneamente para a produção na cozinha, otimizando o tempo de entrega.",
-      "Experiência Visual: O totem funciona como uma vitrine interativa, permitindo a exibição de vídeos, promoções e conteúdos personalizados que atraem o público.",
-      "Gestão Centralizada: Todo o processo — do pedido à impressão e desempenho de vendas — fica conectado ao sistema principal, garantindo controle total da operação em um só lugar.",
+      "projects.projectTotem.featureOne",
+      "projects.projectTotem.featureTwo",
+      "projects.projectTotem.featureThree",
+      "projects.projectTotem.featureFour",
     ],
     tech: [
       { icon: SiReact, name: "React Native", scale: 1 },
@@ -188,14 +185,13 @@ const projects = [
     github: "",
   },
   {
-    title: "Tablet Fácil",
-    descriptionMain:
-      "Solução de autoatendimento na mesa, focada em dar autonomia ao cliente e reduzir a carga de trabalho da equipe de salão.",
+    title: "projects.projectTablet.title",
+    descriptionMain: "projects.projectTablet.description",
     descriptionList: [
-      "Autonomia Total na Mesa: O cliente visualiza o cardápio digital, escolhe os itens e faz o pedido sozinho, eliminando a dependência de garçons e o uso de papel.",
-      "Pagamento Integrado (Tap to Pay): Permite finalizar a conta diretamente no tablet por aproximação, dispensando o uso de maquininhas externas e agilizando o fechamento.",
-      "Fluxo em Tempo Real: Os pedidos feitos no tablet são enviados automaticamente para a cozinha e integrados ao painel de gestão, garantindo precisão e acompanhamento de desempenho.",
-      "Experiência Moderna e Fluida: O equipamento é compacto e personalizável com a marca do negócio, ajudando a evitar filas no balcão e tornando a jornada do cliente mais prática e tecnológica.",
+      "projects.projectTablet.featureOne",
+      "projects.projectTablet.featureTwo",
+      "projects.projectTablet.featureThree",
+      "projects.projectTablet.featureFour",
     ],
     tech: [
       { icon: SiReact, name: "React Native", scale: 1 },
@@ -216,14 +212,13 @@ const projects = [
     github: "",
   },
   {
-    title: "Menu Digital",
-    descriptionMain:
-      "Solução de cardápio digital via QR Code e Delivery Próprio, focada em maximizar o lucro eliminando intermediários e taxas de comissão.",
+    title: "projects.projectMenu.title",
+    descriptionMain: "projects.projectMenu.description",
     descriptionList: [
-      "Aumento de Faturamento: Potencializa as vendas em até 200% através de um cardápio visual com fotos e descrições atraentes, que estimulam o consumo de acompanhamentos.",
-      "Redução de Custos Operacionais: O cliente faz o pedido pelo próprio celular na mesa, diminuindo em até 50% os gastos com equipe e eliminando erros humanos no lançamento.",
-      "Lucro Total (Zero Comissões): Diferente de apps de terceiros, o valor das vendas fica 100% com o estabelecimento, sem taxas ocultas ou mensalidades variáveis sobre o faturamento.",
-      "Autonomia e Fidelização: Proporciona uma jornada de compra rápida e sem filas, aumentando a satisfação do cliente, o que gera mais indicações e retorno ao local.",
+      "projects.projectMenu.featureOne",
+      "projects.projectMenu.featureTwo",
+      "projects.projectMenu.featureThree",
+      "projects.projectMenu.featureFour",
     ],
     tech: [
       { icon: SiNextdotjs, name: "Next.js", scale: 1 },
@@ -243,15 +238,14 @@ const projects = [
     github: "",
   },
   {
-    title: "Portal POS",
-    descriptionMain:
-      "Central de inteligência e integração, que unifica a gestão de todos os canais de venda e automatiza a comunicação entre o salão, cozinha e delivery.",
+    title: "projects.projectPortal.title",
+    descriptionMain: "projects.projectPortal.description",
     descriptionList: [
-      "Gestão Centralizada: Funciona como um painel único onde você atualiza cardápios, preços e configurações para todos os aplicativos e PDVs simultaneamente, eliminando o trabalho manual repetitivo.",
-      "Automação do Fluxo de Pedidos: Integra os pedidos do delivery e do balcão diretamente ao sistema, enviando-os em tempo real para a cozinha (KDS) sem necessidade de redigitação ou uso de papel.",
-      "Painel de Senhas Inteligente: Gerencia automaticamente o status do pedido (em preparo → pronto), chamando o cliente para a retirada assim que a cozinha finaliza a produção, o que organiza o fluxo do estabelecimento.",
-      "Visão Gerencial Completa: Oferece relatórios unificados de vendas por canal, permitindo identificar quais plataformas trazem mais lucro e evitando perdas com pedidos esquecidos ou duplicados.",
-      "Eficiência Operacional: Reduz drasticamente erros de comunicação e aumenta o foco da equipe no atendimento, já que a tecnologia cuida da transmissão de dados entre os setores.",
+      "projects.projectPortal.featureOne",
+      "projects.projectPortal.featureTwo",
+      "projects.projectPortal.featureThree",
+      "projects.projectPortal.featureFour",
+      "projects.projectPortal.featureFive",
     ],
     tech: [
       { icon: SiNextdotjs, name: "Next.js", scale: 1 },
@@ -271,17 +265,16 @@ const projects = [
     github: "",
   },
   {
-    title: "Ale Technology",
-    descriptionMain:
-      "Landing page de venda e manutenção de dispositivos premium, unindo precisão técnica a peças de alta qualidade para Apple e Xiaomi.",
+    title: "projects.projectAleTec.title",
+    descriptionMain: "projects.projectAleTec.description",
     descriptionList: [
-      "IPhones e MacBooks: Comercialização de aparelhos novos e seminovos com garantia, procedência verificada e foco no ecossistema Apple.",
-      "Linha Xiaomi: Smartphones e acessórios globais com o melhor custo-benefício do mercado, prontos para uso.",
-      "Manutenção de iPhones: Troca de telas, baterias, conectores e reparos em placa com ferramentas de precisão e vedação original.",
-      "Reparo de MacBooks: Limpeza interna, upgrade de SSD/Memória, reparo de carcaça e solução de problemas de software/MacOS.",
-      "Suporte Xiaomi: Troca de componentes, recuperação de sistema (MIUI) e reparos físicos especializados na linha Android.",
-      "Orçamento Rápido: Diagnóstico preciso e transparente, explicando cada etapa do reparo para que você saiba exatamente o que está sendo feito.",
-      "Peças de Primeira Linha: Utilização de componentes homologados que preservam a vida útil e a performance original do seu equipamento.",
+      "projects.projectAleTec.featureOne",
+      "projects.projectAleTec.featureTwo",
+      "projects.projectAleTec.featureThree",
+      "projects.projectAleTec.featureFour",
+      "projects.projectAleTec.featureFive",
+      "projects.projectAleTec.featureSix",
+      "projects.projectAleTec.featureSeven",
     ],
     tech: [
       { icon: SiNextdotjs, name: "Next.js", scale: 1 },
@@ -293,15 +286,14 @@ const projects = [
     github: "https://github.com/RafaelBiatoAzevedo/aleTec",
   },
   {
-    title: "Vahlis Incorporadora",
-    descriptionMain:
-      "Landing page de uma incorporadora que é uma referência em inteligência imobiliária e urbanismo de alto padrão, unindo uma tradição de quase um século à visão estratégica de mercado para criar ativos de valor geracional.",
+    title: "projects.projectVahlis.title",
+    descriptionMain: "projects.projectVahlis.description",
     descriptionList: [
-      "Tradição desde 1933: Fundada por Santos Vahlis, a incorporadora acumula uma trajetória de excelência com mais de 200 empreendimentos que moldaram o cenário urbano nacional.",
-      "Identificação Estratégica: Mapeamento rigoroso de áreas com alto potencial de valorização, analisando métricas de preço por metro quadrado, infraestrutura e demanda reprimida.",
-      "Concepção de Projetos: Criação de plantas arquitetônicas alinhadas ao perfil da região, unindo elegância, rigor técnico e as mais altas exigências do mercado imobiliário.",
-      "Foco no Investidor: Desenvolvimento de espaços que transcendem a construção civil, focados na valorização do capital para investidores e na experiência de vida para os moradores.",
-      "Construção de Narrativas: Entrega de empreendimentos que funcionam como legados duradouros, integrando-se de forma inteligente e estética à evolução das cidades.",
+      "projects.projectVahlis.featureOne",
+      "projects.projectVahlis.featureTwo",
+      "projects.projectVahlis.featureThree",
+      "projects.projectVahlis.featureFour",
+      "projects.projectVahlis.featureFive",
     ],
     tech: [
       { icon: SiNextdotjs, name: "Next.js", scale: 1 },
@@ -315,11 +307,13 @@ const projects = [
 ];
 
 export function Projects() {
+  const { t } = useTranslation();
+
   return (
     <Section id="projects">
       <Container>
         <Content>
-          <h2>Projetos</h2>
+          <h2>{t("projects.title")}</h2>
 
           {projects.map((project, index) => (
             <ProjectRow key={project.title} reverse={index % 2 === 1}>
@@ -341,12 +335,12 @@ export function Projects() {
               </Carousel>
 
               <ProjectContent>
-                <h3>{project.title}</h3>
-                <p>{project.descriptionMain}</p>
+                <h3>{t(project.title)}</h3>
+                <p>{t(project.descriptionMain)}</p>
 
                 <DescriptionListWrapper>
                   {project.descriptionList.map((description, index) => {
-                    const [title, text] = description.split(":");
+                    const [title, text] = t(description).split(":");
 
                     return (
                       <li key={index}>
@@ -360,7 +354,7 @@ export function Projects() {
                   {project.tech.map(({ name, icon, scale }) => (
                     <TechIcon
                       key={name}
-                      name={name}
+                      name={name || ""}
                       icon={icon}
                       scale={scale}
                     />
@@ -369,7 +363,7 @@ export function Projects() {
 
                 <ButtonGroup>
                   <ActionButtonPrimary href={project.link} target="_blank">
-                    <FaExternalLinkAlt /> Saiba mais
+                    <FaExternalLinkAlt /> {t("projects.genericButtonPlus")}
                   </ActionButtonPrimary>
                   {!!project.github && (
                     <ActionButtonSecondary
