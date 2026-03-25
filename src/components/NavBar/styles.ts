@@ -154,36 +154,6 @@ export const MobileOnly = styled.div`
   }
 `;
 
-export const Hamburger = styled.button`
-  width: 30px;
-  height: 22px;
-  position: relative;
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  span {
-    height: 3px;
-    width: 100%;
-    background: ${({ theme }) => theme.colors.textSoft};
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: 26px;
-    height: 18px;
-
-    span {
-      height: 2px;
-    }
-  }
-`;
-
 export const MobileMenu = styled.div<{ $open: boolean }>`
   display: flex;
   flex-direction: column;

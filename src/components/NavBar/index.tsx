@@ -4,7 +4,6 @@ import {
   Copy,
   DesktopOnly,
   FooterMenuMobile,
-  Hamburger,
   LanguageButton,
   Logo,
   LogoWrapper,
