@@ -14,8 +14,10 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
-  margin: 0 auto;
+  gap: 5rem;
 `;
 
 export const Title = styled.h2`
@@ -28,9 +30,6 @@ export const Title = styled.h2`
 export const CourseCard = styled.div`
   display: flex;
   flex-direction: column;
-
-  border-radius: 16px;
-  //border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const CourseTitle = styled.h2`
@@ -74,7 +73,11 @@ export const CourseLogo = styled.img`
   object-fit: contain;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 20%;
+    width: 15%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 25%;
   }
 `;
 

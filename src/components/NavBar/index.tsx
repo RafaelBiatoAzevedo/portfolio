@@ -28,8 +28,11 @@ import {
   FiGrid,
   FiHome,
   FiMail,
+  FiMenu,
   FiUser,
+  FiX,
 } from "react-icons/fi";
+import { useTheme } from "styled-components";
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -50,6 +53,7 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
   const [active, setActive] = useState("hero");
   const [isOpen, setIsOpen] = useState(false);
   const { i18n, t } = useTranslation();
+  const { colors } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -118,11 +122,19 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
       </DesktopOnly>
 
       <MobileOnly>
-        <Hamburger onClick={() => setIsOpen(!isOpen)}>
-          <span />
-          <span />
-          <span />
-        </Hamburger>
+        {isOpen ? (
+          <FiX
+            size={"3rem"}
+            color={colors.textSoft}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+        ) : (
+          <FiMenu
+            size={"3rem"}
+            color={colors.textSoft}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+        )}
       </MobileOnly>
 
       <MobileMenu $open={isOpen}>

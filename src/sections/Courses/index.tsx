@@ -189,8 +189,8 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
   return (
     <Section id="courses">
+      <Title>{t("courses.title")}</Title>
       <Container>
-        <Title>{t("courses.title")}</Title>
         {courses.map(
           (
             {
