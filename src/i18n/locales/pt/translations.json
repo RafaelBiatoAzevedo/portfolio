@@ -122,10 +122,142 @@
     }
   },
 
+  "experiences": {
+    "title": "Experiências",
+    "experienceManager": {
+      "company": "Restaurante Bandeirantes",
+      "responsibility": "Gerente",
+      "duration": "jan de 2003 - jan de 2018 • 15 anos 1 meses",
+      "bulletOne": "Liderança e desenvolvimento de equipe operacional, promovendo alinhamento e eficiência nos processos internos",
+      "bulletTwo": "Gestão de fornecedores e insumos, assegurando abastecimento, controle de prazos e redução de desperdícios",
+      "bulletThree": "Planejamento de escalas e organização de rotinas operacionais, garantindo estabilidade e continuidade das atividades",
+      "bulletFour": "Monitoramento de estoque e conformidade com normas de higiene e segurança"
+    },
+    "experienceRSSolutions": {
+      "company": "RS Solutions",
+      "responsibility": "Desenvolvedor Web e Mobile Junior/Pleno",
+      "duration": "mai de 2021 - nov de 2024 • 3 anos 7 meses",
+      "bulletOne": "Desenvolvimento e manutenção de soluções de automação comercial voltadas ao varejo, incluindo sistemas de PDV e autoatendimento",
+      "bulletTwo": "Integração com SDKs de empresas de pagamento e dispositivos físicos (balanças, impressoras, totens), assegurando comunicação eficiente e estável",
+      "bulletThree": "Implementação de soluções focadas em alta disponibilidade e confiabilidade em ambientes de operação contínua",
+      "bulletFour": "Otimização de performance e usabilidade em sistemas críticos para o fluxo de vendas"
+    },
+    "experienceVahlis": {
+      "company": "Santos Vahlis Group",
+      "responsibility": "Desenvolvedor Full Stack Pleno",
+      "duration": "fev de 2025 - ago de 2025 • 6 meses",
+      "bulletOne": "Desenvolvimento full stack de aplicações web utilizando Vue.js no front-end e .NET Core no back-end",
+      "bulletTwo": "Implementação de APIs REST seguras e integração com PostgreSQL, garantindo integridade e performance de dados",
+      "bulletThree": "Gestão de deploys e monitoramento em ambiente AWS, assegurando estabilidade e disponibilidade das aplicações",
+      "bulletFour": "Participação ativa no ciclo completo de desenvolvimento (análise, implementação, testes e manutenção)"
+    },
+    "experienceZoki": {
+      "company": "Zoki Tecnologia",
+      "responsibility": "Desenvolvedor Full Stack Pleno",
+      "duration": "fev de 2025 - fev de 2026 • 1 ano 1 mês",
+      "bulletOne": "Desenvolvimento full stack de aplicações web utilizando Vue.js no front-end e .NET Core no back-end",
+      "bulletTwo": "Implementação de APIs REST seguras e integração com PostgreSQL, garantindo integridade e performance de dados",
+      "bulletThree": "Gestão de deploys e monitoramento em ambiente AWS, assegurando estabilidade e disponibilidade das aplicações",
+      "bulletFour": "Participação ativa no ciclo completo de desenvolvimento (análise, implementação, testes e manutenção)"
+    }
+  },
+
   "education": {
     "title": "Formação Acadêmica",
     "educationName": "Análise de Sistemas",
     "period": "semestre"
+  },
+
+  "courses": {
+    "title": "Cursos",
+    "subtitleOne": "Período",
+    "subtitleTwo": "Tópicos abordados",
+    "buttonPrimary": "Download",
+    "buttonSecondary": "Credencial",
+    "hours": "horas",
+    "fullCycle": {
+      "name": "Desenvolvimento com IA",
+      "startDate": "Mar 2026",
+      "endDate": "Mar 2026",
+      "status": "Concluído",
+      "contentOne": "Prompt e Context Engineering",
+      "contentTwo": "Integrar aplicações usando IA (vai muinto além de usar SDK da OpenAI)",
+      "contentThree": "Criar Agentes de IA",
+      "contentFour": "Criar skills para agentes IA",
+      "contentFive": "Problemas que não existiam e que a IA nos trouxe",
+      "contentSix": "Entendimento aprofundado sobre o que são agentes de IA",
+      "contentSeven": "Gerenciamento de prompts e o impacto nos agentes",
+      "contentEight": "Retrieval Augmented Generation (RAG)",
+      "contentNine": "Frameworks para desenvolvimento de agentes",
+      "mainCertificate": {
+        "name": "Desenvolvimento Web"
+      }
+    },
+    "trybe": {
+      "school": "Trybe",
+      "name": "Desenvolvimento Web Full Stack",
+      "startDate": "Nov 2020",
+      "endDate": "Nov 2021",
+      "status": "Concluído",
+      "contentOne": "Fundamentos do Desenvolvimento Web",
+      "contentTwo": "Desenvolvimento Front-End",
+      "contentThree": "Desenvolvimento Back-End",
+      "contentFour": "Ciência da Computação",
+      "contentFive": "Soft Skills",
+      "mainCertificate": {
+        "name": "Desenvolvimento Web",
+        "contentOne": "Fundamentos do Desenvolvimento Web",
+        "contentTwo": "Desenvolvimento Front-End",
+        "contentThree": "Desenvolvimento Back-End",
+        "contentFour": "Ciência da Computação",
+        "contentFive": "Soft Skills"
+      },
+      "certificateAdditionalOne": {
+        "name": "Ciência da Computação",
+        "contentOne": "Introdução à Python",
+        "contentTwo": "Programação Orientada a Objetos (POO)",
+        "contentThree": "Redes e Raspagem de dados",
+        "contentFour": "Algoritmos",
+        "contentFive": "Estritura de Dados I: Arrays, Hashmaps e Sets",
+        "contentSix": "Estrutura de Dados II: Listas, Filas and Pilhas"
+      },
+      "certificateAdditionalTwo": {
+        "name": "Desenvolvimento Back-End",
+        "contentOne": "Introdução à SQL, funções SQL e JOINs",
+        "contentTwo": "Normalização e Modelagem de Banco de Dados",
+        "contentThree": "Introdução a MongoDB",
+        "contentFour": "MongoDB - Upadates simples e complexo",
+        "contentFive": "MongoDB - Aggregation Framework",
+        "contentSix": "Desenvolvimento Web com NodeJs",
+        "contentSeven": "NodeJs - Arquitetura MSC, Rest e Restful",
+        "contentEight": "Autenticação e Upload de arquivos",
+        "contentNine": "Deployment",
+        "contentTen": "Arquitetura SOLID e ORM",
+        "contentEleven": "Sockets"
+      },
+      "certificateAdditionalThree": {
+        "name": "Desenvolvimento Front-End",
+        "contentOne": "Introdução a React",
+        "contentTwo": "Estado dos componentes, Eventos e Formulários com React",
+        "contentThree": "Ciclo de vida dos componentes e React Router",
+        "contentFour": "Metodologias ágeis",
+        "contentFive": "Testes automatizados com React Testing Library(RTL)",
+        "contentSix": "Gerenciamento de estado com Redux",
+        "contentSeven": "Context API e React Hooks"
+      },
+      "certificateAdditionalFour": {
+        "name": "Fundamentos do Desenvolvimento Web",
+        "contentOne": "Unix e Bash",
+        "contentTwo": "Git, GitHub e internet",
+        "contentThree": "Introdução a HTML e CSS",
+        "contentFour": "JavaScript - DOM, Eventos e Web Storage",
+        "contentFive": "HTML e CSS - Formulários, Flexbox e Responsividade",
+        "contentSix": "Introdução a JavaScript ES6 e teste unitário",
+        "contentSeven": "Funções de alta ordem de JavaScript ES6",
+        "contentEight": "JavaScript assíncrono e promises",
+        "contentNine": "Testes automatizados com Jest"
+      }
+    }
   },
 
   "contact": {

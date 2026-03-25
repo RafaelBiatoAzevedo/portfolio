@@ -49,30 +49,35 @@ import fundamentalsCertificatePdf from "../../assets/certificates/pdf/Fundamenta
 import mainAiFullcycleCertificatePdf from "../../assets/certificates/pdf/AiFullCycle.pdf";
 
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+
+interface ICoursesProps {
+  themeSelected: string;
+}
 
 const courses = [
   {
     school: "FullCycle",
     logo: aiFullcycleLogo,
-    name: "Desenvolvimento com IA",
-    startDate: "Mar 2026",
-    endDate: "Mar 2026",
+    name: "courses.fullCycle.name",
+    startDate: "courses.fullCycle.startDate",
+    endDate: "courses.fullCycle.endDate",
     qtdHours: 8,
-    status: "Concluído",
+    status: "courses.fullCycle.status",
     contents: [
-      "Prompt e Context Engineering",
-      "Integrar aplicações usando IA (vai muinto além de usar SDK da OpenAI)",
-      "Criar Agentes de IA",
-      "Criar skills para agentes IA",
-      "Problemas que não existiam e que a IA nos trouxe",
-      "Entendimento aprofundado sobre o que são agentes de IA",
-      "Gerenciamento de prompts e o impacto nos agentes",
-      "Retrieval Augmented Generation (RAG)",
-      "Frameworks para desenvolvimento de agentes",
+      "courses.fullCycle.contentOne",
+      "courses.fullCycle.contentTwo",
+      "courses.fullCycle.contentThree",
+      "courses.fullCycle.contentFour",
+      "courses.fullCycle.contentFive",
+      "courses.fullCycle.contentSix",
+      "courses.fullCycle.contentSeven",
+      "courses.fullCycle.contentEight",
+      "courses.fullCycle.contentNine",
     ],
     mainCertificate: {
       image: mainAiFullcycleCertificateImage,
-      name: "Desenvolvimento Web",
+      name: "courses.fullCycle.mainCertificate.name",
       link: "",
       pdf: mainAiFullcycleCertificatePdf,
       contents: [],
@@ -82,113 +87,110 @@ const courses = [
   {
     school: "Trybe",
     logo: trybeLogo,
-    name: "Desenvolvimento Web Full Stack",
-    startDate: "Nov 2020",
-    endDate: "Nov 2021",
+    name: "courses.trybe.name",
+    startDate: "courses.trybe.startDate",
+    endDate: "courses.trybe.endDate",
     qtdHours: 1500,
-    status: "Concluído",
+    status: "courses.trybe.status",
     contents: [
-      "Fundamentos do Desenvolvimento Web",
-      "Desenvolvimento Front-End",
-      "Desenvolvimento Back-End",
-      "Ciência da Computação",
-      "Soft Skills",
+      "courses.trybe.contentOne",
+      "courses.trybe.contentTwo",
+      "courses.trybe.contentThree",
+      "courses.trybe.contentFour",
+      "courses.trybe.contentFive",
     ],
     mainCertificate: {
       image: mainCertificateImage,
-      name: "Desenvolvimento Web",
+      name: "courses.trybe.mainCertificate.name",
       link: "https://www.credential.net/b41dae45-7403-476c-93a6-f11209ef4474#acc.hkaCTcv9",
       pdf: mainCertificatePdf,
       contents: [
-        "Fundamentos do Desenvolvimento Web",
-        "Desenvolvimento Front-End",
-        "Desenvolvimento Back-End",
-        "Ciência da Computação",
-        "Soft Skills",
+        "courses.trybe.mainCertificate.contentOne",
+        "courses.trybe.mainCertificate.contentTwo",
+        "courses.trybe.mainCertificate.contentThree",
+        "courses.trybe.mainCertificate.contentFour",
+        "courses.trybe.mainCertificate.contentFive",
       ],
     },
 
     certificatesAdditionals: [
       {
         image: computerScienceCertificateImage,
-        name: "Ciência da Computação",
+        name: "courses.trybe.certificateAdditionalOne.name",
         link: "https://www.credential.net/2c4b6b78-67b2-4a93-b11a-f7a09e0104d4#acc.skMBFx2T",
         pdf: computerScienceCertificatePdf,
         contents: [
-          "Introdução à Python",
-          "Programação Orientada a Objetos (POO)",
-          "Redes e Raspagem de dados",
-          "Algoritmos",
-          "Estritura de Dados I: Arrays, Hashmaps e Sets",
-          "Estrutura de Dados II: Listas, Filas and Pilhas",
+          "courses.trybe.certificateAdditionalOne.contentOne",
+          "courses.trybe.certificateAdditionalOne.contentTwo",
+          "courses.trybe.certificateAdditionalOne.contentThree",
+          "courses.trybe.certificateAdditionalOne.contentFour",
+          "courses.trybe.certificateAdditionalOne.contentFive",
+          "courses.trybe.certificateAdditionalOne.contentSix",
         ],
       },
       {
         image: backEndCertificateImage,
-        name: "Desenvolvimento Back-End",
+        name: "courses.trybe.certificateAdditionalTwo.name",
         link: "https://www.credential.net/93d37420-a5d5-4525-9597-f9d4dce703f0#acc.4uVKwoMm",
         pdf: backEndCertificatePdf,
         contents: [
-          "Introdução à SQL, funções SQL e JOINs",
-          "Normalização e Modelagem de Banco de Dados",
-          "Introdução a MongoDB",
-          "MongoDB - Upadates simples e complexo",
-          "MongoDB - Aggregation Framework",
-          "Desenvolvimento Web com NodeJs",
-          "NodeJs - Arquitetura MSC, Rest e Restful",
-          "Autenticação e Upload de arquivos",
-          "Deployment",
-          "Arquitetura SOLID e ORM",
-          "Sockets",
+          "courses.trybe.certificateAdditionalTwo.contentOne",
+          "courses.trybe.certificateAdditionalTwo.contentTwo",
+          "courses.trybe.certificateAdditionalTwo.contentThree",
+          "courses.trybe.certificateAdditionalTwo.contentFour",
+          "courses.trybe.certificateAdditionalTwo.contentFive",
+          "courses.trybe.certificateAdditionalTwo.contentSix",
+          "courses.trybe.certificateAdditionalTwo.contentSeven",
+          "courses.trybe.certificateAdditionalTwo.contentEight",
+          "courses.trybe.certificateAdditionalTwo.contentNine",
+          "courses.trybe.certificateAdditionalTwo.contentTen",
+          "courses.trybe.certificateAdditionalTwo.contentEleven",
         ],
       },
       {
         image: frontEndCertificateImage,
-        name: "Desenvolvimento Front-End",
+        name: "courses.trybe.certificateAdditionalThree.name",
         link: "https://www.credential.net/ac89d79b-ddd2-484a-87b0-4697f37ff20a#acc.NpCyBrFc",
         pdf: frontEndCertificatePdf,
         contents: [
-          "Introdução a React",
-          "Estado dos componentes, Eventos e Formulários com React",
-          "Ciclo de vida dos componentes e React Router",
-          "Metodologias ágeis",
-          "Testes automatizados com React Testing Library(RTL)",
-          "Gerenciamento de estado com Redux",
-          "Context API e React Hooks",
+          "courses.trybe.certificateAdditionalThree.contentOne",
+          "courses.trybe.certificateAdditionalThree.contentTwo",
+          "courses.trybe.certificateAdditionalThree.contentThree",
+          "courses.trybe.certificateAdditionalThree.contentFour",
+          "courses.trybe.certificateAdditionalThree.contentFive",
+          "courses.trybe.certificateAdditionalThree.contentSix",
+          "courses.trybe.certificateAdditionalThree.contentSeven",
         ],
       },
       {
         image: fundamentalsCertificateImage,
-        name: "Fundamentos do Desenvolvimento Web",
+        name: "courses.trybe.certificateAdditionalFour.name",
         link: "https://www.credential.net/fd1a5519-756f-48da-9d64-d449f0eaf0f7#acc.b4VLXrdH",
         pdf: fundamentalsCertificatePdf,
         contents: [
-          "Unix e Bash",
-          "Git, GitHub e internet",
-          "Introdução a HTML e CSS",
-          "JavaScript - DOM, Eventos e Web Storage",
-          "HTML e CSS - Formulários, Flexbox e Responsividade",
-          "Introdução a JavaScript ES6 e teste unitário",
-          "Funções de alta ordem de JavaScript ES6",
-          "JavaScript assíncrono e promises",
-          "Testes automatizados com Jest",
+          "courses.trybe.certificateAdditionalFour.contentOne",
+          "courses.trybe.certificateAdditionalFour.contentTwo",
+          "courses.trybe.certificateAdditionalFour.contentThree",
+          "courses.trybe.certificateAdditionalFour.contentFour",
+          "courses.trybe.certificateAdditionalFour.contentFive",
+          "courses.trybe.certificateAdditionalFour.contentSix",
+          "courses.trybe.certificateAdditionalFour.contentSeven",
+          "courses.trybe.certificateAdditionalFour.contentEight",
+          "courses.trybe.certificateAdditionalFour.contentNine",
         ],
       },
     ],
   },
 ];
 
-interface ICoursesProps {
-  themeSelected: string;
-}
-
 export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Section id="courses">
       <Container>
-        <Title>Cursos</Title>
+        <Title>{t("courses.title")}</Title>
         {courses.map(
           (
             {
@@ -205,7 +207,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
             index,
           ) => (
             <CourseCard key={index}>
-              <CourseTitle>{name}</CourseTitle>
+              <CourseTitle>{t(name)}</CourseTitle>
 
               <CourseContent>
                 <LogoWrapper $themeSelected={themeSelected}>
@@ -213,18 +215,18 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                 </LogoWrapper>
 
                 <CourseInfo>
-                  <h3>Período</h3>
+                  <h3>{t("courses.subtitleOne")}</h3>
                   <p>
-                    {startDate} – {endDate}
+                    {t(startDate)} – {t(endDate)}
                   </p>
                   <p>
-                    {qtdHours} horas • {status}
+                    {qtdHours} {t("courses.hours")} • {t(status)}
                   </p>
 
-                  <h3>Tópicos abordados</h3>
+                  <h3>{t("courses.subtitleTwo")}</h3>
                   <ContentsList>
                     {contents.map((content, index) => (
-                      <li key={index}>{content}</li>
+                      <li key={index}>{t(content)}</li>
                     ))}
                   </ContentsList>
                 </CourseInfo>
@@ -235,7 +237,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
                     <ActionButtons>
                       <ActionButton href={mainCertificate.pdf} download>
-                        <FaDownload /> Download
+                        <FaDownload /> {t("courses.buttonPrimary")}
                       </ActionButton>
 
                       {!!mainCertificate.link && (
@@ -243,7 +245,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                           href={mainCertificate.link}
                           target="_blank"
                         >
-                          <FaExternalLinkAlt /> Credencial
+                          <FaExternalLinkAlt /> {t("courses.buttonSecondary")}
                         </ActionButton>
                       )}
                     </ActionButtons>
@@ -275,23 +277,24 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
                               <ActionButtons>
                                 <ActionButton href={pdf} download>
-                                  <FaDownload /> Download
+                                  <FaDownload /> {t("courses.buttonPrimary")}
                                 </ActionButton>
 
                                 {!!link && (
                                   <ActionButton href={link} target="_blank">
-                                    <FaExternalLinkAlt /> Credencial
+                                    <FaExternalLinkAlt />{" "}
+                                    {t("courses.buttonSecondary")}
                                   </ActionButton>
                                 )}
                               </ActionButtons>
                             </FeaturedLeft>
 
                             <FeaturedRight>
-                              <h4>{name}</h4>
+                              <h4>{t(name)}</h4>
 
                               <CertificateList>
                                 {contents.map((content, index) => (
-                                  <li key={index}>{content}</li>
+                                  <li key={index}>{t(content)}</li>
                                 ))}
                               </CertificateList>
                             </FeaturedRight>

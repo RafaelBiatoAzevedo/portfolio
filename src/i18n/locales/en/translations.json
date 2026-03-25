@@ -122,10 +122,142 @@
     }
   },
 
+  "experiences": {
+    "title": "Experiences",
+    "experienceManager": {
+      "company": "Restaurante Bandeirantes",
+      "responsibility": "Manager",
+      "duration": "Jan 2003 - Jan 2018 • 15 years 1 month",
+      "bulletOne": "Leadership and development of the operational team, promoting alignment and efficiency in internal processes",
+      "bulletTwo": "Supplier and inventory management, ensuring proper supply, deadline control, and waste reduction",
+      "bulletThree": "Shift planning and organization of operational routines, ensuring stability and continuity of activities",
+      "bulletFour": "Inventory monitoring and compliance with hygiene and safety standards"
+    },
+    "experienceRSSolutions": {
+      "company": "RS Solutions",
+      "responsibility": "Junior/Mid Web and Mobile Developer",
+      "duration": "May 2021 - Nov 2024 • 3 years 7 months",
+      "bulletOne": "Development and maintenance of retail-focused commercial automation solutions, including POS and self-service systems",
+      "bulletTwo": "Integration with payment company SDKs and physical devices (scales, printers, kiosks), ensuring efficient and stable communication",
+      "bulletThree": "Implementation of solutions focused on high availability and reliability in continuous operation environments",
+      "bulletFour": "Performance and usability optimization in critical sales flow systems"
+    },
+    "experienceVahlis": {
+      "company": "Santos Vahlis Group",
+      "responsibility": "Full Stack Engineer",
+      "duration": "Feb 2025 - Aug 2025 • 6 months",
+      "bulletOne": "Full stack web application development using Vue.js on the front-end and .NET Core on the back-end",
+      "bulletTwo": "Implementation of secure REST APIs and integration with PostgreSQL, ensuring data integrity and performance",
+      "bulletThree": "Deployment management and monitoring in AWS environment, ensuring application stability and availability",
+      "bulletFour": "Active participation in the full development lifecycle (analysis, implementation, testing, and maintenance)"
+    },
+    "experienceZoki": {
+      "company": "Zoki Tecnologia",
+      "responsibility": "Full Stack Engineer",
+      "duration": "Feb 2025 - Feb 2026 • 1 year 1 month",
+      "bulletOne": "Full stack web application development using Vue.js on the front-end and .NET Core on the back-end",
+      "bulletTwo": "Implementation of secure REST APIs and integration with PostgreSQL, ensuring data integrity and performance",
+      "bulletThree": "Deployment management and monitoring in AWS environment, ensuring application stability and availability",
+      "bulletFour": "Active participation in the full development lifecycle (analysis, implementation, testing, and maintenance)"
+    }
+  },
+
   "education": {
     "title": "Academic Training",
     "educationName": "Systems Analysis",
     "period": "semester"
+  },
+
+  "courses": {
+    "title": "Courses",
+    "subtitleOne": "Period",
+    "subtitleTwo": "Covered Topics",
+    "buttonPrimary": "Download",
+    "buttonSecondary": "Credential",
+    "hours": "hours",
+    "fullCycle": {
+      "name": "AI Development",
+      "startDate": "Mar 2026",
+      "endDate": "Mar 2026",
+      "status": "Completed",
+      "contentOne": "Prompt and Context Engineering",
+      "contentTwo": "Integrating applications using AI (goes far beyond just using the OpenAI SDK)",
+      "contentThree": "Building AI Agents",
+      "contentFour": "Creating skills for AI agents",
+      "contentFive": "New challenges introduced by AI",
+      "contentSix": "In-depth understanding of what AI agents are",
+      "contentSeven": "Prompt management and its impact on agents",
+      "contentEight": "Retrieval Augmented Generation (RAG)",
+      "contentNine": "Frameworks for building agents",
+      "mainCertificate": {
+        "name": "Web Development"
+      }
+    },
+    "trybe": {
+      "school": "Trybe",
+      "name": "Full Stack Web Development",
+      "startDate": "Nov 2020",
+      "endDate": "Nov 2021",
+      "status": "Completed",
+      "contentOne": "Web Development Fundamentals",
+      "contentTwo": "Front-End Development",
+      "contentThree": "Back-End Development",
+      "contentFour": "Computer Science",
+      "contentFive": "Soft Skills",
+      "mainCertificate": {
+        "name": "Web Development",
+        "contentOne": "Web Development Fundamentals",
+        "contentTwo": "Front-End Development",
+        "contentThree": "Back-End Development",
+        "contentFour": "Computer Science",
+        "contentFive": "Soft Skills"
+      },
+      "certificateAdditionalOne": {
+        "name": "Computer Science",
+        "contentOne": "Introduction to Python",
+        "contentTwo": "Object-Oriented Programming (OOP)",
+        "contentThree": "Networking and Data Scraping",
+        "contentFour": "Algorithms",
+        "contentFive": "Data Structures I: Arrays, Hashmaps and Sets",
+        "contentSix": "Data Structures II: Lists, Queues and Stacks"
+      },
+      "certificateAdditionalTwo": {
+        "name": "Back-End Development",
+        "contentOne": "Introduction to SQL, SQL functions and JOINs",
+        "contentTwo": "Database Normalization and Modeling",
+        "contentThree": "Introduction to MongoDB",
+        "contentFour": "MongoDB - Simple and Complex Updates",
+        "contentFive": "MongoDB - Aggregation Framework",
+        "contentSix": "Web Development with Node.js",
+        "contentSeven": "Node.js - MSC Architecture, REST and RESTful",
+        "contentEight": "Authentication and File Upload",
+        "contentNine": "Deployment",
+        "contentTen": "SOLID Architecture and ORM",
+        "contentEleven": "Sockets"
+      },
+      "certificateAdditionalThree": {
+        "name": "Front-End Development",
+        "contentOne": "Introduction to React",
+        "contentTwo": "Component State, Events and Forms in React",
+        "contentThree": "Component Lifecycle and React Router",
+        "contentFour": "Agile Methodologies",
+        "contentFive": "Automated testing with React Testing Library (RTL)",
+        "contentSix": "State management with Redux",
+        "contentSeven": "Context API and React Hooks"
+      },
+      "certificateAdditionalFour": {
+        "name": "Web Development Fundamentals",
+        "contentOne": "Unix and Bash",
+        "contentTwo": "Git, GitHub and Internet",
+        "contentThree": "Introduction to HTML and CSS",
+        "contentFour": "JavaScript - DOM, Events and Web Storage",
+        "contentFive": "HTML and CSS - Forms, Flexbox and Responsiveness",
+        "contentSix": "Introduction to JavaScript ES6 and Unit Testing",
+        "contentSeven": "JavaScript ES6 Higher-Order Functions",
+        "contentEight": "Asynchronous JavaScript and Promises",
+        "contentNine": "Automated testing with Jest"
+      }
+    }
   },
 
   "contact": {
