@@ -1,5 +1,74 @@
 import styled from "styled-components";
 
+export const BackgroundImage = styled.img`
+  position: absolute;
+
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 45%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center -30%;
+
+  opacity: 0.9;
+
+  z-index: 0;
+
+  /* Faz a imagem desaparecer nas bordas */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+  );
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 50%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 55%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    height: 70%;
+
+    right: 0;
+    top: 0;
+    transform: none;
+
+    object-fit: cover;
+    object-position: center -5%;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 55%,
+      transparent 100%
+    );
+
+    mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      black 55%,
+      transparent 100%
+    );
+  }
+`;
+
 export const Section = styled.section`
   width: 100%;
   height: 100dvh;
@@ -55,59 +124,21 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin-top: 25px;
-  }
-`;
-
-export const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 4rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    gap: 2rem;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    flex-direction: column-reverse;
-    text-align: center;
+    //margin-top: 25px;
+    margin-top: 0px;
   }
 `;
 
 export const Content = styled.div`
-  flex: 1;
-`;
+  flex: 0.5;
 
-export const ImageWrapper = styled.div`
-  flex: 0.8;
-  display: flex;
-  justify-content: center;
-  position: relative;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex: none;
+    width: 100%;
+    margin-top: auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
-    flex: 0.6;
-  }
-`;
-
-export const ProfileImage = styled.img`
-  width: 400px;
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 350px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
-    width: 300px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: 180px;
+    flex-direction: column;
+    text-align: center;
   }
 `;
 

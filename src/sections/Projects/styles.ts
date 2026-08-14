@@ -9,7 +9,7 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 8rem 3%;
+    padding: 2rem 3%;
   }
 `;
 

@@ -7,10 +7,8 @@ import {
   ButtonPrimary,
   ButtonSecondary,
   Greeting,
-  Wrapper,
-  ImageWrapper,
-  ProfileImage,
   Section,
+  BackgroundImage,
 } from "./styles";
 
 import profile from "../../assets/RafaelAzevedoHitech.png";
@@ -30,32 +28,27 @@ export const Hero = () => {
 
   return (
     <Section id="hero">
-      <Wrapper>
-        <Content>
-          <Greeting>{t("hero.greeting")}</Greeting>
+      <BackgroundImage src={profile} alt="" />
+      <Content>
+        <Greeting>{t("hero.greeting")}</Greeting>
 
-          <Title>Rafael Azevedo</Title>
+        <Title>Rafael Azevedo</Title>
 
-          <Subtitle>{t("hero.subtitle")}</Subtitle>
+        <Subtitle>{t("hero.subtitle")}</Subtitle>
 
-          <Description>{t("hero.description")}</Description>
+        <Description>{t("hero.description")}</Description>
 
-          <ButtonGroup>
-            <ButtonPrimary onClick={onClickPrimary}>
-              {t("hero.buttonPrimary")}
-            </ButtonPrimary>
-            <ButtonSecondary onClick={onClickSecondary}>
-              {t("hero.buttonSecondary")}
-            </ButtonSecondary>
-          </ButtonGroup>
+        <ButtonGroup>
+          <ButtonPrimary onClick={onClickPrimary}>
+            {t("hero.buttonPrimary")}
+          </ButtonPrimary>
+          <ButtonSecondary onClick={onClickSecondary}>
+            {t("hero.buttonSecondary")}
+          </ButtonSecondary>
+        </ButtonGroup>
 
-          <SocialLinks />
-        </Content>
-
-        <ImageWrapper>
-          <ProfileImage src={profile} alt="Rafael Azevedo" />
-        </ImageWrapper>
-      </Wrapper>
+        <SocialLinks />
+      </Content>
     </Section>
   );
 };
