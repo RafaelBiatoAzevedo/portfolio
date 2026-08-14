@@ -10,6 +10,7 @@ export const Section = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 4rem 3%;
+    scroll-margin-top: 70px;
   }
 `;
 
