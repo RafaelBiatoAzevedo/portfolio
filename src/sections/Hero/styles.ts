@@ -77,7 +77,7 @@ export const BackgroundImage = styled.img`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     height: 60%;
-    object-position: center -50%;
+    object-position: center -40%;
   }
 `;
 
