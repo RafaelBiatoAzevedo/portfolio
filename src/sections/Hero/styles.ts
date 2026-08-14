@@ -11,7 +11,7 @@ export const BackgroundImage = styled.img`
   height: 100%;
 
   object-fit: cover;
-  object-position: center -30%;
+  object-position: center -20%;
 
   opacity: 0.9;
 
@@ -36,10 +36,12 @@ export const BackgroundImage = styled.img`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 50%;
+    object-position: center -60%;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 55%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {
+    width: 50%;
+    object-position: center 0%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -66,6 +68,16 @@ export const BackgroundImage = styled.img`
       black 55%,
       transparent 100%
     );
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 65%;
+    object-position: center -10%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+    height: 60%;
+    object-position: center -50%;
   }
 `;
 
@@ -124,7 +136,6 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    //margin-top: 25px;
     margin-top: 0px;
   }
 `;
