@@ -71,7 +71,7 @@ export const MenuItem = styled.a<{ $active?: boolean }>`
   transition: 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary}3;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
