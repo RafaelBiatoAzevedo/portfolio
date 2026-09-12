@@ -154,6 +154,13 @@ export const MobileOnly = styled.div`
   }
 `;
 
+export const MenuToggleButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.textSoft};
+`;
+
 export const MobileMenu = styled.div<{ $open: boolean }>`
   display: flex;
   flex-direction: column;

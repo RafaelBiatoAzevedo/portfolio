@@ -26,7 +26,7 @@ export const Contact = () => {
 
   return (
     <Section id="contact">
-      <BackTopButton onClick={scrollToTop}>
+      <BackTopButton type="button" onClick={scrollToTop} aria-label="Voltar ao topo">
         <FiArrowUp />
       </BackTopButton>
 
@@ -39,7 +39,7 @@ export const Contact = () => {
         </Content>
 
         <CompanyInfo>
-          <AzevedoLogo src={azevedoLogo} />
+          <AzevedoLogo src={azevedoLogo} alt="Azevedo Digital" />
           <p>CNPJ: 39.324.590/0001-43</p>
 
           <InfoItem>

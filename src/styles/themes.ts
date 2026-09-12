@@ -1,7 +1,7 @@
 export const lightTheme = {
   colors: {
     background: "#F5F7FA",
-    backgroundCard: " #0485C910",
+    backgroundCard: "#0485C910",
     surface: "#FFFFFF",
     primary: "#0485C9",
     secondary: "#7C3AED",
@@ -23,7 +23,7 @@ export const lightTheme = {
 export const darkTheme = {
   colors: {
     background: "#0A0A0A",
-    backgroundCard: " #0485C910",
+    backgroundCard: "#0485C910",
     surface: "#111827",
     primary: "#0485C9",
     secondary: "#8B5CF6",

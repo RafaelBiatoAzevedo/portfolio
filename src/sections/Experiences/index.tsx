@@ -85,7 +85,7 @@ export const Experiences = () => {
                 <ExperienceItem key={index}>
                   <ContentTop>
                     <LogoWrapper>
-                      <CompanyLogo src={companyLogo}></CompanyLogo>
+                      <CompanyLogo src={companyLogo} alt={t(company)} />
                     </LogoWrapper>
                     <ContentTitle>
                       <h3>{t(company)}</h3>

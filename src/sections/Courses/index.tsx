@@ -194,6 +194,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
         {courses.map(
           (
             {
+              school,
               logo,
               name,
               startDate,
@@ -211,7 +212,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
               <CourseContent>
                 <LogoWrapper $themeSelected={themeSelected}>
-                  <CourseLogo src={logo} />
+                  <CourseLogo src={logo} alt={school} loading="lazy" />
                 </LogoWrapper>
 
                 <CourseInfo>
@@ -233,7 +234,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
                 {!!mainCertificate && (
                   <MainCertificate>
-                    <MainCertificateImage src={mainCertificate.image} />
+                    <MainCertificateImage src={mainCertificate.image} alt={t(mainCertificate.name)} loading="lazy" />
 
                     <ActionButtons>
                       <ActionButton href={mainCertificate.pdf} download>
@@ -244,6 +245,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                         <ActionButton
                           href={mainCertificate.link}
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <FaExternalLinkAlt /> {t("courses.buttonSecondary")}
                         </ActionButton>
@@ -255,7 +257,11 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
               {!!certificatesAdditionals.length && (
                 <>
                   <ToggleWrapper>
-                    <ToggleButton onClick={() => setIsOpen(!isOpen)}>
+                    <ToggleButton type="button" onClick={() => setIsOpen((open) => !open)}
+                      aria-label={isOpen ? "Ocultar certificados adicionais" : "Mostrar certificados adicionais"}
+                      aria-expanded={isOpen}
+                      aria-controls="additional-certificates"
+                    >
                       {isOpen ? (
                         <>
                           <FiEyeOff size={"1.7rem"} /> -
@@ -267,13 +273,13 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                       )}
                     </ToggleButton>
                   </ToggleWrapper>
-                  <ExpandableContainer $isOpen={isOpen}>
+                  <ExpandableContainer id="additional-certificates" $isOpen={isOpen}>
                     <Grid>
                       {certificatesAdditionals.map(
                         ({ image, name, link, pdf, contents }, index) => (
                           <FeaturedCard key={index}>
                             <FeaturedLeft>
-                              <CertificateImage src={image} />
+                              <CertificateImage src={image} alt={t(name)} loading="lazy" />
 
                               <ActionButtons>
                                 <ActionButton href={pdf} download>
@@ -281,7 +287,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                                 </ActionButton>
 
                                 {!!link && (
-                                  <ActionButton href={link} target="_blank">
+                                  <ActionButton href={link} target="_blank" rel="noopener noreferrer">
                                     <FaExternalLinkAlt />{" "}
                                     {t("courses.buttonSecondary")}
                                   </ActionButton>

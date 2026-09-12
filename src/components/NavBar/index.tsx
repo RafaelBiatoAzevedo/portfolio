@@ -7,6 +7,7 @@ import {
   LanguageButton,
   Logo,
   LogoWrapper,
+  MenuToggleButton,
   Menu,
   MenuItem,
   MenuWrapper,
@@ -31,7 +32,6 @@ import {
   FiUser,
   FiX,
 } from "react-icons/fi";
-import { useTheme } from "styled-components";
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -52,7 +52,6 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
   const [active, setActive] = useState("hero");
   const [isOpen, setIsOpen] = useState(false);
   const { i18n, t } = useTranslation();
-  const { colors } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,35 +107,32 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
 
       <DesktopOnly>
         <ActionsWrapper>
-          <ThemeSwitch onClick={toggleTheme}>
+          <ThemeSwitch type="button" onClick={toggleTheme}
+            aria-label={t(theme === "dark" ? "accessibility.activateLightTheme" : "accessibility.activateDarkTheme")}
+          >
             <SwitchCircle themeMode={theme}>
               {theme === "dark" ? "🌙" : "☀️"}
             </SwitchCircle>
           </ThemeSwitch>
 
-          <LanguageButton onClick={toggleLanguage}>
+          <LanguageButton type="button" onClick={toggleLanguage}
+            aria-label={t("accessibility.changeLanguage")}
+          >
             {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
           </LanguageButton>
         </ActionsWrapper>
       </DesktopOnly>
 
       <MobileOnly>
-        {isOpen ? (
-          <FiX
-            size={"3rem"}
-            color={colors.textSoft}
-            onClick={() => setIsOpen(!isOpen)}
-          />
-        ) : (
-          <FiMenu
-            size={"3rem"}
-            color={colors.textSoft}
-            onClick={() => setIsOpen(!isOpen)}
-          />
-        )}
+        <MenuToggleButton type="button" onClick={() => setIsOpen((open) => !open)}
+          aria-label={t(isOpen ? "accessibility.closeMenu" : "accessibility.openMenu")}
+          aria-expanded={isOpen} aria-controls="mobile-menu"
+        >
+          {isOpen ? <FiX size="3rem" /> : <FiMenu size="3rem" />}
+        </MenuToggleButton>
       </MobileOnly>
 
-      <MobileMenu $open={isOpen}>
+      <MobileMenu id="mobile-menu" $open={isOpen}>
         <MenuWrapper>
           {Object.entries(sectionAndIcons).map(([name, Icon]) => {
             return (
@@ -154,13 +150,17 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
           })}
 
           <ActionsWrapper>
-            <ThemeSwitch onClick={toggleTheme}>
+            <ThemeSwitch type="button" onClick={toggleTheme}
+              aria-label={t(theme === "dark" ? "accessibility.activateLightTheme" : "accessibility.activateDarkTheme")}
+            >
               <SwitchCircle themeMode={theme}>
                 {theme === "dark" ? "🌙" : "☀️"}
               </SwitchCircle>
             </ThemeSwitch>
 
-            <LanguageButton onClick={toggleLanguage}>
+            <LanguageButton type="button" onClick={toggleLanguage}
+              aria-label={t("accessibility.changeLanguage")}
+            >
               {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
             </LanguageButton>
           </ActionsWrapper>

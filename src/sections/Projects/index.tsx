@@ -88,7 +88,7 @@ const projects = [
       "projects.projectSmartExtrator.featureThree",
     ],
     tech: [
-      { icon: FaNodeJs, nmae: "Node.js", scale: 1 },
+      { icon: FaNodeJs, name: "Node.js", scale: 1 },
       { icon: SiTypescript, name: "TypeScript", scale: 1 },
       { icon: SiNestjs, name: "NestJS", scale: 1 },
       { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
@@ -328,7 +328,7 @@ export function Projects() {
                 >
                   {project.images.map((img, i) => (
                     <SwiperSlide key={i}>
-                      <img src={img} alt={project.title} />
+                      <img src={img} alt={t(project.title)} loading="lazy" />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -362,13 +362,18 @@ export function Projects() {
                 </IconsRow>
 
                 <ButtonGroup>
-                  <ActionButtonPrimary href={project.link} target="_blank">
+                  <ActionButtonPrimary
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaExternalLinkAlt /> {t("projects.genericButtonPlus")}
                   </ActionButtonPrimary>
                   {!!project.github && (
                     <ActionButtonSecondary
                       href={project.github}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <SiGithub /> GitHub
                     </ActionButtonSecondary>

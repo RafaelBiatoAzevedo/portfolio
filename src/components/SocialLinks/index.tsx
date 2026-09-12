@@ -14,6 +14,7 @@ export const SocialLinks = () => {
         href="https://www.linkedin.com/in/rafael-azevedo-530889195"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn"
       >
         <FaLinkedinIn />
       </SocialButton>
@@ -22,6 +23,7 @@ export const SocialLinks = () => {
         href="https://github.com/RafaelBiatoAzevedo"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="GitHub"
       >
         <FaGithub />
       </SocialButton>
@@ -30,6 +32,7 @@ export const SocialLinks = () => {
         href="https://www.instagram.com/rafael_azevedo_55"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Instagram"
       >
         <FaInstagram />
       </SocialButton>
@@ -38,6 +41,7 @@ export const SocialLinks = () => {
         href="https://wa.me/55019990197883"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="WhatsApp"
       >
         <FaWhatsapp />
       </SocialButton>
