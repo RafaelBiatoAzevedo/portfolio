@@ -328,7 +328,7 @@ export function Projects() {
                 >
                   {project.images.map((img, i) => (
                     <SwiperSlide key={i}>
-                      <img src={img} alt={t(project.title)} loading="lazy" />
+                      <img src={img} alt={t(project.title)} />
                     </SwiperSlide>
                   ))}
                 </Swiper>

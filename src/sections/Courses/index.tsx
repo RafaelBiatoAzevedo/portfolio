@@ -212,7 +212,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
               <CourseContent>
                 <LogoWrapper $themeSelected={themeSelected}>
-                  <CourseLogo src={logo} alt={school} loading="lazy" />
+                  <CourseLogo src={logo} alt={school} />
                 </LogoWrapper>
 
                 <CourseInfo>
@@ -234,7 +234,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
 
                 {!!mainCertificate && (
                   <MainCertificate>
-                    <MainCertificateImage src={mainCertificate.image} alt={t(mainCertificate.name)} loading="lazy" />
+                    <MainCertificateImage src={mainCertificate.image} alt={t(mainCertificate.name)} />
 
                     <ActionButtons>
                       <ActionButton href={mainCertificate.pdf} download>
@@ -279,7 +279,7 @@ export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
                         ({ image, name, link, pdf, contents }, index) => (
                           <FeaturedCard key={index}>
                             <FeaturedLeft>
-                              <CertificateImage src={image} alt={t(name)} loading="lazy" />
+                              <CertificateImage src={image} alt={t(name)} />
 
                               <ActionButtons>
                                 <ActionButton href={pdf} download>
