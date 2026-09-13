@@ -1,5 +1,6 @@
 import {
   ActionsWrapper,
+  BrandName,
   Container,
   Copy,
   DesktopOnly,
@@ -88,6 +89,7 @@ export const Navbar = ({ toggleTheme, theme }: NavbarProps) => {
     <Container>
       <LogoWrapper>
         <Logo src={profile} alt="Rafael caricature" />
+        <BrandName>Rafael Azevedo</BrandName>
       </LogoWrapper>
 
       <DesktopOnly>

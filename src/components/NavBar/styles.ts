@@ -33,6 +33,8 @@ export const Container = styled.nav`
 
 export const LogoWrapper = styled.div`
   display: flex;
+  align-items: center;
+  gap: 1rem;
   justify-content: center;
   position: relative;
 `;
@@ -47,6 +49,18 @@ export const Logo = styled.img`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 36px;
     height: 36px;
+  }
+`;
+
+export const BrandName = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
   }
 `;
 
