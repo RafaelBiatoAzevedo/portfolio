@@ -36,7 +36,7 @@ export const BackgroundImage = styled.img`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 50%;
-    object-position: center -60%;
+    object-position: center -20%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.laptop}) {

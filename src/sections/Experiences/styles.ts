@@ -89,6 +89,16 @@ export const ExperienceItem = styled.div`
 
   overflow: hidden;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background: ${({ theme }) => theme.colors.primary};
+  }
+
   transition: all 0.3s ease;
 
   &::before {

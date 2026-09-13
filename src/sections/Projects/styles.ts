@@ -158,6 +158,13 @@ export const Carousel = styled.div`
     object-fit: contain;
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    img {
+      width: 100%;
+      height: 330px;
+    }
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     img {
       width: 100%;
