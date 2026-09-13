@@ -40,6 +40,13 @@
   "projects": {
     "title": "Projects",
     "genericButtonPlus": "Learn more",
+    "projectLeviata": {
+      "title": "Leviatã e o Cativeiro — UNESP-SP",
+      "description": "Institutional and academic platform developed for the “Leviatã e o Cativeiro” research group at UNESP-SP, dedicated to the organization, dissemination, and management of research on the relationship between the Modern State and slavery, covering the period from the 16th to the 19th century.",
+      "featureOne": "Academic Content Management: A structured system for managing researchers, research themes, books, articles, dossiers, events, examination boards, presented works, and other academic productions of the group.",
+      "featureTwo": "API and Modular Architecture: Backend developed with NestJS, Prisma, and PostgreSQL, using a modular and strongly typed architecture to facilitate maintenance, scalability, and frontend integration.",
+      "featureThree": "Academic Relationships: Data modeling designed to represent relationships between researchers, institutions, research themes, academic productions, events, and other content, enabling a structured organization of the academic collection."
+    },
     "projectSmartExtrator": {
       "title": "Smart Invoice Extractor (API)",
       "description": "Intelligent system for processing, extracting, and managing electricity invoices, using Artificial Intelligence to transform unstructured documents (PDF) into actionable data.",

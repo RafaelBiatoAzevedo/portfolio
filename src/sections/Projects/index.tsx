@@ -18,11 +18,13 @@ import {
   ActionButtonSecondary,
 } from "./styles";
 
-import zoki1 from "../../assets/projects/GestorLoteamento/zokiCRM.png";
-import zoki2 from "../../assets/projects/GestorLoteamento/ZokiHome.png";
-import zoki3 from "../../assets/projects/GestorLoteamento/usingZoki.png";
+import leviata1 from "../../assets/projects/Leviata/leviataHome.png";
 
 import smartInvoiceExtrator from "../../assets/projects/SmartInvoiceExtrator/ExtartorLLMInvoices.png";
+
+import zoki1 from "../../assets/projects/GestorLoteamento/zokiCRM.png";
+import zoki2 from "../../assets/projects/GestorLoteamento/zokiHome.png";
+import zoki3 from "../../assets/projects/GestorLoteamento/usingZoki.png";
 
 import pdv1 from "../../assets/projects/PDVFacil/pdvs.webp";
 import pdv2 from "../../assets/projects/PDVFacil/pdvAndroid.png";
@@ -79,6 +81,27 @@ import { SwaggerIcon } from "../../assets/SVGs/swaggerIcon";
 import { useTranslation } from "react-i18next";
 
 const projects = [
+  {
+    title: "projects.projectLeviata.title",
+    descriptionMain: "projects.projectLeviata.description",
+    descriptionList: [
+      "projects.projectLeviata.featureOne",
+      "projects.projectLeviata.featureTwo",
+      "projects.projectLeviata.featureThree",
+    ],
+    tech: [
+      { icon: FaNodeJs, name: "Node.js", scale: 1 },
+      { icon: SiTypescript, name: "TypeScript", scale: 1 },
+      { icon: SiNestjs, name: "NestJS", scale: 1 },
+      { icon: SiPostgresql, name: "PostgreSQL", scale: 1 },
+      { icon: SiPrisma, name: "Prisma", scale: 1 },
+      { icon: SiGithub, name: "GitHub", scale: 1 },
+      { icon: SwaggerIcon, name: "Swagger", scale: 1 },
+    ],
+    images: [leviata1],
+    link: "",
+    github: "",
+  },
   {
     title: "projects.projectSmartExtrator.title",
     descriptionMain: "projects.projectSmartExtrator.description",

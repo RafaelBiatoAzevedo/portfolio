@@ -40,6 +40,13 @@
   "projects": {
     "title": "Projetos",
     "genericButtonPlus": "Saiba mais",
+    "projectLeviata": {
+      "title": "Leviatã e o Cativeiro — UNESP-SP",
+      "description": "Plataforma institucional e acadêmica desenvolvida para o grupo de pesquisa “Leviatã e o Cativeiro”, da UNESP-SP, dedicada à organização, divulgação e gestão de pesquisas sobre a relação entre Estado Moderno e escravidão, abrangendo o período do século XVI ao XIX.",
+      "featureOne": "Gestão de Conteúdo Acadêmico: Sistema estruturado para gerenciamento de pesquisadores, temáticas, livros, artigos, dossiês, eventos, bancas, trabalhos apresentados e demais produções acadêmicas do grupo.",
+      "featureTwo": "API e Arquitetura Modular: Backend desenvolvido com NestJS, Prisma e PostgreSQL, utilizando uma arquitetura modular e tipada para facilitar a manutenção, evolução e integração com o frontend.",
+      "featureThree": "Relacionamentos Acadêmicos: Modelagem de dados desenvolvida para representar relações entre pesquisadores, instituições, temáticas, produções científicas, eventos e demais conteúdos, permitindo uma organização estruturada do acervo."
+    },
     "projectSmartExtrator": {
       "title": "Extrator de Faturas Inteligente (API)",
       "description": "Sistema inteligente para processamento, extração e gestão de faturas de energia elétrica, utilizando Inteligência Artificial para transformar documentos não estruturados (PDF) em dados acionáveis.",
