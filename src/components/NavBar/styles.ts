@@ -34,6 +34,7 @@ export const Container = styled.nav`
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  cursor: default;
   gap: 1rem;
   justify-content: center;
   position: relative;
