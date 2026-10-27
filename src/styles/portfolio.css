@@ -461,8 +461,11 @@
   .portrait-tag { bottom: 40px; }
   .portrait-caption { font-size: 10px; bottom: 17px; }
   .availability { top: 3px; right: -10px; font-size: 9px; padding: 11px 12px; }
-  .code-note { width: 171px; bottom: 53px; left: -14px; padding: 10px 12px; }
-  .code-note code { font-size: 9px; }
+  .code-note { width: 132px; bottom: 53px; left: -14px; padding: 8px 10px; }
+  .code-note-top { margin-bottom: 6px; }
+  .code-note-top > span { width: 4px; height: 4px; }
+  .code-note-top svg { width: 11px; height: 11px; }
+  .code-note code { font-size: 7px; line-height: 1.6; }
   .orbit-badge { width: 95px; height: 95px; right: -18px; bottom: -7px; }
   .hero-bottom { padding-block: 26px; }
   .hero-stats { width: 100%; gap: 15px; justify-content: space-between; }
