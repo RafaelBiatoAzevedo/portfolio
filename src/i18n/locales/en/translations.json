@@ -8,7 +8,6 @@
     "courses": "Courses",
     "contact": "Contact"
   },
-
   "hero": {
     "greeting": "Hello, I am",
     "subtitle": "Full Stack Engineer focused on scalable applications",
@@ -16,7 +15,6 @@
     "buttonPrimary": "Projects",
     "buttonSecondary": "Contact"
   },
-
   "about": {
     "title": "About me",
     "description": "I am a Full Stack Developer focused on building modern, high-performance, and scalable applications, always prioritizing clean architecture, best practices, and user experience. In addition to my technical work, I am the founder of Azevedo Digital, where I develop tailored solutions for companies and professionals looking to transform processes into efficient digital products. My motivation is to use technology to simplify complex problems and create real impact through well-structured software.",
@@ -36,7 +34,6 @@
     "stackTitleSeven": "Tools",
     "stackTitleEight": "Methodologies"
   },
-
   "projects": {
     "title": "Projects",
     "genericButtonPlus": "Learn more",
@@ -128,7 +125,6 @@
       "featureFive": "Legacy Building: Delivery of developments that act as long-lasting assets, intelligently and aesthetically integrated into the evolution of cities."
     }
   },
-
   "experiences": {
     "title": "Experiences",
     "experienceManager": {
@@ -166,15 +162,21 @@
       "bulletTwo": "Implementation of secure REST APIs and integration with PostgreSQL, ensuring data integrity and performance",
       "bulletThree": "Deployment management and monitoring in AWS environment, ensuring application stability and availability",
       "bulletFour": "Active participation in the full development lifecycle (analysis, implementation, testing, and maintenance)"
+    },
+    "experienceLeviata": {
+      "company": "Leviatã e o Cativeiro — UNESP-SP",
+      "responsibility": "Full Stack Developer · Freelance",
+      "duration": "2026",
+      "bulletOne": "Freelance development of the institutional and academic website for the Leviatã e o Cativeiro research group at UNESP-SP",
+      "bulletTwo": "API development with Node.js, TypeScript, and NestJS, integrated with PostgreSQL through Prisma",
+      "bulletThree": "Data modeling and organization of researchers, scientific publications, events, and academic content"
     }
   },
-
   "education": {
     "title": "Academic Training",
     "educationName": "Systems Analysis",
     "period": "semester"
   },
-
   "courses": {
     "title": "Courses",
     "subtitleOne": "Period",
@@ -197,7 +199,7 @@
       "contentEight": "Retrieval Augmented Generation (RAG)",
       "contentNine": "Frameworks for building agents",
       "mainCertificate": {
-        "name": "Web Development"
+        "name": "AI Development"
       }
     },
     "trybe": {
@@ -266,9 +268,98 @@
       }
     }
   },
-
   "contact": {
     "title": "Ready to turn your idea into a solution?",
     "subtitle": "I am available for new projects and opportunities."
+  },
+  "design": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "close": "Close",
+    "talk": "Let's talk",
+    "heroLineOne": "Turning",
+    "heroLineTwo": "ideas into",
+    "heroLineThree": "solutions",
+    "heroDescription": "From the first concept to the final line of code. I build web and mobile experiences that connect people, simplify processes, and help businesses grow.",
+    "exploreProjects": "Explore my projects",
+    "meetMe": "A little about me",
+    "based": "BRAZIL · CONNECTED TO THE WORLD",
+    "portraitAlt": "Portrait of Rafael Azevedo, Full Stack developer",
+    "portraitCaption": "People, technology, and purpose.",
+    "available": "Available for new projects",
+    "scroll": "Keep exploring",
+    "aboutTitle": "Intentional code.",
+    "aboutAccent": "Meaningful impact.",
+    "aboutStatement": "I believe in technology that solves.",
+    "aboutStatementAccent": "And experiences that make a difference.",
+    "githubExplore": "Explore my GitHub",
+    "expertiseWeb": "Web experiences",
+    "expertiseWebText": "Intuitive, fast, responsive interfaces.",
+    "expertiseMobile": "Mobile applications",
+    "expertiseMobileText": "Solutions built for the real world.",
+    "expertiseArchitecture": "Solid architecture",
+    "expertiseArchitectureText": "APIs, integrations, and scalable systems.",
+    "expertiseBusiness": "Business perspective",
+    "expertiseBusinessText": "Every decision connected to a purpose.",
+    "stackTitle": "My technical toolkit",
+    "stackCaption": "The tools behind the ideas",
+    "selectedWork": "Selected work",
+    "projectsTitle": "Less talk.",
+    "projectsAccent": "More building.",
+    "projectsDescription": "A selection of what I've built where technology, experience, and real business challenges meet.",
+    "filterProjects": "Filter projects by category",
+    "filter_all": "All",
+    "filter_web": "Web",
+    "filter_mobile": "Mobile",
+    "showingProjects_one": "Showing {{count}} project",
+    "showingProjects_other": "Showing {{count}} projects",
+    "openProject": "View details of {{name}}",
+    "viewCase": "Explore the project",
+    "showLess": "Show fewer",
+    "showAllProjects": "View all projects",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "aboutProject": "Behind the project",
+    "visitProject": "Visit project",
+    "experienceTitle": "Every challenge,",
+    "experienceAccent": "a step forward.",
+    "experienceDescription": "A journey combining software development, management, and a focus on people.",
+    "experienceAside": "Experience goes beyond code. It's about understanding the problem and building the way forward.",
+    "continuousLearning": "Continuous learning",
+    "coursesTitle": "Always curious.",
+    "coursesAccent": "Always growing.",
+    "coursesDescription": "New tools, new challenges. Learning is part of every step along the way.",
+    "viewCertificate": "View {{name}} certificate",
+    "preview": "Preview",
+    "downloadCertificate": "Download certificate",
+    "moreCertificates": "More certifications (4)",
+    "hideCertificates": "Hide certifications",
+    "nextChapter": "Let's build the next chapter",
+    "contactTitle": "Good ideas start",
+    "contactAccent": "with a hello.",
+    "talkWhatsapp": "Talk to Rafael on WhatsApp",
+    "sendEmail": "Prefer email? Let's go",
+    "footerDescription": "Development with intention. Solutions that make a difference.",
+    "copyEmail": "Copy email address",
+    "copied": "Email copied!",
+    "copyFailed": "Use the email link to get in touch.",
+    "businessDescription": "Custom technology to turn processes into possibilities.",
+    "businessDetails": "Company information",
+    "rights": "All rights reserved.",
+    "madeWith": "MADE WITH PURPOSE & CODE",
+    "backTop": "Back to top",
+    "filter_api": "AI & APIs",
+    "category_web": "Web",
+    "category_mobile": "Mobile",
+    "category_api": "APIs",
+    "showTechnologies": "Show {{count}} more technologies for {{name}}",
+    "hideTechnologies": "Show fewer technologies for {{name}}"
+  },
+  "accessibility": {
+    "activateLightTheme": "Activate light theme",
+    "activateDarkTheme": "Activate dark theme",
+    "changeLanguage": "Switch language to Portuguese",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
   }
 }

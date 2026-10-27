@@ -1,50 +1,14 @@
-import { Links, SocialButton } from "./styles";
+import { FaLinkedinIn, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
+const socials = [
+  { name: "GitHub", href: "https://github.com/RafaelBiatoAzevedo", icon: FaGithub },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/rafael-azevedo-530889195", icon: FaLinkedinIn },
+  { name: "Instagram", href: "https://www.instagram.com/rafael_azevedo_55", icon: FaInstagram },
+  { name: "WhatsApp", href: "https://wa.me/5519990197883", icon: FaWhatsapp },
+];
 
-export const SocialLinks = () => {
-  return (
-    <Links>
-      <SocialButton
-        href="https://www.linkedin.com/in/rafael-azevedo-530889195"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <FaLinkedinIn />
-      </SocialButton>
-
-      <SocialButton
-        href="https://github.com/RafaelBiatoAzevedo"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-      >
-        <FaGithub />
-      </SocialButton>
-
-      <SocialButton
-        href="https://www.instagram.com/rafael_azevedo_55"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-        <FaInstagram />
-      </SocialButton>
-
-      <SocialButton
-        href="https://wa.me/55019990197883"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-      >
-        <FaWhatsapp />
-      </SocialButton>
-    </Links>
-  );
-};
+export const SocialLinks = () => (
+  <div className="social-links">
+    {socials.map(({ name, href, icon: Icon }) => <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name} title={name}><Icon /></a>)}
+  </div>
+);

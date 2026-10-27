@@ -3,8 +3,9 @@ import { initReactI18next } from "react-i18next";
 
 import pt from "./locales/pt/translations.json";
 import en from "./locales/en/translations.json";
+import { readPreference } from "../lib/preferences";
 
-const savedLanguage = localStorage.getItem("portfolio-language") || "pt";
+const savedLanguage = readPreference("portfolio-language", "pt") === "en" ? "en" : "pt";
 
 i18n.use(initReactI18next).init({
   resources: {

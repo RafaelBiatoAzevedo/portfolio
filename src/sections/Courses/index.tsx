@@ -1,320 +1,34 @@
-import { useState, type FC } from "react";
-
-import {
-  ActionButton,
-  ActionButtons,
-  Container,
-  ContentsList,
-  CourseCard,
-  CourseLogo,
-  CourseTitle,
-  CourseContent,
-  MainCertificateImage,
-  Section,
-  Title,
-  CourseInfo,
-  LogoWrapper,
-  MainCertificate,
-  ToggleWrapper,
-  ToggleButton,
-  ExpandableContainer,
-  Grid,
-  FeaturedLeft,
-  FeaturedRight,
-  CertificateList,
-  FeaturedCard,
-  CertificateImage,
-} from "./styles";
-
-import { FaDownload, FaExternalLinkAlt } from "react-icons/fa";
-
-//logos
-import trybeLogo from "../../assets/courses/trybeIcon.png";
-import aiFullcycleLogo from "../../assets/courses/fullcycleLogo.png";
-
-//Certificates
-import mainCertificateImage from "../../assets/certificates/MainCertificate.png";
-import computerScienceCertificateImage from "../../assets/certificates/ComputerScience.png";
-import backEndCertificateImage from "../../assets/certificates/BackEnd.png";
-import frontEndCertificateImage from "../../assets/certificates/FrontEnd.png";
-import fundamentalsCertificateImage from "../../assets/certificates/Fundamentals.png";
-import mainAiFullcycleCertificateImage from "../../assets/certificates/AiFullCycle.png";
-
-//PDFs
-import mainCertificatePdf from "../../assets/certificates/pdf/MainCertificate.pdf";
-import computerScienceCertificatePdf from "../../assets/certificates/pdf/ComputerScience.pdf";
-import backEndCertificatePdf from "../../assets/certificates/pdf/BackEnd.pdf";
-import frontEndCertificatePdf from "../../assets/certificates/pdf/FrontEnd.pdf";
-import fundamentalsCertificatePdf from "../../assets/certificates/pdf/Fundamentals.pdf";
-import mainAiFullcycleCertificatePdf from "../../assets/certificates/pdf/AiFullCycle.pdf";
-
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import { useState } from "react";
+import { FiArrowDown, FiArrowUpRight, FiAward, FiDownload, FiPlus } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { courses } from "../../data/courses";
+import { SectionHeading } from "../../components/SectionHeading";
+import { Reveal } from "../../components/Reveal";
+import { Modal } from "../../components/Modal";
 
-interface ICoursesProps {
-  themeSelected: string;
-}
+type Certificate = typeof courses[number]['mainCertificate'];
 
-const courses = [
-  {
-    school: "FullCycle",
-    logo: aiFullcycleLogo,
-    name: "courses.fullCycle.name",
-    startDate: "courses.fullCycle.startDate",
-    endDate: "courses.fullCycle.endDate",
-    qtdHours: 8,
-    status: "courses.fullCycle.status",
-    contents: [
-      "courses.fullCycle.contentOne",
-      "courses.fullCycle.contentTwo",
-      "courses.fullCycle.contentThree",
-      "courses.fullCycle.contentFour",
-      "courses.fullCycle.contentFive",
-      "courses.fullCycle.contentSix",
-      "courses.fullCycle.contentSeven",
-      "courses.fullCycle.contentEight",
-      "courses.fullCycle.contentNine",
-    ],
-    mainCertificate: {
-      image: mainAiFullcycleCertificateImage,
-      name: "courses.fullCycle.mainCertificate.name",
-      link: "",
-      pdf: mainAiFullcycleCertificatePdf,
-      contents: [],
-    },
-    certificatesAdditionals: [],
-  },
-  {
-    school: "Trybe",
-    logo: trybeLogo,
-    name: "courses.trybe.name",
-    startDate: "courses.trybe.startDate",
-    endDate: "courses.trybe.endDate",
-    qtdHours: 1500,
-    status: "courses.trybe.status",
-    contents: [
-      "courses.trybe.contentOne",
-      "courses.trybe.contentTwo",
-      "courses.trybe.contentThree",
-      "courses.trybe.contentFour",
-      "courses.trybe.contentFive",
-    ],
-    mainCertificate: {
-      image: mainCertificateImage,
-      name: "courses.trybe.mainCertificate.name",
-      link: "https://www.credential.net/b41dae45-7403-476c-93a6-f11209ef4474#acc.hkaCTcv9",
-      pdf: mainCertificatePdf,
-      contents: [
-        "courses.trybe.mainCertificate.contentOne",
-        "courses.trybe.mainCertificate.contentTwo",
-        "courses.trybe.mainCertificate.contentThree",
-        "courses.trybe.mainCertificate.contentFour",
-        "courses.trybe.mainCertificate.contentFive",
-      ],
-    },
-
-    certificatesAdditionals: [
-      {
-        image: computerScienceCertificateImage,
-        name: "courses.trybe.certificateAdditionalOne.name",
-        link: "https://www.credential.net/2c4b6b78-67b2-4a93-b11a-f7a09e0104d4#acc.skMBFx2T",
-        pdf: computerScienceCertificatePdf,
-        contents: [
-          "courses.trybe.certificateAdditionalOne.contentOne",
-          "courses.trybe.certificateAdditionalOne.contentTwo",
-          "courses.trybe.certificateAdditionalOne.contentThree",
-          "courses.trybe.certificateAdditionalOne.contentFour",
-          "courses.trybe.certificateAdditionalOne.contentFive",
-          "courses.trybe.certificateAdditionalOne.contentSix",
-        ],
-      },
-      {
-        image: backEndCertificateImage,
-        name: "courses.trybe.certificateAdditionalTwo.name",
-        link: "https://www.credential.net/93d37420-a5d5-4525-9597-f9d4dce703f0#acc.4uVKwoMm",
-        pdf: backEndCertificatePdf,
-        contents: [
-          "courses.trybe.certificateAdditionalTwo.contentOne",
-          "courses.trybe.certificateAdditionalTwo.contentTwo",
-          "courses.trybe.certificateAdditionalTwo.contentThree",
-          "courses.trybe.certificateAdditionalTwo.contentFour",
-          "courses.trybe.certificateAdditionalTwo.contentFive",
-          "courses.trybe.certificateAdditionalTwo.contentSix",
-          "courses.trybe.certificateAdditionalTwo.contentSeven",
-          "courses.trybe.certificateAdditionalTwo.contentEight",
-          "courses.trybe.certificateAdditionalTwo.contentNine",
-          "courses.trybe.certificateAdditionalTwo.contentTen",
-          "courses.trybe.certificateAdditionalTwo.contentEleven",
-        ],
-      },
-      {
-        image: frontEndCertificateImage,
-        name: "courses.trybe.certificateAdditionalThree.name",
-        link: "https://www.credential.net/ac89d79b-ddd2-484a-87b0-4697f37ff20a#acc.NpCyBrFc",
-        pdf: frontEndCertificatePdf,
-        contents: [
-          "courses.trybe.certificateAdditionalThree.contentOne",
-          "courses.trybe.certificateAdditionalThree.contentTwo",
-          "courses.trybe.certificateAdditionalThree.contentThree",
-          "courses.trybe.certificateAdditionalThree.contentFour",
-          "courses.trybe.certificateAdditionalThree.contentFive",
-          "courses.trybe.certificateAdditionalThree.contentSix",
-          "courses.trybe.certificateAdditionalThree.contentSeven",
-        ],
-      },
-      {
-        image: fundamentalsCertificateImage,
-        name: "courses.trybe.certificateAdditionalFour.name",
-        link: "https://www.credential.net/fd1a5519-756f-48da-9d64-d449f0eaf0f7#acc.b4VLXrdH",
-        pdf: fundamentalsCertificatePdf,
-        contents: [
-          "courses.trybe.certificateAdditionalFour.contentOne",
-          "courses.trybe.certificateAdditionalFour.contentTwo",
-          "courses.trybe.certificateAdditionalFour.contentThree",
-          "courses.trybe.certificateAdditionalFour.contentFour",
-          "courses.trybe.certificateAdditionalFour.contentFive",
-          "courses.trybe.certificateAdditionalFour.contentSix",
-          "courses.trybe.certificateAdditionalFour.contentSeven",
-          "courses.trybe.certificateAdditionalFour.contentEight",
-          "courses.trybe.certificateAdditionalFour.contentNine",
-        ],
-      },
-    ],
-  },
-];
-
-export const Courses: FC<ICoursesProps> = ({ themeSelected }) => {
-  const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-
+export const Courses = () => {
+  const { t, i18n } = useTranslation();
+  const [selected, setSelected] = useState<Certificate | null>(null);
+  const [expanded, setExpanded] = useState(false);
+  const additional = courses.flatMap((course) => course.certificatesAdditionals);
   return (
-    <Section id="courses">
-      <Title>{t("courses.title")}</Title>
-      <Container>
-        {courses.map(
-          (
-            {
-              school,
-              logo,
-              name,
-              startDate,
-              endDate,
-              qtdHours,
-              status,
-              contents,
-              mainCertificate,
-              certificatesAdditionals,
-            },
-            index,
-          ) => (
-            <CourseCard key={index}>
-              <CourseTitle>{t(name)}</CourseTitle>
-
-              <CourseContent>
-                <LogoWrapper $themeSelected={themeSelected}>
-                  <CourseLogo src={logo} alt={school} />
-                </LogoWrapper>
-
-                <CourseInfo>
-                  <h3>{t("courses.subtitleOne")}</h3>
-                  <p>
-                    {t(startDate)} – {t(endDate)}
-                  </p>
-                  <p>
-                    {qtdHours} {t("courses.hours")} • {t(status)}
-                  </p>
-
-                  <h3>{t("courses.subtitleTwo")}</h3>
-                  <ContentsList>
-                    {contents.map((content, index) => (
-                      <li key={index}>{t(content)}</li>
-                    ))}
-                  </ContentsList>
-                </CourseInfo>
-
-                {!!mainCertificate && (
-                  <MainCertificate>
-                    <MainCertificateImage src={mainCertificate.image} alt={t(mainCertificate.name)} />
-
-                    <ActionButtons>
-                      <ActionButton href={mainCertificate.pdf} download>
-                        <FaDownload /> {t("courses.buttonPrimary")}
-                      </ActionButton>
-
-                      {!!mainCertificate.link && (
-                        <ActionButton
-                          href={mainCertificate.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaExternalLinkAlt /> {t("courses.buttonSecondary")}
-                        </ActionButton>
-                      )}
-                    </ActionButtons>
-                  </MainCertificate>
-                )}
-              </CourseContent>
-              {!!certificatesAdditionals.length && (
-                <>
-                  <ToggleWrapper>
-                    <ToggleButton type="button" onClick={() => setIsOpen((open) => !open)}
-                      aria-label={isOpen ? "Ocultar certificados adicionais" : "Mostrar certificados adicionais"}
-                      aria-expanded={isOpen}
-                      aria-controls="additional-certificates"
-                    >
-                      {isOpen ? (
-                        <>
-                          <FiEyeOff size={"1.7rem"} /> -
-                        </>
-                      ) : (
-                        <>
-                          <FiEye size={"1.7rem"} /> +
-                        </>
-                      )}
-                    </ToggleButton>
-                  </ToggleWrapper>
-                  <ExpandableContainer id="additional-certificates" $isOpen={isOpen}>
-                    <Grid>
-                      {certificatesAdditionals.map(
-                        ({ image, name, link, pdf, contents }, index) => (
-                          <FeaturedCard key={index}>
-                            <FeaturedLeft>
-                              <CertificateImage src={image} alt={t(name)} />
-
-                              <ActionButtons>
-                                <ActionButton href={pdf} download>
-                                  <FaDownload /> {t("courses.buttonPrimary")}
-                                </ActionButton>
-
-                                {!!link && (
-                                  <ActionButton href={link} target="_blank" rel="noopener noreferrer">
-                                    <FaExternalLinkAlt />{" "}
-                                    {t("courses.buttonSecondary")}
-                                  </ActionButton>
-                                )}
-                              </ActionButtons>
-                            </FeaturedLeft>
-
-                            <FeaturedRight>
-                              <h4>{t(name)}</h4>
-
-                              <CertificateList>
-                                {contents.map((content, index) => (
-                                  <li key={index}>{t(content)}</li>
-                                ))}
-                              </CertificateList>
-                            </FeaturedRight>
-                          </FeaturedCard>
-                        ),
-                      )}
-                    </Grid>
-                  </ExpandableContainer>
-                </>
-              )}
-            </CourseCard>
-          ),
-        )}
-      </Container>
-    </Section>
+    <section id="courses" className="section courses-section">
+      <div className="container">
+        <Reveal><SectionHeading number="04" label="design.continuousLearning" title="design.coursesTitle" accent="design.coursesAccent" description="design.coursesDescription" /></Reveal>
+        <div className="courses-grid">{courses.map((course, index) => <Reveal className="course-card" key={course.school} delay={index * 0.1}>
+          <div className="course-top"><span className="course-school"><span className="course-logo"><img src={course.logo} alt="" loading="lazy" width="36" height="36" /></span>{course.school}</span><span className="course-status"><span className="status-dot" />{t(course.status)}</span></div>
+          <h3>{t(course.name)}</h3><div className="course-meta mono"><span>{t(course.startDate)} — {t(course.endDate)}</span><span>{course.qtdHours.toLocaleString(i18n.language === "pt" ? "pt-BR" : "en-US")} {t("courses.hours")}</span></div>
+          <button type="button" className="certificate-preview" onClick={() => setSelected(course.mainCertificate)} aria-label={t("design.viewCertificate", { name: t(course.name) })}><img src={course.mainCertificate.image} alt={t(course.name)} width="800" height="560" loading="lazy" /><span><FiPlus />{t("design.preview")}</span></button>
+          <details className="course-contents"><summary>{t("courses.subtitleTwo")}<FiPlus className="details-plus" /></summary><ul>{course.contents.map((content) => <li key={content}>{t(content)}</li>)}</ul></details>
+          <div className="course-actions"><a className="text-link" href={course.mainCertificate.pdf} download><FiDownload />{t("design.downloadCertificate")}</a>{course.mainCertificate.link && <a className="credential-link" href={course.mainCertificate.link} target="_blank" rel="noopener noreferrer" aria-label={`${t("courses.buttonSecondary")} — ${t(course.name)}`}><FiArrowUpRight /></a>}</div>
+        </Reveal>)}</div>
+        <div className="additional-certificates"><button type="button" className="button button-outline" onClick={() => setExpanded(!expanded)} aria-expanded={expanded} aria-controls="additional-certificates"><FiAward />{t(expanded ? "design.hideCertificates" : "design.moreCertificates")}<FiArrowDown className={expanded ? 'rotated' : ''} /></button>
+          <div id="additional-certificates" className="certificates-grid" hidden={!expanded}>{additional.map((certificate) => <article key={certificate.name} className="additional-certificate"><button type="button" onClick={() => setSelected(certificate)} aria-label={t("design.viewCertificate", { name: t(certificate.name) })}><img src={certificate.image} alt={t(certificate.name)} width="600" height="420" loading="lazy" /><h4>{t(certificate.name)}<FiArrowUpRight /></h4></button><div><a href={certificate.pdf} download><FiDownload />PDF</a><a href={certificate.link} target="_blank" rel="noopener noreferrer">{t("courses.buttonSecondary")}<FiArrowUpRight /></a></div></article>)}</div>
+        </div>
+      </div>
+      {selected && <Modal title={t(selected.name)} onClose={() => setSelected(null)}><img className="certificate-full" src={selected.image} alt={t(selected.name)} /><div className="certificate-modal-footer">{selected.contents.length > 0 && <ul>{selected.contents.map((content) => <li key={content}>{t(content)}</li>)}</ul>}<div className="detail-actions"><a href={selected.pdf} download className="button button-primary"><FiDownload />{t("design.downloadCertificate")}</a>{selected.link && <a className="button button-outline" href={selected.link} target="_blank" rel="noopener noreferrer">{t("courses.buttonSecondary")}<FiArrowUpRight /></a>}</div></div></Modal>}
+    </section>
   );
 };

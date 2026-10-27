@@ -8,7 +8,6 @@
     "courses": "Cursos",
     "contact": "Contato"
   },
-
   "hero": {
     "greeting": "Olá, eu sou",
     "subtitle": "Full Stack Engineer focado em aplicações escaláveis",
@@ -16,7 +15,6 @@
     "buttonPrimary": "Projetos",
     "buttonSecondary": "Contatos"
   },
-
   "about": {
     "title": "Sobre mim",
     "description": "Sou Desenvolvedor Full Stack com foco na criação de aplicações modernas, performáticas e escaláveis, sempre priorizando arquitetura limpa, boas práticas e experiência do usuário. Além da atuação técnica, sou fundador da Azevedo Digital, onde desenvolvo soluções sob medida para empresas e profissionais que desejam transformar processos em produtos digitais eficientes. Minha motivação é usar tecnologia para simplificar problemas complexos e gerar impacto real através de software bem estruturado.",
@@ -36,7 +34,6 @@
     "stackTitleSeven": "Ferramentas",
     "stackTitleEight": "Metodologias"
   },
-
   "projects": {
     "title": "Projetos",
     "genericButtonPlus": "Saiba mais",
@@ -128,7 +125,6 @@
       "featureFive": "Construção de Narrativas: Entrega de empreendimentos que funcionam como legados duradouros, integrando-se de forma inteligente e estética à evolução das cidades."
     }
   },
-
   "experiences": {
     "title": "Experiências",
     "experienceManager": {
@@ -166,15 +162,21 @@
       "bulletTwo": "Implementação de APIs REST seguras e integração com PostgreSQL, garantindo integridade e performance de dados",
       "bulletThree": "Gestão de deploys e monitoramento em ambiente AWS, assegurando estabilidade e disponibilidade das aplicações",
       "bulletFour": "Participação ativa no ciclo completo de desenvolvimento (análise, implementação, testes e manutenção)"
+    },
+    "experienceLeviata": {
+      "company": "Leviatã e o Cativeiro — UNESP-SP",
+      "responsibility": "Desenvolvedor Full Stack · Autônomo",
+      "duration": "2026",
+      "bulletOne": "Desenvolvimento autônomo da plataforma web institucional e acadêmica do grupo de pesquisa Leviatã e o Cativeiro, da UNESP-SP",
+      "bulletTwo": "Implementação da API com Node.js, TypeScript e NestJS, integrada ao PostgreSQL com Prisma",
+      "bulletThree": "Modelagem e organização de pesquisadores, produções científicas, eventos e demais conteúdos acadêmicos"
     }
   },
-
   "education": {
     "title": "Formação Acadêmica",
     "educationName": "Análise de Sistemas",
     "period": "semestre"
   },
-
   "courses": {
     "title": "Cursos",
     "subtitleOne": "Período",
@@ -197,7 +199,7 @@
       "contentEight": "Retrieval Augmented Generation (RAG)",
       "contentNine": "Frameworks para desenvolvimento de agentes",
       "mainCertificate": {
-        "name": "Desenvolvimento Web"
+        "name": "Desenvolvimento com IA"
       }
     },
     "trybe": {
@@ -266,9 +268,98 @@
       }
     }
   },
-
   "contact": {
     "title": "Pronto para transformar sua ideia em solução?",
     "subtitle": "Estou disponível para novos projetos e oportunidades."
+  },
+  "design": {
+    "skip": "Ir para o conteúdo",
+    "navigation": "Navegação principal",
+    "close": "Fechar",
+    "talk": "Vamos conversar",
+    "heroLineOne": "Transformo",
+    "heroLineTwo": "ideias em",
+    "heroLineThree": "soluções",
+    "heroDescription": "Do primeiro conceito à última linha de código. Crio experiências web e mobile que conectam pessoas, simplificam processos e fazem negócios evoluir.",
+    "exploreProjects": "Explore os projetos",
+    "meetMe": "Um pouco sobre mim",
+    "based": "BRASIL · CONECTADO AO MUNDO",
+    "portraitAlt": "Retrato de Rafael Azevedo, desenvolvedor Full Stack",
+    "portraitCaption": "Pessoas, tecnologia e propósito.",
+    "available": "Disponível para novos projetos",
+    "scroll": "Continue explorando",
+    "aboutTitle": "Código com intenção.",
+    "aboutAccent": "Impacto de verdade.",
+    "aboutStatement": "Acredito em tecnologia que resolve.",
+    "aboutStatementAccent": "E em experiências que fazem a diferença.",
+    "githubExplore": "Conheça meu GitHub",
+    "expertiseWeb": "Experiências web",
+    "expertiseWebText": "Interfaces intuitivas, rápidas e responsivas.",
+    "expertiseMobile": "Aplicações mobile",
+    "expertiseMobileText": "Soluções que acompanham a vida real.",
+    "expertiseArchitecture": "Arquitetura sólida",
+    "expertiseArchitectureText": "APIs, integrações e sistemas escaláveis.",
+    "expertiseBusiness": "Visão de negócio",
+    "expertiseBusinessText": "Cada decisão conectada a um propósito.",
+    "stackTitle": "Meu repertório técnico",
+    "stackCaption": "As ferramentas por trás das ideias",
+    "selectedWork": "Projetos selecionados",
+    "projectsTitle": "Menos promessa.",
+    "projectsAccent": "Mais projeto.",
+    "projectsDescription": "Uma seleção do que construí na interseção entre tecnologia, experiência e desafios reais de negócio.",
+    "filterProjects": "Filtrar projetos por área",
+    "filter_all": "Todos",
+    "filter_web": "Web",
+    "filter_mobile": "Mobile",
+    "showingProjects_one": "{{count}} projeto em exibição",
+    "showingProjects_other": "{{count}} projetos em exibição",
+    "openProject": "Ver detalhes de {{name}}",
+    "viewCase": "Explore o projeto",
+    "showLess": "Mostrar menos",
+    "showAllProjects": "Ver todos os projetos",
+    "previousImage": "Imagem anterior",
+    "nextImage": "Próxima imagem",
+    "aboutProject": "Por trás do projeto",
+    "visitProject": "Acessar projeto",
+    "experienceTitle": "Cada desafio,",
+    "experienceAccent": "uma evolução.",
+    "experienceDescription": "Uma trajetória que combina desenvolvimento de software, gestão e um olhar atento para as pessoas.",
+    "experienceAside": "A experiência vai além do código. Ela está em entender o problema e construir o caminho.",
+    "continuousLearning": "Aprendizado contínuo",
+    "coursesTitle": "Sempre curioso.",
+    "coursesAccent": "Sempre evoluindo.",
+    "coursesDescription": "Novas ferramentas, novos desafios. O aprendizado faz parte de cada etapa do caminho.",
+    "viewCertificate": "Visualizar certificado de {{name}}",
+    "preview": "Visualizar",
+    "downloadCertificate": "Baixar certificado",
+    "moreCertificates": "Mais certificações (4)",
+    "hideCertificates": "Recolher certificações",
+    "nextChapter": "Vamos construir o próximo capítulo",
+    "contactTitle": "Boas ideias começam",
+    "contactAccent": "com um olá.",
+    "talkWhatsapp": "Conversar com Rafael pelo WhatsApp",
+    "sendEmail": "Prefere e-mail? Vamos lá",
+    "footerDescription": "Desenvolvimento com intenção. Soluções que fazem a diferença.",
+    "copyEmail": "Copiar endereço de e-mail",
+    "copied": "E-mail copiado!",
+    "copyFailed": "Use o link do e-mail para entrar em contato.",
+    "businessDescription": "Tecnologia sob medida para transformar processos em possibilidades.",
+    "businessDetails": "Informações da empresa",
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "FEITO COM PROPÓSITO & CÓDIGO",
+    "backTop": "Voltar ao topo",
+    "filter_api": "IA & APIs",
+    "category_web": "Web",
+    "category_mobile": "Mobile",
+    "category_api": "APIs",
+    "showTechnologies": "Mostrar mais {{count}} tecnologias de {{name}}",
+    "hideTechnologies": "Recolher tecnologias de {{name}}"
+  },
+  "accessibility": {
+    "activateLightTheme": "Ativar tema claro",
+    "activateDarkTheme": "Ativar tema escuro",
+    "changeLanguage": "Mudar idioma para inglês",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação"
   }
 }
